@@ -28,13 +28,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set Source Directory
+      - name: Move files to root directory
         run: |
-          mv ./dist/res/static/* ./  # dist/res/static 안의 모든 파일을 루트로 이동
+          cp -r ./dist/res/static/* ./
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  # 루트 경로를 업로드
+          path: '.'  # 루트 경로의 모든 파일 업로드
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

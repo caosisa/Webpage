@@ -35,7 +35,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Set Source Directory
         run: |
-          mv ./dist/res/static ./
+          mv ./dist/res/static/* ./
+          rm ./README.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

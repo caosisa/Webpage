@@ -25,12 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 확인: dist/res/static 폴더가 존재하는지 확인
-      - name: List files before copying
-        run: |
-          echo "Before copying:"
-          ls -R ./dist/res/static
-
       # 복사: dist/res/static 폴더의 모든 파일을 루트 디렉토리로 복사
       - name: Copy files to root directory using cp
         run: |

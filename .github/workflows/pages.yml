@@ -25,10 +25,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 복사: dist/res/static 폴더의 모든 파일을 루트 디렉토리로 복사
-      - name: Copy files to root directory using cp
+      # 확인: dist/res/static 폴더가 존재하는지 확인
+      - name: List files before copying
         run: |
-          cp -r ./dist/res/static/* ./
+          echo "Before copying:"
+          ls -R ./dist/res/static
+
+      # 복사: dist/res/static 폴더의 모든 파일을 루트 디렉토리로 복사
+      - name: Copy files to root directory
+        run: |
+          cp -a ./dist/res/static/. ./  # 정확한 디렉토리 구조를 유지하며 복사
 
       # .nojekyll 파일 생성: Jekyll 비활성화
       - name: Create .nojekyll file

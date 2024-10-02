@@ -22,7 +22,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       # 확인: dist/res/static 폴더가 존재하는지 확인
@@ -32,9 +32,9 @@ jobs:
           ls -R ./dist/res/static
 
       # 복사: dist/res/static 폴더의 모든 파일을 루트 디렉토리로 복사
-      - name: Copy files to root directory
+      - name: Copy files to root directory using rsync
         run: |
-          cp -a ./dist/res/static/. ./  # 정확한 디렉토리 구조를 유지하며 복사
+          rsync -av --progress ./dist/res/static/ ./
 
       # .nojekyll 파일 생성: Jekyll 비활성화
       - name: Create .nojekyll file

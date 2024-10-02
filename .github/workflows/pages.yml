@@ -36,6 +36,11 @@ jobs:
         run: |
           cp -r ./dist/res/static/* ./
 
+      # .nojekyll 파일 생성: Jekyll 비활성화
+      - name: Create .nojekyll file
+        run: |
+          touch .nojekyll
+
       # 확인: 루트 디렉토리에 파일이 제대로 복사되었는지 확인
       - name: List files after copying
         run: |

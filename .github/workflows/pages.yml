@@ -25,17 +25,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Move files to root directory using mv command
-      - name: Move files to root directory
+      # 확인: dist/res/static 폴더가 존재하는지 확인
+      - name: List files before copying
         run: |
-          mv ./dist/res/static/* ./
+          echo "Before copying:"
+          ls -R ./dist/res/static
 
-      # Check if index.html is in the root directory after moving
-      - name: Verify files in root directory
+      # 복사: dist/res/static 폴더의 모든 파일을 루트 디렉토리로 복사
+      - name: Copy files to root directory using cp
         run: |
-          ls -l
+          cp -r ./dist/res/static/* ./
 
-      # Upload the moved files to GitHub Pages
+      # 확인: 루트 디렉토리에 파일이 제대로 복사되었는지 확인
+      - name: List files after copying
+        run: |
+          echo "After copying:"
+          ls -R ./
+
+      # 업로드: 복사된 파일을 GitHub Pages에 업로드
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -34,7 +34,7 @@ jobs:
       # 복사: dist/res/static 폴더의 모든 파일을 루트 디렉토리로 복사
       - name: Copy files to root directory using rsync
         run: |
-          rsync -av --progress ./dist/res/static/ ./
+          sudo rsync -av --progress ./dist/res/static/ ./
 
       # .nojekyll 파일 생성: Jekyll 비활성화
       - name: Create .nojekyll file

@@ -1,0 +1,96 @@
+/*--------------------------------------------------------------
+# Judge
+--------------------------------------------------------------*/
+#judge {
+    margin: 0;
+    padding: 0;
+    background: #879ab5;
+}
+
+#judge iframe {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#contact {
+    padding: 50px 0;
+    background: #dbe0e8;
+    text-align: center;
+    font-size: 15px;
+    color: #444444;
+}
+
+#contact h4 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    color: #3F7F93;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    font-size: 14px;
+    background: #677a96;
+}
+
+#footer .footer-sns {
+    padding: 0px 16px 0px 0px;
+    text-decoration: none;
+}
+
+#footer .footer-sns-last {
+    padding: 0px 0px 0px 0px;
+}
+
+#footer .bi-discord {
+    padding: 3px;
+    height: 22px;
+    width: 114px;
+    background-color: #212529;
+    border-radius: 50px;
+}
+
+#footer .bi-discord text {
+    color: #677a96;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.btn-back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #8296A6;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.btn-back-to-top:hover {
+    background: #6F8699;
+    color: #fff;
+}
+
+.btn-back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

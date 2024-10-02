@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 헤더 배경 색상과 텍스트 색상 지정 */
+        header {
+            background-color: #000000; /* 배경 색상 */
+            color: #FB9EBC; /* 기본 텍스트 색상 */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        /* 링크(a) 태그의 색상을 #FB9EBC로 지정 */
+        header a {
+            color: #FB9EBC;
+            text-decoration: none; /* 링크 밑줄 제거 */
+            padding: 0 15px;
+        }
+
+        /* 링크에 마우스를 올렸을 때 색상을 유지 */
+        header a:hover {
+            color: #FFCEDE;
+        }
+
+        /* 네비게이션 메뉴 스타일 */
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        /* 헤더의 로고 스타일 */
+        h1.banner {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* 모바일 토글 버튼 숨기기 */
+        .mobile-nav-toggle {
+            display: none;
+        }
+
+        /* 페이지 컨텐츠가 헤더 밑에 가려지지 않도록 마진 추가 */
+        body {
+            margin-top: 70px; /* 헤더 높이만큼 마진 */
+        }
+    </style>
+    <title>헤더 예시</title>
+</head>
+<body>
+
+<!-- Header - 모든 페이지에서 동일하게 사용 -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <!-- 로고 클릭시 홈으로 이동 -->
+        <h1 class="banner me-auto"><a href="/index.html">zzz</a></h1>
+        <!-- 네비게이션 -->
+        <nav id="navbar" class="navbar">
+            <ul class="m-4 m-lg-0">
+                <li><a class="nav-link" href="/index.html">HOME</a></li>
+                <li><a class="nav-link" href="/about.html">ABOUT</a></li>
+                <li><a class="nav-link" href="/work.html">WORK</a></li>
+
+            </ul>
+            <!-- 모바일 메뉴 아이콘 (모바일 전용 토글 버튼) -->
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list mobile-nav-toggle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x mobile-nav-toggle hidden" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </i>
+        </nav>
+
+    </div>
+</header>
+
+</body>
+</html>

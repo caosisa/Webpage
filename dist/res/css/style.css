@@ -1,0 +1,368 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+}
+
+#header.header-scrolled, #header.header-inner-pages {
+    background: #000000;
+}
+
+#header .banner {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+}
+
+#header .banner a {
+    font-family: 'Audiowide', serif;
+    color: #FB9EBC;
+}
+
+#header .banner a:hover {
+    color: #2D4356;
+    text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FB9EBC;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+    color: #2D4356;
+    cursor: pointer;
+}
+
+.navbar .joinus,
+.navbar .joinus:focus {
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.navbar .joinus:hover,
+.navbar .joinus:focus:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.navbar .contest ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.navbar .contest ul li {
+    min-width: 200px;
+}
+
+.navbar .contest ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 500;
+    color: #0c3c53;
+}
+
+.navbar .contest ul a i {
+    font-size: 12px;
+}
+
+.navbar .contest ul a:hover,
+.navbar .contest ul .active:hover,
+.navbar .contest ul li:hover>a {
+    color: #4890A6;
+    cursor: pointer;
+}
+
+.navbar .contest:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.navbar .contest .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+}
+
+.navbar .contest .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+}
+
+@media (max-width: 1366px) {
+    .navbar .contest .dropdown ul {
+        left: -90%;
+    }
+
+    .navbar .contest .dropdown:hover>ul {
+        left: -100%;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu for Mobile
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar .joinus:hover,
+    .navbar .joinus:focus:hover {
+        color: #fff;
+        background: #2D4356;
+    }
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(90, 110, 140, 0.95);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.mobile-nav-toggle.hidden {
+    display: none;
+}
+
+.navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #5A6E8C;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+    color: #4890A6;
+}
+
+.navbar-mobile .joinus, .navbar-mobile .joinus:focus {
+    margin: 15px;
+    color: #fff;
+    background: #5A6E8C;
+}
+
+.navbar-mobile .contest ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .contest ul li {
+    min-width: 200px;
+}
+
+.navbar-mobile .contest ul a {
+    padding: 10px 20px;
+}
+
+.navbar-mobile .contest ul a i {
+    font-size: 12px;
+}
+
+.navbar-mobile .contest ul a:hover,
+.navbar-mobile .contest ul .active:hover,
+.navbar-mobile .contest ul li:hover>a {
+    color: #4890A6;
+    cursor: pointer;
+}
+
+.navbar-mobile .contest>.dropdown-active,
+.navbar-mobile .dropdown>.dropdown-active {
+    display: block;
+    visibility: visible !important;
+    cursor: pointer;
+}
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+    padding: 50px 0;
+    background: #dbe0e8;
+    text-align: center;
+    font-size: 15px;
+    color: #444444;
+}
+
+#contact h4 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    color: #3F7F93;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    font-size: 14px;
+    background: #677a96;
+}
+
+#footer .footer-sns {
+    padding: 0px 16px 0px 0px;
+    text-decoration: none;
+}
+
+#footer .footer-sns-last {
+    padding: 0px 0px 0px 0px;
+}
+
+#footer .bi-discord {
+    padding: 3px;
+    height: 22px;
+    width: 114px;
+    background-color: #212529;
+    border-radius: 50px;
+}
+
+#footer .bi-discord text {
+    color: #677a96;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.btn-back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #8296A6;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.btn-back-to-top:hover {
+    background: #6F8699;
+    color: #fff;
+}
+
+.btn-back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

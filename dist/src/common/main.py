@@ -17,7 +17,12 @@ browser.__dict__['module_init'] = module_init
 
 
 async def insert_template(template_path: str, parent, index: int = -1, oncomplete=lambda: None):
-    result = await window.fetch("../dist/res/templates/"+template_path)
+    base_path = window.location.pathname
+    if base_path.startswith("/Webpage/about") or base_path.startswith("/Webpage/work"):
+        result = await window.fetch("../dist/res/templates/" + template_path)
+    else:
+        result = await window.fetch("./dist/res/templates/" + template_path)
+
     insert_element(await result.text(), parent, index)
     oncomplete()
 

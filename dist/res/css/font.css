@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 @font-face {
     font-family: 'SUITE-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
@@ -13,7 +13,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 body, h1, h2, h3, h4, h5, h6, p, text, pre, span {
-    font-family: 'SUITE-Regular',serif!important;
+    font-family: 'Pretendard', 'SUITE-Regular', serif!important;
 }

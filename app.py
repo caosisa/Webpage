@@ -17,7 +17,6 @@ def respond_dist_source(path):
 @app.route("/", defaults={'path': "", 'file': "index"})
 @app.route("/<file>.html", defaults={'path': ""})
 @app.route("/<path:path>/", defaults={'file': "index"})
-@app.route("/judge/", defaults={'path': "judge", 'file': "index"})  # 없으면 안들어가짐...
 @app.route("/<path:path>/<file>.html")
 def redirect_to_index(path, file):
     return app.send_static_file(f"{path}/{file}.html" if path else f"{file}.html")

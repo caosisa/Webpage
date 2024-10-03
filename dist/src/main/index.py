@@ -47,51 +47,38 @@ def setup_programs_filter():
     for el in programs_filter + list(document.getElementsByClassName('program-type')):
         el.onclick = change_filter
 
+from browser import document, window
 
-########################################################################################################################
-# Set Datas by Year
-########################################################################################################################
-from common.main import current_year, insert_element
+# 슬라이더 초기 설정
+currentIndex = 0
+slider_wrapper = document["slider-wrapper"]
+total_items = len(slider_wrapper.children)
+items_per_slide = 3  # 한 번에 보이는 슬라이더 아이템 수
+item_width = 410  # 슬라이더 아이템 너비 (400px + margin-right 10px)
 
-team = document.getElementById('team')
-if team:
-    async def add_team_history():
-        enabled = False
-        for year in range(current_year, 2022, -1):
-            result = await window.fetch(f"/dist/res/templates/years/{year}/team.html")
-            if result.status != 200:
-                continue
-            insert_element(await result.text(), team.getElementsByClassName("container")[0], -1)
-            if not enabled:
-                enabled = True
-                document.getElementById('team_'+str(year)).style.display = 'block'
-                window.AOS.init()
-                window.AOS.refresh()
+# 슬라이드 이동 함수
+def move_slide():
+    global currentIndex
+    offset = currentIndex * item_width  # 이동할 너비 계산
+    slider_wrapper.style.transform = f"translateX(-{offset}px)"
 
-    aio.run(add_team_history())
+# 다음 버튼 클릭
+def next_slide(event):
+    global currentIndex
+    if currentIndex < total_items - items_per_slide:
+        currentIndex += 1
+    move_slide()
+
+# 이전 버튼 클릭
+def prev_slide(event):
+    global currentIndex
+    if currentIndex > 0:
+        currentIndex -= 1
+    move_slide()
+
+# 이벤트 리스너 등록
+document["nextBtn"].bind("click", next_slide)
+document["prevBtn"].bind("click", prev_slide)
 
 
-programs = document.getElementById('programs')
-if programs:
-    async def add_programs_history():
-        enabled = False
-        for year in range(current_year, 2022, -1):
-            result = await window.fetch(f"/dist/res/templates/years/{year}/programs.html")
-            if result.status != 200:
-                continue
-            insert_element(await result.text(), programs.getElementsByClassName("container")[0], -1)
-            if not enabled:
-                enabled = True
-                document.getElementById('programs_'+str(year)).style.display = 'block'
-                images = document.select('img')
 
-                for img in images:
-                    if not img.complete:
-                        images.append(img)
-                    await aio.sleep(0.001)
-
-                window.AOS.init()
-                window.AOS.refresh()
-                setup_programs_filter()
-
-    aio.run(add_programs_history())

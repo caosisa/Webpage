@@ -105,11 +105,6 @@ def enable_navigation():
     for toggle in mobile_toggles:
         toggle.onclick = toggle_menu_icon
 
-    contest = navbar.getElementsByClassName('contest')[0]
-    contest.getElementsByTagName('a')[0].onclick = enable_mobile_dropdown
-    for dropdown in contest.getElementsByClassName('dropdown'):
-        dropdown.getElementsByTagName('a')[0].onclick = enable_mobile_dropdown
-
 
 ########################################################################################################################
 # Back to Top

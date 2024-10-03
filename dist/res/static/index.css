@@ -1,0 +1,221 @@
+/* Front Section */
+#front {
+    background-image: url('https://via.placeholder.com/1920x1052');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* Introduce Section */
+#introduce {
+    min-height: 30vh;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: #03182E;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 10%;
+    gap: 28px;
+    width: 100%;
+    max-width: 1920px;
+    height: 384px;
+    background-color: #03182E;
+}
+
+/* Invitation */
+.invitation {
+    width: 316px;
+    height: 108px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 36px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.011em;
+    color: #FB9EBC;
+}
+
+/* Intro */
+.intro {
+    width: 112px;
+    height: 30px;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.011em;
+    color: #FB9EBC;
+}
+
+/* Exhibition Information */
+#Exhibition\ Information {
+    background-color: #162A3F;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.section-title h5 {
+    color: #FB9EBC;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.section-title p {
+    color: #FFFFFF;
+}
+
+.section-title .highlight {
+    color: #FFCEDE;
+}
+
+/* Map Placeholder */
+.map-placeholder {
+    width: 100%;
+    max-width: 1192px;
+    height: 540px;
+    background-color: #2A3E50;
+    border: 2px dashed #FFFFFF;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Works Section */
+#Works {
+    min-height: 50vh;
+    background-color: #162A3F;
+    margin-left: 0;
+    padding-bottom: 150px;
+}
+
+/* Works 제목을 중앙에 고정 */
+.section-title h5 {
+    text-align: center;
+    position: relative;
+    z-index: 2; /* 슬라이더 위에 있게 하기 위해 z-index 설정 */
+}
+
+/* 전체 요소의 박스 크기 조정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 슬라이더 컨테이너 */
+.slider-container {
+    width: 100vw; /* 화면 전체 너비 */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 화면 밖으로 나가는 부분 숨기기 */
+    position: relative; /* 컨트롤 버튼을 절대 위치로 배치하기 위해 사용 */
+}
+
+/* 슬라이더 래퍼 */
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 슬라이드가 부드럽게 이동하도록 설정 */
+    width: max-content; /* 래퍼의 너비를 슬라이더 아이템에 맞춰 설정 */
+}
+
+/* 슬라이더 아이템 */
+.slider-item {
+    width: 400px; /* 고정된 이미지 너비 */
+    height: 400px; /* 고정된 이미지 높이 */
+    flex-shrink: 0; /* 슬라이더 아이템이 줄어들지 않도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* 슬라이더 아이템 사이에 약간의 간격을 추가 */
+}
+
+/* 이미지 크기 고정 */
+.slider-item img {
+    width: 100%; /* 이미지가 부모 요소에 맞게 조정되도록 설정 */
+    height: 100%; /* 고정된 크기 유지 */
+}
+
+/* Works 제목을 중앙에 고정 */
+.section-title h5 {
+    text-align: center;
+    position: relative;
+    z-index: 2; /* 슬라이더 위에 있게 하기 위해 z-index 설정 */
+}
+
+/* 슬라이더 컨트롤 */
+.slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.prev-control {
+    left: 10px;
+}
+
+.next-control {
+    right: 10px;
+}
+
+.slider-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* Programs Section */
+#programs {
+    min-height: 50vh;
+    padding-bottom: 200px;
+    padding-top: 150px;
+    background-color: #162A3F;
+}
+
+.box {
+    background-color: #000000;
+    color: white;
+    padding: 30px;
+    position: relative;
+}
+
+.box h5 {
+    color: #FB9EBC;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.box p {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.1rem;
+}
+
+/* Media Queries for small devices */
+@media (max-width: 768px) {
+    #Exhibition\ Information {
+        padding: 100px 0;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+}

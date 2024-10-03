@@ -34,230 +34,93 @@
 
     <!-- Page Scripting -->
     <script type="text/python" src="/dist/src/common/main.py"></script>
-    <script type="text/python" src="/dist/src/main/index/index.py"></script>
-    <link href="/dist/src/main/index/index.css" rel="stylesheet">
+    <script type="text/python" src="/dist/src/main/index.py"></script>
+    <link href="/dist/res/static/index.css" rel="stylesheet">
 </head>
 <body onload="brython()">
     <!-- Front Page -->
-    <section id="front" class="d-flex align-items-center" style="background-image: url('https://via.placeholder.com/1920x1080'); background-size: cover; background-position: center; min-height: 100vh;">
-
+    <section id="front" class="d-flex align-items-center">
     </section>
 
-
     <!-- Introduce -->
-    <section id="introduce" class="contact d-flex align-items-center" style="min-height: 30vh; padding-top:70px; padding-bottom:50px;background-color: #03182E;">
-        <div class="container px-5">
-            <div class="row justify-content-center">
-                <div class="col-lg text-center">
-                    <h4 style="color: #FB9EBC;font-weight:bold; font-size: 2rem">&lt;~~~&gt;에 <br> 여러분을 초대합니다.</h4>
-                    <br>
-                    <p style="color: #FB9EBC;">전시 한줄 소개</p>
-                </div>
+    <section id="introduce" class="contact d-flex align-items-center">
+        <div class="main-container">
+            <div class="invitation">
+                <p><~~~~~~>에 <br>초대합니다.</p>
+            </div>
+            <div class="intro">
+                <p>전시 한줄 소개</p>
             </div>
         </div>
     </section>
 
     <!-- Exhibition Information -->
-    <section id="Exhibition Information" class="contact d-flex align-items-center justify-content-center" style="height: auto; background-color: #162A3F; padding-top:120px; padding-bottom: 100px">
+    <section id="Exhibition Information" class="contact d-flex align-items-center justify-content-center">
         <div class="container text-center" data-aos="fade-up">
             <div class="section-title">
-                <h5 style="color: #FB9EBC; font-weight:bold; font-size: 2rem">Exhibition Information</h5>
-                <br>
-                <br>
-                <p style="color: #FFCEDE;">일시</p>
-                <p style="color: #FFFFFF;">2024.11.25(MON) ~ 2024.12.1(SUN)</p>
-                <br>
-                <p style="color: #FFCEDE;">장소</p>
-                <p style="color: #FFFFFF;">충남대학교 융합교육혁신센터 1F FABLAB</p>
-                <br>
-                <p style="color: #FFCEDE;">오픈식</p>
-                <p style="color: #FFFFFF;">2024.11.25(MON)</p>
-                <br>
+                <h5>Exhibition Information</h5>
+                <p class="highlight">일시</p>
+                <p>2024.11.25(MON) ~ 2024.12.1(SUN)</p>
+                <p class="highlight">장소</p>
+                <p>충남대학교 융합교육혁신센터 1F FABLAB</p>
+                <p class="highlight">오픈식</p>
+                <p>2024.11.25(MON)</p>
                 <!-- 지도 약도 추가 부분 -->
-                <p style="color: #FFCEDE;">지도 약도</p>
-                <div class="map-placeholder" style="width: 100%; max-width: 600px; height: 400px; background-color: #2A3E50; border: 2px dashed #FFFFFF; color: #FFFFFF; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+                <div class="map-placeholder">
                     <p>여기에 지도 약도 이미지가 들어갑니다</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Media Queries for small devices -->
-    <style>
-        @media (max-width: 768px) {
-            section#Exhibition\ Information {
-                padding: 100px 0;
-            }
-            .section-title p {
-                font-size: 1rem; /* 텍스트 크기 조정 */
-            }
-
-        }
-    </style>
-
-    <!-- Works -->
-    <section id="Works" class="contact d-flex align-items-center justify-content-center" style="min-height: 50vh; background-color: #162A3F;padding-bottom:150px">
-        <div class="container text-center" data-aos="fade-up">
+    <section id="Works" class="contact">
+        <div class="slider-container text-center">
             <div class="section-title">
-                <h5 style="color: #FB9EBC; font-weight:bolder; padding-bottom:25px">Works</h5>
-
-                <!-- Slider Container -->
-                <div class="slider-container position-relative">
-                    <div class="slider-wrapper d-flex">
-                        <!-- 각 이미지 슬롯 -->
-                        <div class="slider-item">
-                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Work 1">
-                            <p style="color: #FFFFFF;">사진명 1</p>
-                        </div>
-                        <div class="slider-item">
-                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Work 2">
-                            <p style="color: #FFFFFF;">사진명 2</p>
-                        </div>
-                        <div class="slider-item">
-                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Work 3">
-                            <p style="color: #FFFFFF;">사진명 3</p>
-                        </div>
-                        <div class="slider-item">
-                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Work 4">
-                            <p style="color: #FFFFFF;">사진명 4</p>
-                        </div>
-                        <div class="slider-item">
-                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Work 5">
-                            <p style="color: #FFFFFF;">사진명 5</p>
-                        </div>
-                        <!-- 추가 이미지 -->
-                        <div class="slider-item">
-                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Work 6">
-                            <p style="color: #FFFFFF;">사진명 6</p>
-                        </div>
-                        <div class="slider-item">
-                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Work 7">
-                            <p style="color: #FFFFFF;">사진명 7</p>
-                        </div>
-                    </div>
-
-                    <!-- Slider Controls (Custom Arrows) -->
-                    <button class="slider-control prev-control" id="prevBtn">
-                        &#9664; <!-- 왼쪽 화살표 -->
-                    </button>
-                    <button class="slider-control next-control" id="nextBtn">
-                        &#9654; <!-- 오른쪽 화살표 -->
-                    </button>
-                </div>
+                <h5>Works</h5>
             </div>
+            <!-- 슬라이더 -->
+            <div class="slider-wrapper" id="slider-wrapper">
+                <div class="slider-item"><img src="https://via.placeholder.com/400x400" alt="Item 1"></div>
+                <div class="slider-item"><img src="https://via.placeholder.com/400x400" alt="Item 2"></div>
+                <div class="slider-item"><img src="https://via.placeholder.com/400x400" alt="Item 3"></div>
+                <div class="slider-item"><img src="https://via.placeholder.com/400x400" alt="Item 4"></div>
+                <div class="slider-item"><img src="https://via.placeholder.com/400x400" alt="Item 5"></div>
+            </div>
+            <!-- 슬라이더 컨트롤 -->
+            <button class="slider-control prev-control" id="prevBtn">&#9664;</button>
+            <button class="slider-control next-control" id="nextBtn">&#9654;</button>
         </div>
     </section>
 
-    <!-- Custom CSS -->
-    <style>
-        .slider-container {
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-        }
-        .slider-wrapper {
-            transition: transform 0.4s ease;
-            display: flex;
-        }
-        .slider-item {
-            min-width: 20%; /* 한 화면에 5개의 이미지가 보이도록 설정 */
-            margin: 0 5px;
-        }
-        .img-fluid {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Slider Controls */
-        .slider-control {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            font-size: 2rem;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 1;
-        }
-        .prev-control {
-            left: -40px; /* 왼쪽 화살표 위치 */
-        }
-        .next-control {
-            right: -40px; /* 오른쪽 화살표 위치 */
-        }
-        .slider-control:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-    </style>
-
-    <!-- Custom JavaScript -->
-    <script>
-        const sliderWrapper = document.querySelector('.slider-wrapper');
-        let currentIndex = 0;
-        const itemsPerSlide = 5;
-
-        // 다음 버튼 클릭
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            if (currentIndex < sliderWrapper.children.length - itemsPerSlide) {
-                currentIndex++;
-                sliderWrapper.style.transform = `translateX(-${currentIndex * 20}%)`;
-            }
-        });
-
-        // 이전 버튼 클릭
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                sliderWrapper.style.transform = `translateX(-${currentIndex * 20}%)`;
-            }
-        });
-    </script>
 
 
 
     <!-- Programs Section -->
-    <section id="programs" class="programs" style="min-height: 50vh; padding-bottom: 200px; padding-top:150px;background-color: #162A3F;">
+    <section id="programs" class="programs">
         <div class="container" data-aos="fade-up">
-            <!-- Flexbox Layout for Boxes -->
             <div class="row d-flex align-items-stretch">
-                <!-- 상단의 두 네모 박스 -->
                 <div class="col-md-6 mb-3 d-flex">
-                        <div class="box" style="background-color: #000000; color: white; padding: 30px; position: relative;flex-grow:1;">
-                        <h5 style="color: #FB9EBC; margin-bottom: 30px; margin-left:50px; margin-top: 20px; font-weight: bold">화환 대신 마음으로</h5>
-                        <p style="margin-top: 20px;margin-left:50px;margin-right: 50px ">원활한 전시 관람과 환경 보호를 위하여 대형 화환을 받지 않습니다. 마음으로 축하해 주시면 감사하겠습니다.</p>
+                    <div class="box">
+                        <h5>화환 대신 마음으로</h5>
+                        <p>원활한 전시 관람과 환경 보호를 위하여 대형 화환을 받지 않습니다.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3 d-flex">
-                    <div class="box" style="background-color: #000000; color: white; padding: 30px; position: relative;flex-grow:1;">
-                        <h5 style="color: #FB9EBC; margin-bottom: 30px; margin-left:50px; margin-top: 20px; font-weight: bold">선물 보관은 지킴이에게</h5>
-                        <p style="margin-top: 20px;margin-left:50px;margin-right: 50px ">선물을 직접 전달하기 어려운 경우, 전시장에 상주하고 있는 지킴이 학생에게 대신 전달해 주세요. 작품 근처에 선물 보관 시 전시 관람에 방해가 됩니다.</p>
+                    <div class="box">
+                        <h5>선물 보관은 지킴이에게</h5>
+                        <p>선물을 직접 전달하기 어려운 경우, 전시장에 상주하고 있는 지킴이 학생에게 대신 전달해 주세요.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- 하단의 긴 네모 박스 -->
             <div class="row">
                 <div class="col-12">
-                    <div class="box d-flex justify-content-center align-items-center" style=" background-color: #000000; color: white; padding: 30px; position: relative;">
-                        <h5 style="color: #FB9EBC; font-weight: bold;">전시 인스타그램 계정 바로가기</h5>
-                    </div>
+                    <a href="https://www.instagram.com/2024_cnud?igsh=MWI1dmdjdTlmeWJ5Zg==" target="_blank" class="box">
+                        <h5>전시 인스타그램 계정 바로가기</h5>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Custom CSS -->
-    <style>
-        .box h5 {
-            font-size: 2rem;
-        }
-        .box p {
-            font-size: 1.1rem;
-        }
-    </style>
-
 
 </body>
 </html>

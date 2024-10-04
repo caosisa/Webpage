@@ -1,0 +1,51 @@
+/* 페이지 상단 중앙의 "WORK" 타이틀 */
+.work-title {
+    text-align: center;
+    color: #FB9EBC; /* 핑크색 */
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* 작품 갤러리 레이아웃 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 데스크탑에서 3개의 열 */
+    gap: 20px; /* 이미지 간의 여백 */
+    padding: 0 90px; /* 화면 양옆에 여백 추가 */
+}
+
+.gallery-item {
+    padding: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* 이미지와 텍스트 사이 여백 */
+}
+
+.student-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.work-title {
+    font-size: 16px;
+}
+
+/* 모바일에서 2개의 열 */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 모바일에서 2개의 열 */
+        padding: 0 20px; /* 모바일에서는 여백을 좁게 */
+    }
+}

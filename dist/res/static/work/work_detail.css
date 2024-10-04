@@ -1,0 +1,112 @@
+/* 첫 번째 섹션: 작품 제목, 설명, 이미지, Designer 문구 */
+.artwork-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white; /* 모든 텍스트를 흰색으로 설정 */
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-flex {
+    display: flex;
+    align-items: flex-end; /* 설명을 제목 하단에 위치시키기 위해 하단 정렬 */
+}
+
+.title {
+    font-size: 2.5rem; /* 제목 크기 조정 */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-left: 15px; /* 제목과 설명 사이 간격 */
+    position: relative;
+    top: 5px; /* 설명을 제목보다 약간 아래로 이동 */
+}
+
+.img-fluid {
+    max-width: 100%; /* 이미지가 큰 화면에서 최대 크기로 보이게 */
+    height: auto;
+    margin-top: 20px; /* 이미지와 텍스트 사이에 간격 추가 */
+}
+
+.designer {
+    text-align: left;
+    margin-top: 20px; /* 이미지와 Designer 사이에 간격 추가 */
+}
+
+.designer h1 {
+    font-size: 2.5rem; /* Designer 문구 크기 설정 */
+    margin-top: 20px; /* 위쪽에 추가적인 여백 */
+    font-weight: bold;
+}
+
+/* 두 번째 섹션: 작가 정보 및 인터뷰 */
+.designer-section {
+    background-color: #FB9EBC; /* 섹션 배경 색상 */
+}
+
+.square-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* 이미지를 네모 형태로 유지 */
+    margin-bottom: 20px; /* 주변과 간격 */
+}
+
+.designer-name {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: bold; /* 이름을 굵게 표시 */
+}
+
+.designer-email {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.email-icon {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* 인터뷰 제목 */
+.interview-title {
+    font-size: 1rem;
+    font-weight: bold; /* Interview 텍스트를 굵게 표시 */
+    margin-bottom: 20px;
+}
+
+/* 인터뷰 그리드 레이아웃 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개씩 한 줄에 배치 */
+    gap: 20px; /* 그리드 항목 사이의 간격 */
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 인터뷰 항목에 약간의 그림자 추가 */
+}
+
+.grid-item p {
+    margin-bottom: 10px;
+}
+
+/* 질문 텍스트 굵게 */
+.grid-item strong {
+    font-weight: bold;
+}
+
+/* 세 번째 섹션: 빈 공간 */
+.footer-section .spacer {
+    height: 100px;
+}

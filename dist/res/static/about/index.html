@@ -21,11 +21,6 @@
     <script src="../cdn/animated-cursor/anicursor.js"></script>
     <link href="../cdn/animated-cursor/anicursor.css" rel="stylesheet">
 
-    <!-- Style Setting -->
-    <link href="../dist/res/css/font.css" rel="stylesheet">
-    <link href="../dist/res/css/style.css" rel="stylesheet">
-    <link href="../dist/res/css/color.css" rel="stylesheet">
-
     <!-- Load Js Library -->
     <script type="text/javascript" src="../cdn/brython/3.11.3/brython.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../cdn/brython/3.11.3/brython_stdlib.js" crossorigin="anonymous"></script>
@@ -34,83 +29,13 @@
     <!-- Page Scripting -->
     <script type="text/python" src="../dist/src/common/main.py"></script>
     <script type="text/python" src="../dist/src/main/about.py"></script>
-    <link href="../about/about.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <style>
-        /* 기본 섹션 스타일 */
-        section {
-            padding: 40px 0;
-        }
+    <!-- External CSS 파일 로드 -->
+    <link href="../dist/res/css/font.css" rel="stylesheet">
+    <link href="../dist/res/css/style.css" rel="stylesheet">
+    <link href="../dist/res/css/color.css" rel="stylesheet">
+    <link href="../about/about.css" rel="stylesheet"> <!-- about.css 파일 추가 -->
 
-        /* 중앙 정렬 텍스트 */
-        .center-text {
-            text-align: center;
-            color: white;
-        }
-
-        /* 제목 스타일 */
-        .title {
-            font-weight: 1000;
-            color: #FB9EBC; /* 핑크색 */
-        }
-
-        .sub-title{
-            font-weight:bold;
-
-        }
-
-        /* 소제목, 설명 사이의 여백 */
-        .description {
-            margin-top: 40px;
-        }
-
-
-        /* 이미지 및 비디오 사이즈 */
-        .image-poster, .professor-img, .student-img, .video {
-            max-width: 80%;
-            margin: 20px auto;
-            display: block;
-            border-radius: 8px;
-        }
-
-        /* 포스터 앞에 문구 */
-        .poster-label {
-            text-align: left;
-            font-weight: bold;
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        /* 교수 및 학생 섹션 스타일 */
-        .profile-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .profile {
-            margin: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .profile img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        /* 학생 이미지 크기 */
-        .student-img {
-            width: 120px;
-            height: 120px;
-        }
-    </style>
 </head>
 <body onload="brython()">
 
@@ -127,7 +52,6 @@
         </div>
     </section>
 
-
     <!-- 두 번째 섹션 - Video -->
     <section id="Video" class="d-flex align-items-center" style="background-color: #162A3F; min-height: 60vh;">
         <div class="container center-text">
@@ -140,7 +64,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- 세 번째 섹션 - Professor -->
     <section id="Professor" class="d-flex align-items-center" style="background-color: #162A3F; min-height: 100vh;">
@@ -166,70 +89,18 @@
         <div class="container center-text">
             <h1>Student</h1>
             <div class="profile-section">
-                <!-- 학생 1 -->
+                <!-- 학생 목록 -->
                 <div class="profile">
                     <img src="https://via.placeholder.com/120" alt="Student 1" class="student-img">
                     <h5>김철수</h5>
                 </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 2" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 3" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 4" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 5" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 6" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 7" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 8" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 9" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 10" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 11" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 12" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 13" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 14" class="student-img">
-                    <h5>김철수</h5>
-                </div>
-
-                </div>
+                <!-- 나머지 학생들 추가 -->
             </div>
         </div>
     </section>
 
     <!-- Bootstrap 및 외부 스크립트 -->
     <script src="/cdn/bootstrap/5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

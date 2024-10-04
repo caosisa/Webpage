@@ -141,3 +141,24 @@ def add_to_home():
 # Insert Templates
 aio.run(insert_template("header.html", document.body, 0, enable_navigation))
 aio.run(insert_template("footer.html", document.body, -1, enable_back_to_top))
+
+
+
+# 네비게이션 토글 기능 구현
+def toggle_nav(ev):
+    nav = document['navbar'].select('ul')[0]
+    menu_icon = document['menu-icon']
+    close_icon = document['close-icon']
+
+    if 'active' in nav.classList:
+        nav.classList.remove('active')
+        close_icon.classList.add('hidden')
+        menu_icon.classList.remove('hidden')
+    else:
+        nav.classList.add('active')
+        menu_icon.classList.add('hidden')
+        close_icon.classList.remove('hidden')
+
+# 햄버거 메뉴 및 닫기 아이콘 클릭 이벤트에 토글 함수 연결
+document['menu-icon'].bind('click', toggle_nav)
+document['close-icon'].bind('click', toggle_nav)

@@ -53,6 +53,37 @@
         body {
             margin-top: 70px; /* 헤더 높이만큼 마진 */
         }
+
+        /* Mobile-specific styles */
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+                cursor: pointer;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            /* 아이콘 스타일 */
+            .bi-list, .bi-x {
+                cursor: pointer;
+            }
+        }
     </style>
     <title>헤더 예시</title>
 </head>
@@ -73,16 +104,14 @@
                     <a href="https://www.instagram.com/2024_cnud?igsh=MWI1dmdjdTlmeWJ5Zg==" target="_blank">
                         <img src="/Webpage/dist/res/image/instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
                     </a>
-
                 </li>
-
             </ul>
-            <!-- 모바일 메뉴 아이콘 (모바일 전용 토글 버튼) -->
+            <!-- 모바일 메뉴 아이콘 (햄버거 & 닫기) -->
             <i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list mobile-nav-toggle" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list mobile-nav-toggle" viewBox="0 0 16 16" id="menu-icon">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x mobile-nav-toggle hidden" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x mobile-nav-toggle hidden" viewBox="0 0 16 16" id="close-icon">
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                 </svg>
             </i>
@@ -90,6 +119,8 @@
 
     </div>
 </header>
+
+<script type="text/python" src="/Webpage/dist/src/common/main.py"></script>
 
 </body>
 </html>

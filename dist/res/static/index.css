@@ -53,23 +53,23 @@
 }
 
 /* Exhibition Information */
-#Exhibition\ Information {
+#exhibition-information {
     background-color: #162A3F;
     padding-top: 120px;
     padding-bottom: 100px;
 }
 
-.section-title h5 {
+.exhibition-section-title h5 {
     color: #FB9EBC;
     font-weight: bold;
     font-size: 2rem;
 }
 
-.section-title p {
+.exhibition-section-title p {
     color: #FFFFFF;
 }
 
-.section-title .highlight {
+.exhibition-section-title .highlight {
     color: #FFCEDE;
 }
 

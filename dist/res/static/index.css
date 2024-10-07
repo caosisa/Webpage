@@ -77,7 +77,7 @@
 /* 약도가 컨테이너 안에 비율에 맞게 들어가도록 설정 */
 .map-placeholder {
     width: 100%;  /* 부모 요소의 너비에 맞게 설정 */
-    max-width: 600px; /* 최대 너비를 설정하여 너무 크게 나오지 않도록 제한 */
+    max-width: 1100px; /* 최대 너비를 설정하여 너무 크게 나오지 않도록 제한 */
     margin: 0 auto; /* 가운데 정렬 */
 }
 
@@ -100,6 +100,7 @@
 
 /* Works 제목을 중앙에 고정 */
 .section-title h5 {
+    color: #FB9EBC;
     text-align: center;
     position: relative;
     z-index: 2; /* 슬라이더 위에 있게 하기 위해 z-index 설정 */

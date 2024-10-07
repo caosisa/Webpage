@@ -146,20 +146,26 @@ aio.run(insert_template("footer.html", document.body, -1, enable_back_to_top))
 
 
 # 네비게이션 토글 기능 구현
-def toggle_nav(ev):
-    nav = document['navbar'].select('ul')[0]
-    menu_icon = document['menu-icon']
-    close_icon = document['close-icon']
+from browser import document, window, html
 
-    if 'active' in nav.classList:
-        nav.classList.remove('active')
-        close_icon.classList.add('hidden')
-        menu_icon.classList.remove('hidden')
+def toggle_nav(event):
+    # 메뉴와 아이콘 상태를 토글하는 함수
+    menu_icon = document.getElementById('menu-icon')
+    close_icon = document.getElementById('close-icon')
+    navbar = document.getElementById('navbar').getElementsByTagName('ul')[0]
+
+    # 메뉴가 보이는 상태면 숨기고, 숨겨진 상태면 보이도록 처리
+    if 'active' in navbar.classList:
+        navbar.classList.remove('active')
+        menu_icon.classList.remove('hidden')  # 햄버거 아이콘을 다시 보이게
+        close_icon.classList.add('hidden')   # 닫기 아이콘 숨김
     else:
-        nav.classList.add('active')
-        menu_icon.classList.add('hidden')
-        close_icon.classList.remove('hidden')
+        navbar.classList.add('active')       # 메뉴를 보여줌
+        menu_icon.classList.add('hidden')    # 햄버거 아이콘 숨김
+        close_icon.classList.remove('hidden') # 닫기 아이콘을 보이게
 
-# 햄버거 메뉴 및 닫기 아이콘 클릭 이벤트에 토글 함수 연결
-document['menu-icon'].bind('click', toggle_nav)
-document['close-icon'].bind('click', toggle_nav)
+# 모바일 아이콘이 존재하는지 확인한 후 이벤트 바인딩
+if 'menu-icon' in document and 'close-icon' in document:
+    document['menu-icon'].bind('click', toggle_nav)  # 햄버거 아이콘 클릭 시
+    document['close-icon'].bind('click', toggle_nav)  # 닫기 아이콘 클릭 시
+

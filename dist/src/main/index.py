@@ -62,8 +62,8 @@ def move_slide():
     offset = currentIndex * item_width  # 이동할 너비 계산
     slider_wrapper.style.transform = f"translateX(-{offset}px)"
 
-# 다음 슬라이드로 자동 이동
-def auto_slide():
+# 다음 슬라이드로 자동 이동 (인수 무시 처리)
+def auto_slide(*args):
     global currentIndex
     if currentIndex < total_items - items_per_slide:
         currentIndex += 1
@@ -83,7 +83,8 @@ document["nextBtn"].bind("click", auto_slide)
 document["prevBtn"].bind("click", prev_slide)
 
 # 슬라이드를 자동으로 넘기기 위한 타이머 설정 (예: 3초마다)
-window.set_interval(auto_slide, 3000)  # 3000ms = 3초
+window.setInterval(auto_slide, 3000)  # 3000ms = 3초
+
 
 
 

@@ -99,7 +99,8 @@ def enable_navigation():
 
     scroll_to(window.location.hash)
     if window.location.pathname in ("/", "/index.html"):
-        navigation_menus['front'].classList.add('active')  # set active menu
+        if 'front' in navigation_menus:
+            navigation_menus['front'].classList.add('active')
         for scrll in document.getElementsByClassName('scrollto'):
             scrll.onclick = navbar_click
     else:

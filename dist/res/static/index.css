@@ -195,6 +195,9 @@
     color: white;
     padding: 30px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box h5 {
@@ -223,3 +226,4 @@
         font-size: 1rem;
     }
 }
+

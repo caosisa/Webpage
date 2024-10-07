@@ -62,11 +62,13 @@ def move_slide():
     offset = currentIndex * item_width  # 이동할 너비 계산
     slider_wrapper.style.transform = f"translateX(-{offset}px)"
 
-# 다음 버튼 클릭
-def next_slide(event):
+# 다음 슬라이드로 자동 이동
+def auto_slide():
     global currentIndex
     if currentIndex < total_items - items_per_slide:
         currentIndex += 1
+    else:
+        currentIndex = 0  # 마지막 슬라이드에 도달하면 처음으로 돌아감
     move_slide()
 
 # 이전 버튼 클릭
@@ -77,8 +79,12 @@ def prev_slide(event):
     move_slide()
 
 # 이벤트 리스너 등록
-document["nextBtn"].bind("click", next_slide)
+document["nextBtn"].bind("click", auto_slide)
 document["prevBtn"].bind("click", prev_slide)
+
+# 슬라이드를 자동으로 넘기기 위한 타이머 설정 (예: 3초마다)
+window.set_interval(auto_slide, 3000)  # 3000ms = 3초
+
 
 
 

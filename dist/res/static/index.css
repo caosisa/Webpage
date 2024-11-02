@@ -151,7 +151,7 @@
 .box {
     background-color: #000000;
     color: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -187,13 +187,23 @@
 
 /* 인스타그램 박스 스타일 */
 .instagram-box {
+    display: flex;
+    align-items: center;
     background: #000000;
     color: #FB9EBC;
     text-decoration: none;
-    padding: 30px;
+    text-align: center;
+    padding: 40px;
     font-weight: bold;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    width: 100%;
+}
+.icon {
+    width: 24px; /* 아이콘 크기 */
+    height: 24px;
+    margin-right: 8px; /* 텍스트와 아이콘 간격 */
+    vertical-align: middle;
 }
 
 .instagram-box:hover {

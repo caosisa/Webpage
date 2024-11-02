@@ -4,7 +4,10 @@
 #header {
     transition: all 0.5s;
     z-index: 997;
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #header.header-scrolled, #header.header-inner-pages {

@@ -40,12 +40,15 @@
 <body onload="brython()">
     <!-- Front Page -->
     <section id="front" class="d-flex align-items-center">
-        <img src="/dist/res/image/home_first.svg">
+        <div class="homemain-container">
+            <img src="/dist/res/image/home_first.svg" alt="Front Page Image" class="home-image">
+        </div>
     </section>
+
 
     <!-- Exhibition Information -->
     <section id="exhibition-information" class="contact d-flex align-items-center justify-content-center">
-        <div class="home-container text-center" data-aos="fade-up">
+        <div class="exhibition-container text-center" data-aos="fade-up">
             <div class="exhibition-section-title">
                 <h5>Exhibition Information</h5>
                 <p class="highlight">🗓️ 일시</p>
@@ -99,28 +102,32 @@
     <section id="programs" class="programs">
         <div class="container" data-aos="fade-up">
             <div class="row d-flex align-items-stretch">
+                <!-- 첫 번째 박스: 화환 대신 마음으로 -->
                 <div class="col-md-6 mb-3 d-flex">
-                    <div class="box">
+                    <div class="box box-1">
                         <h5>화환 대신 마음으로</h5>
                         <p>원활한 전시 관람과 환경 보호를 위하여 대형 화환을 받지 않습니다. 마음으로 축하해 주시면 감사하겠습니다.</p>
                     </div>
                 </div>
+                <!-- 두 번째 박스: 선물 보관은 지킴이에게 -->
                 <div class="col-md-6 mb-3 d-flex">
-                    <div class="box">
+                    <div class="box box-2">
                         <h5>선물 보관은 지킴이에게</h5>
                         <p>선물을 직접 전달하기 어려운 경우, 전시장에 상주하고 있는 지킴이 학생에게 대신 전달해 주세요. 작품 근처에 선물 보관 시 전시 관람에 방해가 됩니다.</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 mb-2 d-flex">
-                    <a href="https://www.instagram.com/2024_cnud?igsh=MWI1dmdjdTlmeWJ5Zg==" target="_blank" class="box">
+                <!-- 인스타그램 계정 바로가기 -->
+                <div class="col-md-12 mb-2 d-flex justify-content-center">
+                    <a href="https://www.instagram.com/2024_cnud?igsh=MWI1dmdjdTlmeWJ5Zg==" target="_blank" class="box instagram-box">
                         <h5>전시 인스타그램 계정 바로가기</h5>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
 
 
 </body>

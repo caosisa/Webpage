@@ -124,8 +124,8 @@
 
 /* 슬라이더 아이템 */
 .slider-item {
-    width: 400px; /* 고정된 이미지 너비 */
-    height: 400px; /* 고정된 이미지 높이 */
+    width: 380px; /* 고정된 이미지 너비 */
+    height: 380px; /* 고정된 이미지 높이 */
     flex-shrink: 0; /* 슬라이더 아이템이 줄어들지 않도록 설정 */
     display: flex;
     justify-content: center;

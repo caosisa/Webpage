@@ -6,13 +6,6 @@
     min-height: 100vh;
 }
 
-/* Introduce Section */
-#introduce {
-    min-height: 30vh;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    background-color: #03182E;
-}
 
 /* Main Container */
 .main-container {
@@ -24,7 +17,7 @@
     width: 100%;
     max-width: 1920px;
     height: 384px;
-    background-color: #03182E;
+    background-color: #020D18;
 }
 
 /* Invitation */
@@ -54,7 +47,7 @@
 
 /* Exhibition Information */
 #exhibition-information {
-    background-color: #162A3F;
+    background-color: #020D18;
     padding-top: 120px;
     padding-bottom: 100px;
     min-height: 300px;
@@ -93,7 +86,7 @@
 /* Works Section */
 #Works {
     min-height: 50vh;
-    background-color: #162A3F;
+    background-color: #020D18;
     margin-left: 0;
     padding-bottom: 150px;
 }
@@ -187,7 +180,7 @@
     min-height: 50vh;
     padding-bottom: 200px;
     padding-top: 150px;
-    background-color: #162A3F;
+    background-color: #020D18;
 }
 
 .box {

@@ -2,6 +2,7 @@
 #front {
     background-size: cover;
     background-position: center;
+    background-color: #020D18;
     min-height: 100vh;
 }
 /* 화면을 꽉 채우는 이미지 스타일 */
@@ -54,15 +55,17 @@
     min-height: 50vh;
     background-color: #020D18;
     margin-left: 0;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 
 /* Works 제목을 중앙에 고정 */
-.section-title h5 {
+.work-title h5 {
     color: #FB9EBC;
     text-align: center;
     position: relative;
     z-index: 2; /* 슬라이더 위에 있게 하기 위해 z-index 설정 */
+    font-weight: bold;
+    margin-top:13px;
 }
 
 /* 전체 요소의 박스 크기 조정 */
@@ -102,13 +105,6 @@
 .slider-item img {
     width: 100%; /* 이미지가 부모 요소에 맞게 조정되도록 설정 */
     height: 100%; /* 고정된 크기 유지 */
-}
-
-/* Works 제목을 중앙에 고정 */
-.section-title h5 {
-    text-align: center;
-    position: relative;
-    z-index: 2; /* 슬라이더 위에 있게 하기 위해 z-index 설정 */
 }
 
 /* 슬라이더 컨트롤 */
@@ -197,6 +193,7 @@
     font-weight: bold;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    flex-direction: row;
     width: 100%;
 }
 .icon {

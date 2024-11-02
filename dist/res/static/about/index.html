@@ -38,18 +38,21 @@
 
 </head>
 <body onload="brython()">
-    <!-- 첫 번째 섹션 - Poster -->
-    <section id="About_first" class="d-flex align-items-center">
-        <img src="/dist/res/image/about_first.svg" alt="Poster Image" class="image-poster">
+    <!-- 첫 번째 섹션 -->
+    <section id="About_first" class="d-flex align-items-center" style="height: 100vh; overflow: hidden; margin: 0; padding: 0;">
+        <img src="/dist/res/image/about_first.svg" alt="Poster Image" class="image-poster" style="width: 100%; height: 100%; object-fit: cover;">
     </section>
-    <!-- 첫 번째 섹션 - Poster -->
-    <section id="About_second" class="d-flex align-items-center" style="background-color: #162A3F; background-position: center;">
-        <div class="container center-text">
-            <img src="/dist/res/image/about_second.svg" alt="Poster Image" class="image-poster">
+
+    <!-- 두 번째 섹션 -->
+    <section id="About_second" class="d-flex align-items-center" style="height: 100vh; background-color: #020D18; background-position: center; overflow: hidden; margin: 0; padding: 0;">
+        <div class="container center-text" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <img src="/dist/res/image/about_second.svg" alt="Poster Image" class="image-poster" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
     </section>
+
+
     <!-- 첫 번째 섹션 - Poster -->
-    <section id="Poster" class="d-flex align-items-center" style="background-color: #162A3F; background-position: center;">
+    <section id="Poster" class="d-flex align-items-center" style="background-color: #020D18; background-position: center;">
         <div class="container center-text">
             <h1 class="title">Z Z Z</h1> <!-- 제목 -->
             <h3 class="subtitle">꿈의 실현</h3> <!-- 소제목 -->
@@ -75,7 +78,7 @@
     </section>
 
     <!-- 세 번째 섹션 - Professor -->
-    <section id="Professor" class="d-flex align-items-center" style="background-color: #162A3F; min-height: 100vh;">
+    <section id="Professor" class="d-flex align-items-center" style="background-color: #020D18; min-height: 100vh;">
         <div class="container center-text">
             <h1>Professor</h1>
             <div class="profile-section">
@@ -94,16 +97,81 @@
     </section>
 
     <!-- 네 번째 섹션 - Student -->
-    <section id="Student" class="d-flex align-items-center" style="background-color: #162A3F; min-height: 100vh;">
+    <section id="Student" class="d-flex align-items-center" style="background-color: #020D18; min-height: 100vh;">
         <div class="container center-text">
             <h1>Student</h1>
             <div class="profile-section">
                 <!-- 학생 목록 -->
                 <div class="profile">
-                    <img src="https://via.placeholder.com/120" alt="Student 1" class="student-img">
-                    <h5>김철수</h5>
+                    <img src="/dist/res/image/artist/dongju.svg" alt="Student 1" class="student-img">
+                    <h5>고동주</h5>
+                    <h5>Ko Dong Ju</h5>
                 </div>
-                <!-- 나머지 학생들 추가 -->
+                <div class="profile">
+                    <img src="/dist/res/image/artist/naeun.svg" alt="Student 1" class="student-img">
+                    <h5>김나은</h5>
+                    <h5>Kim Na Eun</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/minjin.svg" alt="Student 1" class="student-img">
+                    <h5>김민진</h5>
+                    <h5>Kim MIn Jin</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/habin.svg" alt="Student 1" class="student-img">
+                    <h5>김하빈</h5>
+                    <h5>Kim Ha Bin</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/chaeyeong.svg" alt="Student 1" class="student-img">
+                    <h5>복채영</h5>
+                    <h5>Bok Chae Yeong</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/chaehee.svg" alt="Student 1" class="student-img">
+                    <h5>유채희</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/daeun.svg" alt="Student 1" class="student-img">
+                    <h5>이다은</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/seohyun.svg" alt="Student 1" class="student-img">
+                    <h5>이서현</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/shinjeong.svg" alt="Student 1" class="student-img">
+                    <h5>이신정</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/hyunju.svg" alt="Student 1" class="student-img">
+                    <h5>이현주</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/youngseo.svg" alt="Student 1" class="student-img">
+                    <h5>장영서</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/bada.svg" alt="Student 1" class="student-img">
+                    <h5>전바다</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/yujin.svg" alt="Student 1" class="student-img">
+                    <h5>조유진</h5>
+                    <h5>고동주</h5>
+                </div>
+                <div class="profile">
+                    <img src="/dist/res/image/artist/hanbyeol.svg" alt="Student 1" class="student-img">
+                    <h5>진한별</h5>
+                    <h5>고동주</h5>
+                </div>
             </div>
         </div>
     </section>

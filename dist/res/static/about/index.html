@@ -39,28 +39,26 @@
 </head>
 <body onload="brython()">
     <!-- 첫 번째 섹션 -->
-    <section id="About_first" style="height: 100vh; background-color: #020D18; overflow: hidden; margin: 0; padding: 0;">
+    <section id="About_first" style="background-color: #000000; padding-bottom: 30px;">
         <div class="homemain-container">
             <img src="/dist/res/image/about_main.svg"  style="width: 100%; height: 100%;">
         </div>
 
     </section>
 
-
-
-    <!-- 첫 번째 섹션 - Poster -->
-    <section id="Poster" class="d-flex align-items-center" style="background-color: #020D18; background-position: center;">
+    <!-- 두 번째 섹션 - Poster -->
+    <section id="Poster" class="d-flex align-items-center" style="background-color: #020D18; background-position: center;padding-top: 70px">
         <div class="container center-text">
             <!-- 포스터 앞에 POSTER 문구 추가 -->
-            <div class="poster-label">POSTER</div>
+            <div class="poster-label">Promotion</div>
             <img src="/dist/res/image/about_poster.svg" alt="Poster Image" class="image-poster">
         </div>
     </section>
 
     <!-- 두 번째 섹션 - Video -->
-    <section id="Video" class="d-flex align-items-center" style="background-color: #162A3F; min-height: 60vh;">
-        <div class="container center-text">
-            <h1>졸업 전시 비디오</h1>
+    <section id="Video" class="d-flex align-items-center" style="background-color: #020D18; padding-top: 60px">
+        <div class="video-container center-text">
+            <p>졸업 전시 비디오</p>
             <div class="video-container">
                 <video class="video" controls>
                     <source src="https://via.placeholder.com/1412x720" type="video/mp4">
@@ -71,27 +69,31 @@
     </section>
 
     <!-- 세 번째 섹션 - Professor -->
-    <section id="Professor" class="d-flex align-items-center" style="background-color: #020D18; min-height: 100vh;">
-        <div class="container center-text">
-            <h1>Professor</h1>
-            <div class="profile-section">
-                <!-- 교수 1 -->
-                <div class="profile">
-                    <img src="https://via.placeholder.com/150" alt="Professor 1" class="professor-img">
-                    <h4>교수1</h4>
-                </div>
-                <!-- 교수 2 -->
-                <div class="profile">
-                    <img src="https://via.placeholder.com/150" alt="Professor 2" class="professor-img">
-                    <h4>교수2</h4>
+    <section id="Professor" class="d-flex align-items-center">
+        <div class="professor-container center-text">
+            <div class="section-title">
+                <h1>Professor</h1>
+                <p>충남대학교 디자인창의학과 시각・제품디자인전공 4학년 담당 교수님들의 2024년도 34기 졸업생들을 위한 축하 메세지입니다.</p>
+            </div>
+
+            <div class="professor-list">
+                <div class="professor-card">
+                    <div class="professor-image" style="background-image: url('/path/to/professor-image.jpg');"></div>
+                    <div class="professor-message">
+                        <h3>Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점</h3>
+                        <p>A. 학생들 각자가 자기 테마에 맞춰 열심히 하는 모습을 보며 저도 많은 것을 보며 배웠습니다...</p>
+                        <h3>Q. 졸업 후 사회로 나갈 학생들에게 해주고 싶은 말</h3>
+                        <p>A. 사회는 학생 때와 전혀 다릅니다... 졸업 후에 AS가 가능하니 늘 학교에 오시길 바랍니다...</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 네 번째 섹션 - Student -->
-    <section id="Student" class="d-flex align-items-center" style="background-color: #020D18; min-height: 100vh;">
-        <div class="container center-text">
+
+       <!-- 네 번째 섹션 - Student -->
+    <section id="Student" class="d-flex align-items-center">
+        <div class="student-container center-text">
             <h1>Student</h1>
             <div class="profile-section">
                 <!-- 학생 목록 -->
@@ -108,7 +110,7 @@
                 <div class="profile">
                     <img src="/dist/res/image/artist/minjin.svg" alt="Student 1" class="student-img">
                     <h5>김민진</h5>
-                    <h5>Kim MIn Jin</h5>
+                    <h5>Kim Min Jin</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/habin.svg" alt="Student 1" class="student-img">
@@ -123,51 +125,52 @@
                 <div class="profile">
                     <img src="/dist/res/image/artist/chaehee.svg" alt="Student 1" class="student-img">
                     <h5>유채희</h5>
-                    <h5>고동주</h5>
+                    <h5>Yoo Chae Hee</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/daeun.svg" alt="Student 1" class="student-img">
                     <h5>이다은</h5>
-                    <h5>고동주</h5>
+                    <h5>Lee Da Eun</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/seohyun.svg" alt="Student 1" class="student-img">
                     <h5>이서현</h5>
-                    <h5>고동주</h5>
+                    <h5>Lee Seo Hyun</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/shinjeong.svg" alt="Student 1" class="student-img">
                     <h5>이신정</h5>
-                    <h5>고동주</h5>
+                    <h5>Lee Shin Jeong</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/hyunju.svg" alt="Student 1" class="student-img">
                     <h5>이현주</h5>
-                    <h5>고동주</h5>
+                    <h5>Lee Hyun Joo</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/youngseo.svg" alt="Student 1" class="student-img">
                     <h5>장영서</h5>
-                    <h5>고동주</h5>
+                    <h5>Jang Young Seo</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/bada.svg" alt="Student 1" class="student-img">
                     <h5>전바다</h5>
-                    <h5>고동주</h5>
+                    <h5>Jeon Ba Da</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/yujin.svg" alt="Student 1" class="student-img">
                     <h5>조유진</h5>
-                    <h5>고동주</h5>
+                    <h5>Jo Yoo Jin</h5>
                 </div>
                 <div class="profile">
                     <img src="/dist/res/image/artist/hanbyeol.svg" alt="Student 1" class="student-img">
                     <h5>진한별</h5>
-                    <h5>고동주</h5>
+                    <h5>Jin Han Byeol</h5>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Bootstrap 및 외부 스크립트 -->
     <script src="/cdn/bootstrap/5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

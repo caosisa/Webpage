@@ -149,7 +149,6 @@
     padding: 40px;
     border-radius: 8px;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 
@@ -202,6 +201,7 @@
     font-weight: bold;
     font-size: 28px;
     padding-top: 10px;
+    padding-left: 0;
 }
 .icon {
     width: 24px; /* 아이콘 크기 */

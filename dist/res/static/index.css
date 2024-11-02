@@ -3,7 +3,6 @@
     background-size: cover;
     background-position: center;
     background-color: #020D18;
-    min-height: 100vh;
 }
 /* 화면을 꽉 채우는 이미지 스타일 */
 .homemain-container img {

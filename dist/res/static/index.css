@@ -1,6 +1,5 @@
 /* Front Section */
 #front {
-    background-image: url('https://via.placeholder.com/1920x1052');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -23,7 +22,6 @@
 .exhibition-section-title p {
     color: #FFFFFF;
 }
-
 .exhibition-section-title .highlight {
     color: #FFCEDE;
 }

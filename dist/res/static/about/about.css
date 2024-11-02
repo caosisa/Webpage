@@ -9,6 +9,7 @@
 }
 
 .video-container video {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -57,135 +58,23 @@
 
 }
 
-/* Professor 섹션 스타일 */
-#Professor {
-    background-color: #020D18;
-    padding: 120px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 798px;
-}
-
-.professor-container {
-    text-align: center;
-    width: 100%;
-    max-width: 1920px;
-    gap: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-title h1 {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 600;
-    font-size: 34px;
-    color: #FB9EBC;
-    margin-bottom: 8px;
-}
-
-.section-title p {
-    font-family: 'Pretendard', sans-serif;
-    font-size: 16px;
-    color: #E3E3E3;
-    max-width: 784px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* Professor Card */
-.professor-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 28px;
-    justify-content: center;
-}
-
-.professor-card {
-    display: flex;
-    width: 1200px;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Professor 이미지 스타일 */
-.professor-image {
-    width: 248px;
-    height: 372px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px 0 0 12px;
-}
-
-/* Professor 메시지 스타일 */
-.professor-message {
-    padding: 52px 64px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
-.professor-message h3 {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #000000;
-    margin: 0;
-}
-
-.professor-message p {
-    font-family: 'Pretendard', sans-serif;
-    font-size: 16px;
-    color: #000000;
-    line-height: 1.5;
-    margin: 0;
-}
-
-
-/* 네 번째 섹션 - Student 스타일 */
-#Student {
-    background-color: #020D18;
-    padding: 120px 0 180px; /* 피그마 padding 적용 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .student-container h1{
     font-size: 34px;
     color: #FB9EBC;
     font-weight: bold;
 }
-
-.student-container {
-    text-align: center;
-    width: 100%;
-    max-width: 1920px; /* 피그마의 너비와 일치 */
-}
-
+/* 교수 및 학생 섹션 스타일 */
 .profile-section {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 60px; /* 피그마 gap */
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
+    margin: 20px;
     text-align: center;
-}
-
-.profile h5 {
-    margin: 5px 0;
-    color: #FFFFFF;
-    font-size: 1rem;
+    color: white;
 }
 
 /* 학생 이미지 크기 */

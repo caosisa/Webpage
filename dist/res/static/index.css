@@ -152,7 +152,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+
 }
 /* 첫 번째 박스 배경 이미지 */
 .box-1 {
@@ -170,13 +170,16 @@
 .box h5 {
     color: #FB9EBC;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 28px;
+    padding-left: 40px;
+    padding-top: 10px;
 }
 
 /* 박스 본문 스타일 */
 .box p {
-    font-size: 1.1rem;
-    margin: 0 20px;
+    font-size: 16px;
+    padding-left: 40px;
+    padding-top: 10px;
 }
 
 /* 인스타그램 박스 스타일 */
@@ -193,6 +196,12 @@
     transition: background-color 0.3s ease;
     flex-direction: row;
     width: 100%;
+}
+.instagram-box h5 {
+    color: #FB9EBC;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: 10px;
 }
 .icon {
     width: 24px; /* 아이콘 크기 */

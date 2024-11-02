@@ -45,7 +45,6 @@
     max-width: 80%;
     margin: 20px auto;
     display: block;
-    border-radius: 8px;
 }
 
 /* 포스터 앞에 문구 */
@@ -69,14 +68,6 @@
     margin: 20px;
     text-align: center;
     color: white;
-}
-
-.profile img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
 }
 
 /* 학생 이미지 크기 */

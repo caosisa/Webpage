@@ -1,13 +1,3 @@
-/* 페이지 상단 중앙의 "WORK" 타이틀 */
-.work-title {
-    text-align: center;
-    color: #FB9EBC; /* 핑크색 */
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
 /* 작품 갤러리 레이아웃 */
 .gallery {
     display: grid;

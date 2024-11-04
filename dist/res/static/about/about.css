@@ -1,4 +1,3 @@
-.about
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 비율 유지 */
@@ -10,7 +9,6 @@
 
 .video-container video {
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -62,19 +60,71 @@
     font-size: 34px;
     color: #FB9EBC;
     font-weight: bold;
+    margin-top: 100px;
 }
 /* 교수 및 학생 섹션 스타일 */
+.professor {
+    justify-content: center;
+}
+
+.button-container {
+    margin: 20px 0;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.professor-button {
+    background-color: #00509E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.professor-button:hover {
+    background-color: #003F7F;
+}
+
+.professor-detail-box {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #00509E;
+    background-color: #ffffff;
+    color: #020D18;
+    min-height: 150px;
+}
+
 .profile-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+}
+.section-title h1 {
+    color: #FB9EBC;
+    font-size: 34px;
+    font-weight: bold;
+}
+.section-title h1 {
+    color: #E3E3E3;
+    font-size: 16px;
 }
 
 .profile {
-    margin: 20px;
+    margin-bottom: 20px;
     text-align: center;
     color: white;
+    width: 18%;
+
+
 }
 
 /* 학생 이미지 크기 */

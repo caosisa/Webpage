@@ -39,7 +39,7 @@
 </head>
 <body onload="brython()">
     <!-- 첫 번째 섹션 -->
-    <section id="About_first" style="background-color: #000000; padding-bottom: 30px;">
+    <section id="About_first" style="background-color: #020D18; padding-bottom: 30px;">
         <div class="homemain-container">
             <img src="/dist/res/image/about_main.svg"  style="width: 100%; height: 100%;">
         </div>
@@ -69,12 +69,41 @@
     </section>
 
     <!-- 세 번째 섹션 - Professor -->
-    <section id="Professor" class="d-flex align-items-center">
+    <section id="Professor" class="d-flex align-items-center" style="background-color: #020D18;">
         <div class="professor-container center-text">
             <div class="section-title">
                 <h1>Professor</h1>
                 <p>충남대학교 디자인창의학과 시각・제품디자인전공 4학년 담당 교수님들의 2024년도 34기 졸업생들을 위한 축하 메세지입니다.</p>
             </div>
+
+            <!-- 버튼 목록 -->
+            <div class="button-container">
+                <!-- 첫 번째 줄 버튼 -->
+                <div class="button-row">
+                    <button class="professor-button" id="professor1">교수님 1</button>
+                    <button class="professor-button" id="professor2">교수님 2</button>
+                </div>
+                <!-- 두 번째 줄 버튼 -->
+                <div class="button-row">
+                    <button class="professor-button" id="professor3">교수님 3</button>
+                    <button class="professor-button" id="professor4">교수님 4</button>
+                    <button class="professor-button" id="professor5">교수님 5</button>
+                </div>
+            </div>
+
+            <!-- 설명이 나오는 큰 박스 -->
+            <div class="professor-detail-box" id="professorDetailBox">
+                <h3 id="professorQuestion"></h3>
+                <p id="professorAnswer"></p>
+            </div>
+        </div>
+
+        <!-- 설명이 나오는 큰 박스 -->
+        <div class="professor-detail-box" id="professorDetailBox">
+            <h3 id="professorQuestion"></h3>
+            <p id="professorAnswer"></p>
+        </div>
+
 
             <div class="professor-list">
                 <div class="professor-card">
@@ -92,7 +121,7 @@
 
 
        <!-- 네 번째 섹션 - Student -->
-    <section id="Student" class="d-flex align-items-center">
+    <section id="Student" class="d-flex align-items-center" style="background-color: #020D18;">
         <div class="student-container center-text">
             <h1>Student</h1>
             <div class="profile-section">

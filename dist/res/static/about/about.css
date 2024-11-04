@@ -78,7 +78,7 @@
 }
 
 .professor-button {
-    background-color: #00509E;
+    background-color: #162A3F; /* 기본 버튼 색상 */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -88,15 +88,8 @@
     transition: background-color 0.3s;
 }
 
-.professor-button:hover {
-    background-color: #003F7F;
-}
-
-/* 교수님 1, 2 버튼을 더 크게 만들기 */
-#professor1, #professor2 {
-    padding: 15px 25px; /* 기본 버튼보다 여유 있는 공간을 부여 */
-    font-size: 18px; /* 폰트 크기를 크게 */
-    font-weight: bold; /* 폰트 굵기를 굵게 */
+.professor-button.selected {
+    background-color: #FFCEDE; /* 선택된 버튼 색상 */
 }
 
 .professor-detail-box {
@@ -106,6 +99,26 @@
     background-color: #ffffff;
     color: #020D18;
     min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.detail-content {
+    display: flex;
+    align-items: center;
+}
+
+#professorImage {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    display: block;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .profile-section {

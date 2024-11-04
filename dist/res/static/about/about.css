@@ -92,6 +92,13 @@
     background-color: #003F7F;
 }
 
+/* 교수님 1, 2 버튼을 더 크게 만들기 */
+#professor1, #professor2 {
+    padding: 15px 25px; /* 기본 버튼보다 여유 있는 공간을 부여 */
+    font-size: 18px; /* 폰트 크기를 크게 */
+    font-weight: bold; /* 폰트 굵기를 굵게 */
+}
+
 .professor-detail-box {
     margin-top: 30px;
     padding: 20px;

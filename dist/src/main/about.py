@@ -1,4 +1,4 @@
-from browser import document
+from browser import document, window
 
 # 교수님 메시지 데이터를 딕셔너리로 저장
 professor_messages = {
@@ -21,6 +21,10 @@ professor_messages = {
     "professor5": {
         "question": "Q. 여러분의 미래를 응원합니다",
         "answer": "A. 졸업을 축하합니다! 여러분의 밝은 미래를 응원합니다. 언제든 도움이나 조언이 필요하면 찾아오세요."
+    },
+    "professor6": {
+        "question": "Q. 여러분의 미래를 응원합니다",
+        "answer": "A. 졸업을 축하합니다! 여러분의 밝은 미래를 응원합니다. 언제든 도움이나 조언이 필요하면 찾아오세요."
     }
 }
 
@@ -33,5 +37,9 @@ def show_message(event):
         document["professorAnswer"].text = message["answer"]
 
 # 각 교수님 버튼에 클릭 이벤트 연결
-for professor_id in professor_messages:
-    document[professor_id].bind("click", show_message)
+def bind_buttons():
+    for professor_id in professor_messages:
+        document[professor_id].bind("click", show_message)
+
+# HTML 문서가 완전히 로드된 후 실행될 수 있도록 설정
+window.onload = bind_buttons

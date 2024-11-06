@@ -1,4 +1,4 @@
-from browser import document
+from browser import document, window
 
 # 교수님 메시지 데이터를 딕셔너리로 저장
 professor_messages = {
@@ -68,4 +68,4 @@ def bind_buttons():
         document[professor_id].bind("click", show_message)
 
 # HTML 로드 후 실행될 수 있도록 설정
-bind_buttons()
+window.onload = bind_buttons

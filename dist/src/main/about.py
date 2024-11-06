@@ -33,15 +33,17 @@ professor_messages = {
         "answer1": "A. 학생들 각자가 자기 테마에 맞춰 열심히 하는 모습을 보며 저도 많은 것을 보며 배웠습니다...",
     }
 }# 버튼 클릭 이벤트 핸들러
+
+
 def show_message(event):
     professor_id = event.target.id
 
-    # 모든 버튼의 선택 스타일 초기화
+    # 모든 버튼의 스타일 초기화
     for button in document.select(".professor-button"):
-        button.class_name = "professor-button"
+        button.style.backgroundColor = "#162A3F"  # 선택이 해제된 버튼의 색상
 
     # 선택된 버튼에 스타일 추가
-    event.target.class_name += " selected"
+    event.target.style.backgroundColor = "#FFCEDE"  # 선택된 버튼의 색상
 
     # 메시지 가져오기
     message = professor_messages.get(professor_id, {})
@@ -62,10 +64,18 @@ def show_message(event):
         # 설명 박스를 보이도록 설정
         document["professorDetailBox"].style.display = "block"
 
+
 # 각 버튼에 클릭 이벤트 핸들러 연결
 def bind_buttons():
+    # 각 버튼에 이벤트 핸들러 연결
     for professor_id in professor_messages:
         document[professor_id].bind("click", show_message)
 
-# HTML 로드 후 실행될 수 있도록 설정
+    # 페이지 로드 시 첫 번째 버튼을 기본 선택 상태로 설정
+    first_button = document["professor1"]
+    first_button.style.backgroundColor = "#FFCEDE"  # 첫 번째 버튼의 기본 색상
+    show_message({"target": first_button})  # 첫 번째 버튼의 메시지를 기본으로 표시
+
+
+# HTML이 완전히 로드된 후 bind_buttons 실행
 window.onload = bind_buttons

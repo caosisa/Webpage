@@ -1,4 +1,4 @@
-from browser import document, window
+from browser import document, html
 
 # 교수님 메시지 데이터를 딕셔너리로 저장
 professor_messages = {
@@ -38,32 +38,36 @@ professor_messages = {
 def show_message(event):
     professor_id = event.target.id
 
-    # 모든 버튼의 색상을 기본값으로 초기화
-    for button in document.getElementsByClassName("professor-button"):
-        button.classList.remove("selected")
+    # 모든 버튼의 선택 스타일 초기화
+    for button in document.select(".professor-button"):
+        button.class_name = "professor-button"
 
-    # 선택된 버튼의 색상을 변경
-    event.target.classList.add("selected")
+    # 선택된 버튼에 스타일 추가
+    event.target.class_name += " selected"
 
     # 메시지 가져오기
     message = professor_messages.get(professor_id, {})
     if message:
-        document["professorQuestion"].text = message["question1"]
-        document["professorAnswer"].text = message["answer1"]
-        document["professorQuestion"].text = message["question2"]
-        document["professorAnswer"].text = message["answer2"]
+        document["professorQuestion1"].text = message["question1"]
+        document["professorAnswer1"].text = message["answer1"]
+        document["professorQuestion2"].text = message["question2"]
+        document["professorAnswer2"].text = message["answer2"]
 
-        # 교수님 1, 2의 경우 이미지를 추가
+        # 이미지 설정
+        image_element = document["professorImage"]
         if "image" in message:
-            document["professorImage"].attrs["src"] = message["image"]
-            document["professorImage"].style.display = "block"
+            image_element.attrs["src"] = message["image"]
+            image_element.style.display = "block"
         else:
-            document["professorImage"].style.display = "none"
+            image_element.style.display = "none"
 
-# 각 교수님 버튼에 클릭 이벤트 연결
+        # 설명 박스를 보이도록 설정
+        document["professorDetailBox"].style.display = "block"
+
+# 각 버튼에 클릭 이벤트 핸들러 연결
 def bind_buttons():
     for professor_id in professor_messages:
         document[professor_id].bind("click", show_message)
 
-# HTML 문서가 완전히 로드된 후 실행될 수 있도록 설정
-window.onload = bind_buttons
+# HTML 로드 후 실행될 수 있도록 설정
+bind_buttons()

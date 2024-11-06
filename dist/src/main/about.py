@@ -1,4 +1,4 @@
-from browser import document, html
+from browser import document
 
 # 교수님 메시지 데이터를 딕셔너리로 저장
 professor_messages = {
@@ -32,9 +32,7 @@ professor_messages = {
         "question1": "Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점",
         "answer1": "A. 학생들 각자가 자기 테마에 맞춰 열심히 하는 모습을 보며 저도 많은 것을 보며 배웠습니다...",
     }
-}
-
-# 버튼 클릭 이벤트 핸들러
+}# 버튼 클릭 이벤트 핸들러
 def show_message(event):
     professor_id = event.target.id
 
@@ -48,10 +46,10 @@ def show_message(event):
     # 메시지 가져오기
     message = professor_messages.get(professor_id, {})
     if message:
-        document["professorQuestion1"].text = message["question1"]
-        document["professorAnswer1"].text = message["answer1"]
-        document["professorQuestion2"].text = message["question2"]
-        document["professorAnswer2"].text = message["answer2"]
+        document["professorQuestion1"].text = message.get("question1", "")
+        document["professorAnswer1"].text = message.get("answer1", "")
+        document["professorQuestion2"].text = message.get("question2", "")
+        document["professorAnswer2"].text = message.get("answer2", "")
 
         # 이미지 설정
         image_element = document["professorImage"]

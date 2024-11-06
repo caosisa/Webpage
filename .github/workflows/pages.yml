@@ -31,7 +31,6 @@ jobs:
       - name: Set Source Directory
         run: |
           mv ./dist/res/static ./build
-          mv ./dist/src ./build/src
           mv ./dist ./build/dist
           mv ./cdn ./build/cdn
           mkdir ./_site

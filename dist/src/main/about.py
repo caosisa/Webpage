@@ -35,15 +35,16 @@ professor_messages = {
 }
 # 버튼 클릭 이벤트 핸들러
 def show_message(event):
-    professor_id = event.target.id if isinstance(event, dict) else event  # 이벤트 객체가 아닌 ID 전달 시 대비
+    professor_id = event.target.id if isinstance(event, dict) else event
 
     # 모든 버튼의 스타일 초기화
     for button in document.select(".professor-button"):
         button.style.backgroundColor = "#162A3F"  # 선택이 해제된 버튼의 색상
 
     # 선택된 버튼의 스타일 변경
-    selected_button = document[professor_id]
-    selected_button.style.backgroundColor = "#FFCEDE"  # 선택된 버튼의 색상
+    selected_button = document.getElementById(professor_id)  # 단일 요소로 가져옴
+    if selected_button is not None:
+        selected_button.style.backgroundColor = "#FFCEDE"  # 선택된 버튼의 색상
 
     # 메시지 가져오기
     message = professor_messages.get(professor_id, {})
@@ -78,3 +79,4 @@ def bind_buttons():
 
 window.show_message = show_message
 bind_buttons()
+

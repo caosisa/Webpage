@@ -76,13 +76,18 @@ def bind_buttons():
         button = document.getElementById(professor_id)
         if button:
             button.bind("click", show_message)
-            print(f"Button {professor_id} bound")  # 바인딩된 버튼 ID 출력
+            print(f"Button {professor_id} bound")
+        else:
+            print(f"Button {professor_id} not found")  # 버튼을 찾을 수 없는 경우
 
     # 첫 번째 버튼을 기본 선택 상태로 설정
     first_button_id = "professor1"
-    document[first_button_id].style.backgroundColor = "#FFCEDE"
-    document[first_button_id].style.color = "#162A3F"
-    show_message(first_button_id)
+    if document.getElementById(first_button_id) is not None:
+        document[first_button_id].style.backgroundColor = "#FFCEDE"
+        document[first_button_id].style.color = "#162A3F"
+        show_message(first_button_id)
+    else:
+        print(f"First button {first_button_id} not found")
 
 window.addEventListener("load", bind_buttons)
 

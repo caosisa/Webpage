@@ -28,9 +28,6 @@
     font-weight: bold;
 }
 
-.work-title {
-    font-size: 16px;
-}
 
 /* 모바일에서 2개의 열 */
 @media (max-width: 768px) {

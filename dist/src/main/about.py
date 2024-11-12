@@ -35,6 +35,7 @@ professor_messages = {
 }
 # 버튼 클릭 이벤트 핸들러
 def show_message(event):
+    print("show_message called")  # 디버깅 메시지 추가
     professor_id = event.target.id if isinstance(event, dict) else event
 
     # 모든 버튼의 스타일 초기화
@@ -70,17 +71,20 @@ def show_message(event):
 
 # 각 버튼에 클릭 이벤트 핸들러 연결
 def bind_buttons():
-    # 각 버튼에 이벤트 핸들러 연결
+    print("bind_buttons called")  # 디버깅 메시지 추가
     for professor_id in professor_messages:
-        document[professor_id].bind("click", show_message)
+        button = document.getElementById(professor_id)
+        if button:
+            button.bind("click", show_message)
+            print(f"Button {professor_id} bound")  # 바인딩된 버튼 ID 출력
 
-    # 페이지 로드 시 첫 번째 버튼을 기본 선택 상태로 설정
+    # 첫 번째 버튼을 기본 선택 상태로 설정
     first_button_id = "professor1"
-    document[first_button_id].style.backgroundColor = "#FFCEDE"  # 첫 번째 버튼의 기본 색상
+    document[first_button_id].style.backgroundColor = "#FFCEDE"
     document[first_button_id].style.color = "#162A3F"
-    show_message(first_button_id)  # 첫 번째 교수님의 메시지를 기본으로 표시
-
-window.show_message = show_message
+    show_message(first_button_id)
 
 window.addEventListener("load", bind_buttons)
+
+window.show_message = show_message
 

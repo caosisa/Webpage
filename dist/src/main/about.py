@@ -7,14 +7,14 @@ professor_messages = {
         "answer1": "A. 학생들 각자가 자기 테마에 맞춰 열심히 하는 모습을 보며 저도 많은 것을 보며 배웠습니다. 휴일이나, 저녁 밤 늦게까지 과실에 불이 켜져 있고 열심히 고뇌하는 모습에서 장래에 좋은 디자이너들이 될 것이라고 확신하였습니다.",
         "question2": "Q. 졸업 후 사회로 나갈 학생들에게 해주고 싶은 말",
         "answer2": "A. 사회는 학생 때와 전혀 다릅니다. 그리고 졸업과 동시에 여러분들은 사회의 일원으로서 무언가를 사회에 기여해야 합니다. 그러기 위해서는 남은 기간에 열심히 자신의 부족한 점을 채워나가야 합니다. 디자인이 무엇인가에 대하여 다시 한 번 곱씹어보고 늘! 기본에 충실하기를 바랍니다. 특히 아이디어를 잘 내는 디자이너로 성장하는 것이 중요합니다. 졸업 후에 AS가 가능하니 늘 학교에 오시길 바랍니다. 후배들을 위해서 가끔 놀러오세요. 제가 학식은 늘 사주겠습니다...oh,,!",
-        "image": "/dist/res/images/professor1.svg"
+        "image": "/dist/res/image/professor1.svg"
     },
     "professor2": {
         "question1": "Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점",
         "answer1": "A. 포기하지 않고 끝까지 하려는 모습이 인상깊었습니다.",
         "question2": "Q. 졸업 후 사회로 나갈 학생들에게 해주고 싶은 말",
         "answer2": "A. 졸업전시 끝난 후 취업을 위한 개인별 노력을 당부하며 관련 프로그램도 제공하도록 교수로서 노력하겠습니다.",
-        "image": "/dist/res/images/professor2.svg"
+        "image": "/dist/res/image/professor2.svg"
     },
     "professor3": {
         "question1": "Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점",
@@ -40,11 +40,13 @@ def show_message(event):
     # 모든 버튼의 스타일 초기화
     for button in document.select(".professor-button"):
         button.style.backgroundColor = "#162A3F"  # 선택이 해제된 버튼의 색상
+        button.style.color = "#FFFFFF"
 
     # 선택된 버튼의 스타일 변경
     selected_button = document.getElementById(professor_id)  # 단일 요소로 가져옴
     if selected_button is not None:
         selected_button.style.backgroundColor = "#FFCEDE"  # 선택된 버튼의 색상
+        selected_button.style.color = "#162A3F"
 
     # 메시지 가져오기
     message = professor_messages.get(professor_id, {})
@@ -75,6 +77,7 @@ def bind_buttons():
     # 페이지 로드 시 첫 번째 버튼을 기본 선택 상태로 설정
     first_button_id = "professor1"
     document[first_button_id].style.backgroundColor = "#FFCEDE"  # 첫 번째 버튼의 기본 색상
+    document[first_button_id].style.color = "#162A3F"
     show_message(first_button_id)  # 첫 번째 교수님의 메시지를 기본으로 표시
 
 window.show_message = show_message

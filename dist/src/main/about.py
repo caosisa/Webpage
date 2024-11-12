@@ -82,5 +82,5 @@ def bind_buttons():
 
 window.show_message = show_message
 
-document.bind("DOMContentLoaded", bind_buttons)
+window.addEventListener("load", bind_buttons)
 

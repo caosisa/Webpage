@@ -81,5 +81,6 @@ def bind_buttons():
     show_message(first_button_id)  # 첫 번째 교수님의 메시지를 기본으로 표시
 
 window.show_message = show_message
-bind_buttons()
+
+document.bind("DOMContentLoaded", bind_buttons)
 

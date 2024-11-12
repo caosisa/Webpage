@@ -92,15 +92,13 @@
 }
 
 .professor-detail-box {
-    margin-top: 30px;
-    padding: 20px;
-    border: 2px solid #00509E;
     background-color: #ffffff;
     color: #020D18;
     min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 15px;
 }
 
 .detail-content {

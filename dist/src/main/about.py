@@ -1,5 +1,5 @@
 from browser import document, window
-
+print("Brython is running")
 # 교수님 메시지 데이터를 딕셔너리로 저장
 professor_messages = {
     "professor1": {

@@ -1,5 +1,4 @@
 from browser import document, window
-print("Brython is running")
 # 교수님 메시지 데이터를 딕셔너리로 저장
 professor_messages = {
     "professor1": {
@@ -33,6 +32,7 @@ professor_messages = {
         "answer1": "A. 학생들 각자가 자기 테마에 맞춰 열심히 하는 모습을 보며 저도 많은 것을 보며 배웠습니다...",
     }
 }
+print("Brython is running")
 # 버튼 클릭 이벤트 핸들러
 def show_message(event):
     print("show_message called")  # 디버깅 메시지 추가

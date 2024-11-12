@@ -1,3 +1,21 @@
+.vector {
+            position: absolute;
+            width: 1196px;
+            height: 0px;
+            left: 362px;
+            top: 311px;
+            border: 1px solid rgba(255, 206, 222, 0.45);
+        }
+.sort-button {
+    position: absolute;
+    top: 320px;
+    left: 362px;
+    background-color: rgba(255, 206, 222, 0.75);
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
 /* 작품 갤러리 레이아웃 */
 .gallery {
     display: grid;
@@ -21,6 +39,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px; /* 이미지와 텍스트 사이 여백 */
+    color:#FFFFFF;
 }
 
 .student-name {

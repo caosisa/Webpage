@@ -77,5 +77,4 @@ def bind_buttons():
     show_message(first_button_id)  # 첫 번째 교수님의 메시지를 기본으로 표시
 
 window.show_message = show_message
-# HTML이 완전히 로드된 후 bind_buttons 실행
-window.onload = bind_buttons
+bind_buttons()

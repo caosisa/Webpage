@@ -1,3 +1,6 @@
+.body {
+    background-color: #020D18;
+}
 /* 첫 번째 섹션: 작품 제목, 설명, 이미지, Designer 문구 */
 .artwork-section {
     display: flex;

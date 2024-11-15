@@ -8872,7 +8872,7 @@
             gl.isXNumeric = true;
           }
         } // no series to pull labels from, put a 0-10 series
-        // possibly, user collapsed all series. Hence we can't work with above calc
+        // possibly, user collapsed all series. Hence we can't work_face with above calc
 
 
         if (labelArr.length === 0) {
@@ -14564,7 +14564,7 @@
         }];
 
         if (!this.w.globals.allSeriesHasEqualX) {
-          // if it is a multi series, and all series have variable x values, export CSV won't work
+          // if it is a multi series, and all series have variable x values, export CSV won't work_face
           menuItems.splice(2, 1);
         }
 
@@ -17902,7 +17902,7 @@
               elGrid: opt.elGrid,
               hoverArea: opt.hoverArea,
               ttItems: ch.w.globals.tooltip.ttItems
-            }; // all the charts should have the same minX and maxX (same xaxis) for multiple tooltips to work correctly
+            }; // all the charts should have the same minX and maxX (same xaxis) for multiple tooltips to work_face correctly
 
             if (ch.w.globals.minX === _this3.w.globals.minX && ch.w.globals.maxX === _this3.w.globals.maxX) {
               ch.w.globals.tooltip.seriesHoverByContext({
@@ -26950,7 +26950,7 @@
 
       if (element instanceof SVG.Doc) {
         element.namespace().defs();
-      } // pull svgjs data from the dom (getAttributeNS doesn't work in html5)
+      } // pull svgjs data from the dom (getAttributeNS doesn't work_face in html5)
 
 
       element.setData(JSON.parse(node.getAttribute('svgjs:data')) || {});
@@ -28997,7 +28997,7 @@
         if (element) {
           // ensure the presence of a dom element
           element = typeof element === 'string' ? document.getElementById(element) : element; // If the target is an svg element, use that element as the main wrapper.
-          // This allows svg.js to work with svg documents as well.
+          // This allows svg.js to work_face with svg documents as well.
 
           if (element.nodeName == 'svg') {
             this.constructor.call(this, element);

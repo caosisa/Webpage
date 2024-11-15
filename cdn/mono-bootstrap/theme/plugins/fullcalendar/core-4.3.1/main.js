@@ -3946,11 +3946,11 @@ Docs & License: https://fullcalendar.io/
         renderEventDragSegs(state: EventSegUiInteractionState) {
           if (state) {
             let { isEvent, segs, sourceSeg } = state
-      
+
             if (this.eventRenderer) {
               this.eventRenderer.hideByHash(state.affectedInstances)
             }
-      
+
             // if the user is dragging something that is considered an event with real event data,
             // and this component likes to do drag mirrors OR the component where the seg came from
             // likes to do drag mirrors, then render a drag mirror.
@@ -3959,7 +3959,7 @@ Docs & License: https://fullcalendar.io/
                 this.mirrorRenderer.renderSegs(segs, { isDragging: true, sourceSeg })
               }
             }
-      
+
             // if it would be impossible to render a drag mirror OR this component likes to render
             // highlights, then render a highlight.
             if (!isEvent || this.doesDragHighlight) {
@@ -4406,7 +4406,7 @@ Docs & License: https://fullcalendar.io/
         var endMarker = framingRange.end;
         var instanceStarts = [];
         while (dayMarker < endMarker) {
-            var instanceStart 
+            var instanceStart
             // if everyday, or this particular day-of-week
             = void 0;
             // if everyday, or this particular day-of-week
@@ -8009,7 +8009,7 @@ Docs & License: https://fullcalendar.io/
                 this.detachSegs(type, segs);
             }
         };
-        // Renders and assigns an `el` property for each fill segment. Generic enough to work with different types.
+        // Renders and assigns an `el` property for each fill segment. Generic enough to work_face with different types.
         // Only returns segments that successfully rendered.
         FillRenderer.prototype.renderSegEls = function (type, segs) {
             var _this = this;
@@ -8039,7 +8039,7 @@ Docs & License: https://fullcalendar.io/
             }
             return segs;
         };
-        // Builds the HTML needed for one fill segment. Generic enough to work with different types.
+        // Builds the HTML needed for one fill segment. Generic enough to work_face with different types.
         FillRenderer.prototype.renderSegHtml = function (type, seg) {
             var css = null;
             var classNames = [];
@@ -8323,7 +8323,7 @@ Docs & License: https://fullcalendar.io/
         // If the date lies between cells (because of hiddenDays), returns a floating-point value between offsets.
         // If before the first offset, returns a negative number.
         // If after the last offset, returns an offset past the last cell offset.
-        // Only works for *start* dates of cells. Will not work for exclusive end dates for cells.
+        // Only works for *start* dates of cells. Will not work_face for exclusive end dates for cells.
         DaySeries.prototype.getDateDayIndex = function (date) {
             var indices = this.indices;
             var dayOffset = Math.floor(diffDays(this.dates[0], date));

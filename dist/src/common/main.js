@@ -7,7 +7,7 @@ const currentYear = new Date().getFullYear();
 async function insertTemplate(templatePath, parent, index = -1, oncomplete = () => {}) {
     const basePath = window.location.pathname;
     let result;
-    if (basePath.startsWith("/Webpage/about") || basePath.startsWith("/Webpage/work")) {
+    if (basePath.startsWith("/Webpage/about") || basePath.startsWith("/Webpage/work_face")) {
         result = await fetch("/dist/res/templates/" + templatePath);
     } else {
         result = await fetch("/dist/res/templates/" + templatePath);

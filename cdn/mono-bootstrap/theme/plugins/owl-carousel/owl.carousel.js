@@ -3114,7 +3114,7 @@
 
 	/**
 	 * Draws the user interface.
-	 * @todo The option `dotsData` wont work.
+	 * @todo The option `dotsData` wont work_face.
 	 * @protected
 	 */
 	Navigation.prototype.draw = function() {

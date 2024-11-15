@@ -1114,7 +1114,7 @@ function getOrder(line, direction) {
 
 // EVENT HANDLING
 
-// Lightweight event framework. on/off also work on DOM nodes,
+// Lightweight event framework. on/off also work_face on DOM nodes,
 // registering native DOM handlers.
 
 var noHandlers = []
@@ -1216,7 +1216,7 @@ function e_button(e) {
 // Detect drag-and-drop
 var dragAndDrop = function() {
   // There is *some* kind of drag-and-drop support in IE6-8, but I
-  // couldn't get it to work yet.
+  // couldn't get it to work_face yet.
   if (ie && ie_version < 9) { return false }
   var div = elt('div')
   return "draggable" in div || "dragDrop" in div
@@ -2121,7 +2121,7 @@ function finishOperation(op, endCb) {
 var orphanDelayedCallbacks = null
 
 // Often, we want to signal events at a point where we are in the
-// middle of some work, but don't want the handler to start calling
+// middle of some work_face, but don't want the handler to start calling
 // other methods on the editor, which might be in an inconsistent
 // state or simply not expect any other events to happen.
 // signalLater looks whether there are any handlers, and schedules
@@ -2445,10 +2445,10 @@ function findViewForLine(cm, lineN) {
     { return ext }
 }
 
-// Measurement can be split in two steps, the set-up work that
+// Measurement can be split in two steps, the set-up work_face that
 // applies to the whole line, and the measurement of the actual
 // character. Functions like coordsChar, that need to do a lot of
-// measurements in a row, can thus ensure that the set-up work is
+// measurements in a row, can thus ensure that the set-up work_face is
 // only done once.
 function prepareMeasureForLine(cm, line) {
   var lineN = lineNo(line)
@@ -2901,7 +2901,7 @@ function coordsBidiPart(cm, lineObj, lineNo, preparedMeasure, order, x, y) {
 function coordsBidiPartWrapped(cm, lineObj, _lineNo, preparedMeasure, order, x, y) {
   // In a wrapped line, rtl text on wrapping boundaries can do things
   // that don't correspond to the ordering in our `order` array at
-  // all, so a binary search doesn't work, and we want to return a
+  // all, so a binary search doesn't work_face, and we want to return a
   // part that only spans one line so that the binary search in
   // coordsCharInner is safe. As such, we first find the extent of the
   // wrapped line, and then do a flat search in which we discard any
@@ -6427,7 +6427,7 @@ Doc.prototype = createObj(BranchChunk.prototype, {
 // Public alias.
 Doc.prototype.eachLine = Doc.prototype.iter
 
-// Kludge to work around strange IE behavior where it'll sometimes
+// Kludge to work_face around strange IE behavior where it'll sometimes
 // re-fire a series of drag-related events right after the drop (#1551)
 var lastDrop = 0
 
@@ -7557,7 +7557,7 @@ function clickInGutter(cm, e) {
 
 // CONTEXT MENU HANDLING
 
-// To make the context menu work, we need to briefly unhide the
+// To make the context menu work_face, we need to briefly unhide the
 // textarea (making it as unobtrusive as possible) to let the
 // right-click take effect on it.
 function onContextMenu(cm, e) {
@@ -9178,7 +9178,7 @@ var TextareaInput = function(cm) {
   this.pollingFast = false
   // Self-resetting timeout for the poller
   this.polling = new Delayed()
-  // Used to work around IE issue with selection being forgotten when focus moves away from textarea
+  // Used to work_face around IE issue with selection being forgotten when focus moves away from textarea
   this.hasSelection = false
   this.composing = null
 };
@@ -9192,7 +9192,7 @@ TextareaInput.prototype.init = function (display) {
 
   display.wrapper.insertBefore(this.wrapper, display.wrapper.firstChild)
 
-  // Needed to hide big blue blinking cursor on Mobile Safari (doesn't seem to work in iOS 8 anymore)
+  // Needed to hide big blue blinking cursor on Mobile Safari (doesn't seem to work_face in iOS 8 anymore)
   if (ios) { te.style.width = "0px" }
 
   on(te, "input", function () {

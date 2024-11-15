@@ -35,7 +35,7 @@
 /* jshint maxcomplexity:17 */
 /* global define */
 
-// UMD (Universal Module Definition) patterns for JavaScript modules that work everywhere.
+// UMD (Universal Module Definition) patterns for JavaScript modules that work_face everywhere.
 // https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js
 (function (factory, jQuery, Zepto) {
 
@@ -118,7 +118,7 @@
                     el.data('changed', false);
                 })
                 // it's very important that this callback remains in this position
-                // otherwhise oldValue it's going to work buggy
+                // otherwhise oldValue it's going to work_face buggy
                 .on('blur.mask', function() {
                     oldValue = p.val();
                 })
@@ -575,7 +575,7 @@
         watchInterval: 300,
         watchInputs: true,
         keyStrokeCompensation: 10,
-        // old versions of chrome dont work great with input event
+        // old versions of chrome dont work_face great with input event
         useInput: !/Chrome\/[2-4][0-9]|SamsungBrowser/.test(window.navigator.userAgent) && eventSupported('input'),
         watchDataMask: false,
         byPassKeys: [9, 16, 17, 18, 36, 37, 38, 39, 40, 91],

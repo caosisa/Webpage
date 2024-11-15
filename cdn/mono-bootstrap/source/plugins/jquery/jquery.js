@@ -852,9 +852,9 @@ function Sizzle( selector, context, results, seed ) {
 			newSelector = nodeType !== 1 && selector;
 
 			// qSA works strangely on Element-rooted queries
-			// We can work around this by specifying an extra ID on the root
+			// We can work_face around this by specifying an extra ID on the root
 			// and working up from there (Thanks to Andrew Dupont for the technique)
-			// IE 8 doesn't work on object elements
+			// IE 8 doesn't work_face on object elements
 			if ( nodeType === 1 && context.nodeName.toLowerCase() !== "object" ) {
 				groups = tokenize( selector );
 
@@ -1936,7 +1936,7 @@ Expr = Sizzle.selectors = {
 
 		"selected": function( elem ) {
 			// Accessing this property makes selected-by-default
-			// options in Safari work properly
+			// options in Safari work_face properly
 			if ( elem.parentNode ) {
 				elem.parentNode.selectedIndex;
 			}
@@ -3521,7 +3521,7 @@ jQuery.ready.promise = function( obj ) {
 			// Use the handy event callback
 			document.addEventListener( "DOMContentLoaded", completed, false );
 
-			// A fallback to window.onload, that will always work
+			// A fallback to window.onload, that will always work_face
 			window.addEventListener( "load", completed, false );
 
 		// If IE event model is used
@@ -3529,7 +3529,7 @@ jQuery.ready.promise = function( obj ) {
 			// Ensure firing before onload, maybe late but safe also for iframes
 			document.attachEvent( "onreadystatechange", completed );
 
-			// A fallback to window.onload, that will always work
+			// A fallback to window.onload, that will always work_face
 			window.attachEvent( "onload", completed );
 
 			// If IE and not a frame
@@ -3727,7 +3727,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ) {
 		// the code to shortcut on the same path as a DOM node with no cache
 		id = isNode ? elem[ internalKey ] : elem[ internalKey ] && internalKey;
 
-	// Avoid doing any more work than we need to when trying to get data on an
+	// Avoid doing any more work_face than we need to when trying to get data on an
 	// object that has no data at all
 	if ( (!id || !cache[id] || (!pvt && !cache[id].data)) && data === undefined && typeof name === "string" ) {
 		return;
@@ -8797,7 +8797,7 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 
 		if ( current ) {
 
-			// There's only work to do if current dataType is non-auto
+			// There's only work_face to do if current dataType is non-auto
 			if ( current === "*" ) {
 
 				current = prev;
@@ -10301,7 +10301,7 @@ jQuery.fn.andSelf = jQuery.fn.addBack;
 // way to register. Lowercase jquery is used because AMD module names are
 // derived from file names, and jQuery is normally delivered in a lowercase
 // file name. Do this after creating the global so that if an AMD module wants
-// to call noConflict to hide this version of jQuery, it will work.
+// to call noConflict to hide this version of jQuery, it will work_face.
 
 // Note that for maximum portability, libraries that are not jQuery should
 // declare themselves as anonymous modules, and avoid setting a global if an
@@ -11202,9 +11202,9 @@ function Sizzle( selector, context, results, seed ) {
 			newSelector = nodeType !== 1 && selector;
 
 			// qSA works strangely on Element-rooted queries
-			// We can work around this by specifying an extra ID on the root
+			// We can work_face around this by specifying an extra ID on the root
 			// and working up from there (Thanks to Andrew Dupont for the technique)
-			// IE 8 doesn't work on object elements
+			// IE 8 doesn't work_face on object elements
 			if ( nodeType === 1 && context.nodeName.toLowerCase() !== "object" ) {
 				groups = tokenize( selector );
 
@@ -12286,7 +12286,7 @@ Expr = Sizzle.selectors = {
 
 		"selected": function( elem ) {
 			// Accessing this property makes selected-by-default
-			// options in Safari work properly
+			// options in Safari work_face properly
 			if ( elem.parentNode ) {
 				elem.parentNode.selectedIndex;
 			}
@@ -13871,7 +13871,7 @@ jQuery.ready.promise = function( obj ) {
 			// Use the handy event callback
 			document.addEventListener( "DOMContentLoaded", completed, false );
 
-			// A fallback to window.onload, that will always work
+			// A fallback to window.onload, that will always work_face
 			window.addEventListener( "load", completed, false );
 
 		// If IE event model is used
@@ -13879,7 +13879,7 @@ jQuery.ready.promise = function( obj ) {
 			// Ensure firing before onload, maybe late but safe also for iframes
 			document.attachEvent( "onreadystatechange", completed );
 
-			// A fallback to window.onload, that will always work
+			// A fallback to window.onload, that will always work_face
 			window.attachEvent( "onload", completed );
 
 			// If IE and not a frame
@@ -14077,7 +14077,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ) {
 		// the code to shortcut on the same path as a DOM node with no cache
 		id = isNode ? elem[ internalKey ] : elem[ internalKey ] && internalKey;
 
-	// Avoid doing any more work than we need to when trying to get data on an
+	// Avoid doing any more work_face than we need to when trying to get data on an
 	// object that has no data at all
 	if ( (!id || !cache[id] || (!pvt && !cache[id].data)) && data === undefined && typeof name === "string" ) {
 		return;
@@ -19147,7 +19147,7 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 
 		if ( current ) {
 
-			// There's only work to do if current dataType is non-auto
+			// There's only work_face to do if current dataType is non-auto
 			if ( current === "*" ) {
 
 				current = prev;
@@ -20651,7 +20651,7 @@ jQuery.fn.andSelf = jQuery.fn.addBack;
 // way to register. Lowercase jquery is used because AMD module names are
 // derived from file names, and jQuery is normally delivered in a lowercase
 // file name. Do this after creating the global so that if an AMD module wants
-// to call noConflict to hide this version of jQuery, it will work.
+// to call noConflict to hide this version of jQuery, it will work_face.
 
 // Note that for maximum portability, libraries that are not jQuery should
 // declare themselves as anonymous modules, and avoid setting a global if an

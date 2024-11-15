@@ -6,14 +6,14 @@
     color: white; /* 모든 텍스트를 흰색으로 설정 */
 }
 
-article .d-flex {
+.d-flex {
         flex-wrap: wrap;
 }
-#article .left-content {
+.left-content {
         flex: 1;
         min-width: 200px;
 }
-#article .right-content {
+.right-content {
         flex: 2;
         min-width: 300px;
 }

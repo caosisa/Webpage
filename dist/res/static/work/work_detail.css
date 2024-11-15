@@ -10,8 +10,8 @@
         flex-wrap: wrap;
 }
 .left-content {
-        flex: 1;
-        min-width: 200px;
+    margin-right: 200px;
+    margin-left: 200px;
 }
 .right-content {
         flex: 2;

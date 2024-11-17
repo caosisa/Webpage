@@ -10,12 +10,14 @@
         flex-wrap: wrap;
 }
 .left-content {
-    margin-right: 200px;
-    margin-left: 200px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 20px;
 }
 .right-content {
-        flex: 2;
-        min-width: 300px;
+    flex: 2;
+    min-width: 300px;
+    margin-top: 15px;
 }
 .work-detail {
         margin-top: 10px;
@@ -26,9 +28,11 @@
     margin-right: 10px;
     font-weight: bold;
 }
-
+.description-title {
+    font-size: 20px;
+}
 .description {
-    font-size: 1.2rem;
+    font-size: 16px;
     margin-left: 15px; /* 제목과 설명 사이 간격 */
     position: relative;
     top: 5px; /* 설명을 제목보다 약간 아래로 이동 */

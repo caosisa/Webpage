@@ -5,7 +5,12 @@
     align-items: flex-start;
     color: white; /* 모든 텍스트를 흰색으로 설정 */
 }
-
+.artist_work {
+   width: 100%;
+}
+.custom-workimage {
+    width: 100%;
+}
 .d-flex {
         flex-wrap: wrap;
 }

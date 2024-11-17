@@ -23,6 +23,7 @@
     flex: 2;
     min-width: 300px;
     margin-top: 15px;
+    margin-right: 20px;
 }
 .work-detail {
         margin-top: 10px;
@@ -33,7 +34,7 @@
     margin-right: 10px;
     font-weight: bold;
 }
-.description-title {
+.description_title {
     font-size: 20px;
 }
 .description {

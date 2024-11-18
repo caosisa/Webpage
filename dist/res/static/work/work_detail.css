@@ -34,9 +34,7 @@
     margin-right: 10px;
     font-weight: bold;
 }
-.description_title {
-    font-size: 20px;
-}
+
 .description {
     font-size: 16px;
     margin-left: 15px; /* 제목과 설명 사이 간격 */

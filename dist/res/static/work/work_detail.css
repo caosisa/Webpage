@@ -100,6 +100,9 @@
 .interview-container {
     background-color: #020D18;
 }
+.interview-question {
+    color: #162A3F;
+}
 
 /* 세 번째 섹션: 빈 공간 */
 .footer-section .spacer {

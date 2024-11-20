@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let cursorLargeElement = document.createElement('div')
     cursorLargeElement.className = 'cursor--large'
     cursorElement.appendChild(cursorLargeElement)
-    
+
     let cursorTextElement = document.createElement('div')
     cursorTextElement.className = 'cursor--text'
     let circleTextElement = document.createElement('div')

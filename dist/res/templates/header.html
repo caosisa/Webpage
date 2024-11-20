@@ -132,8 +132,24 @@
 
     </div>
 </header>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+        const navbar = document.getElementById("navbar");
 
-<script type="text/python" src="/Webpage/dist/src/common/main.py"></script>
+        menuIcon.addEventListener("click", () => {
+            navbar.classList.add("active");
+            menuIcon.style.display = "none";
+            closeIcon.style.display = "block";
+        });
 
+        closeIcon.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            menuIcon.style.display = "block";
+            closeIcon.style.display = "none";
+        });
+    });
+</script>
 </body>
 </html>

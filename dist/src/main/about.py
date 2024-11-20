@@ -6,14 +6,14 @@ professor_messages = {
         "answer1": "A. 학생들 각자가 자기 테마에 맞춰 열심히 하는 모습을 보며 저도 많은 것을 보며 배웠습니다. 휴일이나, 저녁 밤 늦게까지 과실에 불이 켜져 있고 열심히 고뇌하는 모습에서 장래에 좋은 디자이너들이 될 것이라고 확신하였습니다.",
         "question2": "Q. 졸업 후 사회로 나갈 학생들에게 해주고 싶은 말",
         "answer2": "A. 사회는 학생 때와 전혀 다릅니다. 그리고 졸업과 동시에 여러분들은 사회의 일원으로서 무언가를 사회에 기여해야 합니다. 그러기 위해서는 남은 기간에 열심히 자신의 부족한 점을 채워나가야 합니다. 디자인이 무엇인가에 대하여 다시 한 번 곱씹어보고 늘! 기본에 충실하기를 바랍니다. 특히 아이디어를 잘 내는 디자이너로 성장하는 것이 중요합니다. 졸업 후에 AS가 가능하니 늘 학교에 오시길 바랍니다. 후배들을 위해서 가끔 놀러오세요. 제가 학식은 늘 사주겠습니다...oh,,!",
-        "image": "/dist/res/image/professor1.svg"
+        "image": "https://cnudesign2024.com/dist/res/image/professor1.svg"
     },
     "professor2": {
         "question1": "Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점",
         "answer1": "A. 포기하지 않고 끝까지 하려는 모습이 인상깊었습니다.",
         "question2": "Q. 졸업 후 사회로 나갈 학생들에게 해주고 싶은 말",
         "answer2": "A. 졸업전시 끝난 후 취업을 위한 개인별 노력을 당부하며 관련 프로그램도 제공하도록 교수로서 노력하겠습니다.",
-        "image": "/dist/res/image/professor2.svg"
+        "image": "https://cnudesign2024.com/dist/res/image/professor2.svg"
     },
     "professor3": {
         "question1": "Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점",
@@ -35,52 +35,76 @@ professor_messages = {
 print("Brython is running")
 
 # 버튼 클릭 이벤트 핸들러
+# 버튼 클릭 이벤트 핸들러
 def show_message(event):
-    professor_id = event.target.id if hasattr(event.target, "id") else None
-    if not professor_id:
-        print("Invalid professor ID")
+    print("show_message called")
+    professor_id = None
+    # 이벤트 객체가 유효한지 확인
+    if hasattr(event, "target") and hasattr(event.target, "id"):
+        professor_id = event.target.id
+    elif isinstance(event, dict) and "target" in event:
+        professor_id = event["target"].id
+    else:
+        print("Invalid event or target")
         return
 
+    print(f"Processing professor_id: {professor_id}")
+
+    # 버튼 스타일 초기화
     for button in document.select(".professor-button"):
         button.style.backgroundColor = "#162A3F"
         button.style.color = "#FFFFFF"
 
+    # 선택된 버튼 스타일 설정
     selected_button = document.getElementById(professor_id)
     if selected_button:
         selected_button.style.backgroundColor = "#FFCEDE"
         selected_button.style.color = "#162A3F"
 
+    # 메시지 가져오기
     message = professor_messages.get(professor_id, {})
-    document["professorQuestion1"].text = message.get("question1", "")
-    document["professorAnswer1"].text = message.get("answer1", "")
-    document["professorQuestion2"].text = message.get("question2", "")
-    document["professorAnswer2"].text = message.get("answer2", "")
+    if message:
+        document["professorQuestion1"].text = message.get("question1", "")
+        document["professorAnswer1"].text = message.get("answer1", "")
+        document["professorQuestion2"].text = message.get("question2", "")
+        document["professorAnswer2"].text = message.get("answer2", "")
 
-    image_element = document["professorImage"]
-    if "image" in message:
-        image_element.attrs["src"] = message["image"]
-        image_element.style.display = "block"
+        # 이미지 설정
+        image_element = document["professorImage"]
+        if "image" in message:
+            image_element.attrs["src"] = message["image"]
+            image_element.style.display = "block"
+        else:
+            image_element.style.display = "none"
+
+        # 상세 박스 표시
+        document["professorDetailBox"].style.display = "block"
     else:
-        image_element.style.display = "none"
-
-    document["professorDetailBox"].style.display = "block"
+        print(f"No message found for professor_id: {professor_id}")
 
 # 각 버튼에 클릭 이벤트 핸들러 연결
 def bind_buttons():
-    for professor_id in professor_messages:
-        button = document.getElementById(professor_id)
-        if button:
-            button.bind("click", show_message)
-            print(f"Button {professor_id} bound successfully")
-        else:
-            print(f"Button {professor_id} not found")
+    print("bind_buttons called")
+    try:
+        for professor_id in professor_messages:
+            button = document.getElementById(professor_id)
+            if button:
+                button.bind("click", show_message)
+                print(f"Button {professor_id} bound successfully")
+            else:
+                print(f"Button {professor_id} not found")
 
-    # 첫 번째 버튼 기본 선택
-    first_button_id = "professor1"
-    if document.getElementById(first_button_id):
-        document[first_button_id].style.backgroundColor = "#FFCEDE"
-        document[first_button_id].style.color = "#162A3F"
-        show_message({"target": document.getElementById(first_button_id)})
+        # 기본 선택 버튼 설정
+        first_button_id = "professor1"
+        first_button = document.getElementById(first_button_id)
+        if first_button:
+            first_button.style.backgroundColor = "#FFCEDE"
+            first_button.style.color = "#162A3F"
+            show_message({"target": first_button})  # 이벤트 객체 모방
+        else:
+            print(f"First button {first_button_id} not found")
+    except Exception as e:
+        print(f"Error in bind_buttons: {e}")
 
 # Brython 네임스페이스에 함수 등록
 window.bind_buttons = bind_buttons

@@ -1,6 +1,7 @@
 from browser import document, window
 
-def sort_by_name(event):
+def sort_by_name(event=None):  # event를 기본값 None으로 설정
+    print("눌렸음")
     gallery = document["gallery"]
     items = list(gallery.children)
 

@@ -35,6 +35,8 @@ professor_messages = {
 print("Brython is running")
 # 버튼 클릭 이벤트 핸들러
 def show_message(event):
+    print(event.target)  # 이벤트 대상 확인
+    print(event.target.id)  # 대상의 ID 확인
     print("show_message called")  # 디버깅 메시지 추가
     professor_id = event.target.id if hasattr(event.target, "id") else None
     if not professor_id:
@@ -77,14 +79,15 @@ def show_message(event):
 
 # 각 버튼에 클릭 이벤트 핸들러 연결
 def bind_buttons():
-    print("bind_buttons called")  # 디버깅 메시지 추가
+    print("bind_buttons called")  # 함수가 호출되는지 확인
     for professor_id in professor_messages:
         button = document.getElementById(professor_id)
         if button:
             button.bind("click", show_message)
             print(f"Button {professor_id} bound successfully")
         else:
-            print(f"Button {professor_id} not found")  # 버튼을 찾지 못한 경우
+            print(f"Button {professor_id} not found")  # 버튼을 찾을 수 없는 경우
+
 
     # 첫 번째 버튼을 기본 선택 상태로 설정
     first_button_id = "professor1"

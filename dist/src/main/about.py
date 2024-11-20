@@ -44,7 +44,7 @@ def show_message(event):
         return
 
     # 버튼 스타일 초기화
-    for button in document.select(".professor-button"):
+    for button in document.select("professor-button"):
         button.style.backgroundColor = "#162A3F"
         button.style.color = "#FFFFFF"
 

@@ -30,6 +30,5 @@ body {
     background: #fff;
 }
 .cursor .cursor--large {
-    --cursor-size: 60px;
-    border: 2px solid #fff;
+    --cursor-size: 0px;
 }

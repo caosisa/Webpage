@@ -33,64 +33,55 @@ professor_messages = {
     }
 }
 print("Brython is running")
-# 버튼 클릭 이벤트 핸들러
+
 # 버튼 클릭 이벤트 핸들러
 def show_message(event):
-    print("show_message called")  # 디버깅 메시지 추가
-    target = event.currentTarget
-    professor_id = target.id
+    professor_id = event.target.id if hasattr(event.target, "id") else None
+    if not professor_id:
+        print("Invalid professor ID")
+        return
 
-    # 버튼 스타일 초기화
     for button in document.select(".professor-button"):
         button.style.backgroundColor = "#162A3F"
         button.style.color = "#FFFFFF"
 
-    # 선택된 버튼 스타일 변경
-    target.style.backgroundColor = "#FFCEDE"
-    target.style.color = "#162A3F"
+    selected_button = document.getElementById(professor_id)
+    if selected_button:
+        selected_button.style.backgroundColor = "#FFCEDE"
+        selected_button.style.color = "#162A3F"
 
-    # 메시지 설정
-    message = professor_messages.get(professor_id)
-    if message:
-        document["professorQuestion1"].text = message.get("question1", "")
-        document["professorAnswer1"].text = message.get("answer1", "")
-        document["professorQuestion2"].text = message.get("question2", "")
-        document["professorAnswer2"].text = message.get("answer2", "")
+    message = professor_messages.get(professor_id, {})
+    document["professorQuestion1"].text = message.get("question1", "")
+    document["professorAnswer1"].text = message.get("answer1", "")
+    document["professorQuestion2"].text = message.get("question2", "")
+    document["professorAnswer2"].text = message.get("answer2", "")
 
-        # 이미지 업데이트
-        image_element = document["professorImage"]
-        if "image" in message:
-            image_element.attrs["src"] = message["image"]
-            image_element.style.display = "block"
-        else:
-            image_element.style.display = "none"
-
-        # 세부 박스 표시
-        document["professorDetailBox"].style.display = "block"
+    image_element = document["professorImage"]
+    if "image" in message:
+        image_element.attrs["src"] = message["image"]
+        image_element.style.display = "block"
     else:
-        print(f"No message found for {professor_id}")
+        image_element.style.display = "none"
+
+    document["professorDetailBox"].style.display = "block"
 
 # 각 버튼에 클릭 이벤트 핸들러 연결
 def bind_buttons():
-    print("bind_buttons called")  # 함수가 호출되는지 확인
     for professor_id in professor_messages:
         button = document.getElementById(professor_id)
         if button:
             button.bind("click", show_message)
             print(f"Button {professor_id} bound successfully")
         else:
-            print(f"Button {professor_id} not found")  # 버튼을 찾을 수 없는 경우
+            print(f"Button {professor_id} not found")
 
-    # 첫 번째 버튼을 기본 선택 상태로 설정
+    # 첫 번째 버튼 기본 선택
     first_button_id = "professor1"
-    first_button = document.getElementById(first_button_id)
-    if first_button:
-        first_button.style.backgroundColor = "#FFCEDE"
-        first_button.style.color = "#162A3F"
-        first_button.click()  # 첫 번째 버튼 클릭 이벤트 실행
-    else:
-        print(f"First button {first_button_id} not found")
+    if document.getElementById(first_button_id):
+        document[first_button_id].style.backgroundColor = "#FFCEDE"
+        document[first_button_id].style.color = "#162A3F"
+        show_message({"target": document.getElementById(first_button_id)})
 
-# Brython에서 함수 등록
+# Brython 네임스페이스에 함수 등록
 window.bind_buttons = bind_buttons
 window.show_message = show_message

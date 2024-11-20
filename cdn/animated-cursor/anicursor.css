@@ -2,6 +2,7 @@ body {
     cursor: none;
 }
 .cursor .cursor--small,
+.cursor .cursor--large,
 .cursor .cursor--text {
     position: fixed;
     left: 0;
@@ -27,4 +28,8 @@ body {
 .cursor .cursor--small {
     --cursor-size: 20px;
     background: #fff;
+}
+.cursor .cursor--large {
+    --cursor-size: 60px;
+    border: 2px solid #fff;
 }

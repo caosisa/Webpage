@@ -36,28 +36,31 @@ print("Brython is running")
 # 버튼 클릭 이벤트 핸들러
 def show_message(event):
     print("show_message called")  # 디버깅 메시지 추가
-    professor_id = event.target.id if isinstance(event, dict) else event
+    professor_id = event.target.id if hasattr(event.target, "id") else None
+    if not professor_id:
+        print("Invalid professor ID")
+        return
 
-    # 모든 버튼의 스타일 초기화
+    # 버튼 스타일 초기화
     for button in document.select(".professor-button"):
-        button.style.backgroundColor = "#162A3F"  # 선택이 해제된 버튼의 색상
+        button.style.backgroundColor = "#162A3F"
         button.style.color = "#FFFFFF"
 
-    # 선택된 버튼의 스타일 변경
-    selected_button = document.getElementById(professor_id)  # 단일 요소로 가져옴
-    if selected_button is not None:
-        selected_button.style.backgroundColor = "#FFCEDE"  # 선택된 버튼의 색상
+    # 선택된 버튼 스타일 변경
+    selected_button = document.getElementById(professor_id)
+    if selected_button:
+        selected_button.style.backgroundColor = "#FFCEDE"
         selected_button.style.color = "#162A3F"
 
-    # 메시지 가져오기
-    message = professor_messages.get(professor_id, {})
+    # 메시지 설정
+    message = professor_messages.get(professor_id)
     if message:
         document["professorQuestion1"].text = message.get("question1", "")
         document["professorAnswer1"].text = message.get("answer1", "")
         document["professorQuestion2"].text = message.get("question2", "")
         document["professorAnswer2"].text = message.get("answer2", "")
 
-        # 이미지 설정
+        # 이미지 업데이트
         image_element = document["professorImage"]
         if "image" in message:
             image_element.attrs["src"] = message["image"]
@@ -65,8 +68,11 @@ def show_message(event):
         else:
             image_element.style.display = "none"
 
-        # 설명 박스를 보이도록 설정
+        # 세부 박스 표시
         document["professorDetailBox"].style.display = "block"
+    else:
+        print(f"No message found for {professor_id}")
+
 
 
 # 각 버튼에 클릭 이벤트 핸들러 연결
@@ -76,9 +82,9 @@ def bind_buttons():
         button = document.getElementById(professor_id)
         if button:
             button.bind("click", show_message)
-            print(f"Button {professor_id} bound")
+            print(f"Button {professor_id} bound successfully")
         else:
-            print(f"Button {professor_id} not found")  # 버튼을 찾을 수 없는 경우
+            print(f"Button {professor_id} not found")  # 버튼을 찾지 못한 경우
 
     # 첫 번째 버튼을 기본 선택 상태로 설정
     first_button_id = "professor1"

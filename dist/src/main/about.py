@@ -34,25 +34,20 @@ professor_messages = {
 }
 print("Brython is running")
 # 버튼 클릭 이벤트 핸들러
+# 버튼 클릭 이벤트 핸들러
 def show_message(event):
-    print(event.target)  # 이벤트 대상 확인
-    print(event.target.id)  # 대상의 ID 확인
     print("show_message called")  # 디버깅 메시지 추가
-    professor_id = event.target.id if hasattr(event.target, "id") else None
-    if not professor_id:
-        print("Invalid professor ID")
-        return
+    target = event.currentTarget
+    professor_id = target.id
 
     # 버튼 스타일 초기화
-    for button in document.select("professor-button"):
+    for button in document.select(".professor-button"):
         button.style.backgroundColor = "#162A3F"
         button.style.color = "#FFFFFF"
 
     # 선택된 버튼 스타일 변경
-    selected_button = document.getElementById(professor_id)
-    if selected_button:
-        selected_button.style.backgroundColor = "#FFCEDE"
-        selected_button.style.color = "#162A3F"
+    target.style.backgroundColor = "#FFCEDE"
+    target.style.color = "#162A3F"
 
     # 메시지 설정
     message = professor_messages.get(professor_id)
@@ -75,8 +70,6 @@ def show_message(event):
     else:
         print(f"No message found for {professor_id}")
 
-
-
 # 각 버튼에 클릭 이벤트 핸들러 연결
 def bind_buttons():
     print("bind_buttons called")  # 함수가 호출되는지 확인
@@ -88,17 +81,16 @@ def bind_buttons():
         else:
             print(f"Button {professor_id} not found")  # 버튼을 찾을 수 없는 경우
 
-
     # 첫 번째 버튼을 기본 선택 상태로 설정
     first_button_id = "professor1"
-    if document.getElementById(first_button_id) is not None:
-        document[first_button_id].style.backgroundColor = "#FFCEDE"
-        document[first_button_id].style.color = "#162A3F"
-        show_message(first_button_id)
+    first_button = document.getElementById(first_button_id)
+    if first_button:
+        first_button.style.backgroundColor = "#FFCEDE"
+        first_button.style.color = "#162A3F"
+        first_button.click()  # 첫 번째 버튼 클릭 이벤트 실행
     else:
         print(f"First button {first_button_id} not found")
 
-window.addEventListener("load", bind_buttons)
-
-window.show_message = show_message
+# Brython에서 함수 등록
 window.bind_buttons = bind_buttons
+window.show_message = show_message

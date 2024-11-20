@@ -101,4 +101,4 @@ def bind_buttons():
 window.addEventListener("load", bind_buttons)
 
 window.show_message = show_message
-
+window.bind_buttons = bind_buttons

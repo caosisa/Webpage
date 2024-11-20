@@ -109,3 +109,4 @@ def bind_buttons():
 # Brython 네임스페이스에 함수 등록
 window.bind_buttons = bind_buttons
 window.show_message = show_message
+bind_buttons()

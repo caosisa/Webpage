@@ -1,4 +1,4 @@
-from browser import document, html
+from browser import document, window
 
 def sort_by_name(event):
     gallery = document["gallery"]
@@ -12,5 +12,5 @@ def sort_by_name(event):
     for item in items:
         gallery <= item
 
-# sort_by_name 함수를 sort-button 클릭에 연결
-document["sort_by_name"] = sort_by_name
+# 전역 함수로 등록
+window.sort_by_name = sort_by_name

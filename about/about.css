@@ -1,3 +1,17 @@
+.mobile-image {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .default-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+    }
+}
+
 /* 중앙 정렬 텍스트 */
 .center-text {
     text-align: center;

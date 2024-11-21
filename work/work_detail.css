@@ -111,15 +111,15 @@
 
 @media (max-width: 768px) {
     #article .d-flex {
-        width: 100%;
+        width: 100% !important;
     }
     .left-content {
-        margin-left: 30px;
+        margin-left: 30px !important;
     }
     .designer h1 {
-        font-size: 18px;
-        margin-top: 0;
-        margin-left: 10px;
+        font-size: 18px !important;
+        margin-top: 0 !important;
+        margin-left: 10px !important;
     }
     .artwork-section {
         padding-bottom: 0!important;

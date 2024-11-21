@@ -6,14 +6,14 @@ professor_messages = {
         "answer1": "A. 학생들 각자가 자기 테마에 맞춰 열심히 하는 모습을 보며 저도 많은 것을 보며 배웠습니다. 휴일이나, 저녁 밤 늦게까지 과실에 불이 켜져 있고 열심히 고뇌하는 모습에서 장래에 좋은 디자이너들이 될 것이라고 확신하였습니다.",
         "question2": "Q. 졸업 후 사회로 나갈 학생들에게 해주고 싶은 말",
         "answer2": "A. 사회는 학생 때와 전혀 다릅니다. 그리고 졸업과 동시에 여러분들은 사회의 일원으로서 무언가를 사회에 기여해야 합니다. 그러기 위해서는 남은 기간에 열심히 자신의 부족한 점을 채워나가야 합니다. 디자인이 무엇인가에 대하여 다시 한 번 곱씹어보고 늘! 기본에 충실하기를 바랍니다. 특히 아이디어를 잘 내는 디자이너로 성장하는 것이 중요합니다. 졸업 후에 AS가 가능하니 늘 학교에 오시길 바랍니다. 후배들을 위해서 가끔 놀러오세요. 제가 학식은 늘 사주겠습니다...oh,,!",
-        "image": "https://cnudesign2024.com/dist/res/image/professor1.svg"
+        "image": "https://cnudesign2024.com/dist/res/image/professor1.webp"
     },
     "professor2": {
         "question1": "Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점",
         "answer1": "A. 포기하지 않고 끝까지 하려는 모습이 인상깊었습니다.",
         "question2": "Q. 졸업 후 사회로 나갈 학생들에게 해주고 싶은 말",
         "answer2": "A. 졸업전시 끝난 후 취업을 위한 개인별 노력을 당부하며 관련 프로그램도 제공하도록 교수로서 노력하겠습니다.",
-        "image": "https://cnudesign2024.com/dist/res/image/professor2.svg"
+        "image": "https://cnudesign2024.com/dist/res/image/professor2.webp"
     },
     "professor3": {
         "question1": "Q. 2024년도 졸업 지도를 하면서 인상 깊었던 점",

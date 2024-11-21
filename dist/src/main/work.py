@@ -19,9 +19,9 @@ def sort_by_name(event=None):  # event를 기본값 None으로 설정
 
     # 이미지 파일 이름 변경
     if "filter.svg" in current_src:
-        button_image.attrs["src"] = "https://cnudesign2024.com/dist/res/image/filter2.svg"
+        button_image.attrs["src"] = "https://cnudesign2024.com/dist/res/image/filter2.webp"
     else:
-        button_image.attrs["src"] = "https://cnudesign2024.com/dist/res/image/filter.svg"
+        button_image.attrs["src"] = "https://cnudesign2024.com/dist/res/image/filter1.webp"
 
 # 전역 함수로 등록
 window.sort_by_name = sort_by_name

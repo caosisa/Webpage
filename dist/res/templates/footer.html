@@ -1,13 +1,90 @@
-<!-- Footer -->
-<footer id="footer" style="background-color: #000000; color: white; text-align: center;">
-    <div class="footer-container">
-        <img src="/dist/res/image/try.png" alt="Footer Logo" style="max-width: 100%; height: auto;">
-    </div>
-</footer>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Responsive Footer</title>
 
-<!-- Back to top button -->
-<a href="#" id="btn-back-to-top" class="btn-back-to-top d-flex align-items-center justify-content-center" style="position: fixed; bottom: 20px; right: 20px; background-color: #677a96; color: white; border-radius: 50%; width: 40px; height: 40px;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-    </svg>
-</a>
+    <style>
+        /* Footer 기본 스타일 */
+        #footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .mobile-image {
+            display: none; /* 기본적으로 숨김 */
+        }
+
+        .default-image {
+            display: block; /* 기본적으로 표시 */
+        }
+
+        /* Back-to-Top 버튼 스타일 */
+        .btn-back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #677a96;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-back-to-top:hover {
+            background-color: #557084;
+        }
+
+        /* 모바일 화면 대응 */
+        @media (max-width: 768px) {
+            .default-image {
+                display: none; /* 모바일에서는 기본 이미지를 숨김 */
+            }
+
+            .mobile-image {
+                display: block; /* 모바일 이미지를 표시 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <!-- 기본 이미지 -->
+            <img src="/dist/res/image/try.png" alt="Footer Logo" class="footer-image default-image">
+
+            <!-- 모바일 전용 이미지 -->
+            <img src="/dist/res/image/모바일%20푸터.webp" alt="Mobile Footer Logo" class="footer-image mobile-image">
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" id="btn-back-to-top" class="btn-back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146-3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </a>
+</body>
+</html>

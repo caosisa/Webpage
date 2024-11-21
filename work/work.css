@@ -3,8 +3,9 @@
 }
 .work-page-title {
     padding-left: 110px;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    width: 111px;
 }
 .sort-explain {
     color: #FFFFFF;
@@ -20,8 +21,9 @@
     height: 0px;
     left: 362px;
     top: 311px;
-    border: 1px solid
-        }
+    border: 0.5px solid;
+    margin-bottom: 70px;
+}
 .sort-container{
     display: flex;
     justify-content: space-between;
@@ -37,18 +39,19 @@
 }
 .button-image {
     margin-right: 110px;
+    width: 95px;
 }
 
 /* 작품 갤러리 레이아웃 */
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 데스크탑에서 3개의 열 */
-    gap: 20px; /* 이미지 간의 여백 */
+    gap: 28px; /* 이미지 간의 여백 */
     padding: 0 90px; /* 화면 양옆에 여백 추가 */
 }
 
 .gallery-item {
-    padding: 15px;
+    padding-bottom: 30px;
 }
 
 .gallery-item img {
@@ -67,7 +70,6 @@
 
 .student-name {
     font-size: 16px;
-    font-weight: bold;
 }
 
 
@@ -92,7 +94,7 @@
         height: 24px;
     }
     .work-title {
-        font-size: 18px;
+        font-size: 24px;
         padding: 0;
     }
     .student-name {
@@ -105,6 +107,7 @@
         padding-left: 30px;
         padding-top: 30px;
         padding-bottom: 20px;
+        width: 136px;
     }
     .vector {
         width: 100%;

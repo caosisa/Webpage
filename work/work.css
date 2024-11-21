@@ -82,4 +82,17 @@
     .gallery-item {
         padding: 10px; /* 모바일에서 여백 줄이기 */
     }
+    .sort-explain {
+        font-size: 16px;
+    }
+    .sort-button {
+        width: 95px;
+        height: 24px;
+    }
+    .work-title {
+        font-size: 18px;
+    }
+    .student-name {
+        font-size: 14px;
+    }
 }

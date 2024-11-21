@@ -221,12 +221,8 @@
         width: 100%; /* 프로필 너비에 맞게 이미지 크기 조정 */
         height: auto; /* 비율 유지 */
     }
-
     .profile-section {
         gap: 5px; /* 모바일에서 간격 줄이기 */
-    }
-    .professorImage {
-        height: 138px;
     }
     .default-image {
         display: none;
@@ -257,5 +253,36 @@
         padding: 8px 15px; /* 패딩 줄이기 */
         font-size: 14px; /* 폰트 크기 줄이기 */
         margin: 3px; /* 버튼 간 간격 줄이기 */
+    }
+
+    .professor-detail-box {
+        flex-direction: column; /* 박스를 상하로 배치 */
+        align-items: center; /* 중앙 정렬 */
+        padding: 20px;
+    }
+
+    .detail-content {
+        flex-direction: column; /* 사진과 텍스트를 상하로 배치 */
+        align-items: center;
+    }
+
+    #professorImage {
+        margin: 0 0 20px 0; /* 상단에 위치시키고 여백 추가 */
+        width: 80%; /* 모바일에서 이미지 크기를 줄임 */
+    }
+
+    .text-content {
+        margin: 0; /* 텍스트 여백 초기화 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+    }
+
+    .text-content h3 {
+        font-size: 18px; /* 글씨 크기 줄임 */
+        margin-bottom: 10px; /* 제목 간격 */
+    }
+
+    .text-content p {
+        font-size: 14px; /* 글씨 크기 줄임 */
+        margin-bottom: 15px; /* 질문 간 여백 */
     }
 }

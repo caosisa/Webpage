@@ -12,7 +12,9 @@
     object-fit: cover; /* 이미지가 부모 요소에 맞춰 꽉 차도록 설정 */
     background-color: #162A3F;
 }
-
+.default-image {
+    display: block;
+}
 /* 모바일 이미지는 기본적으로 숨김 */
 .mobile-image {
     display: none;

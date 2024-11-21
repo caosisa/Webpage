@@ -84,6 +84,8 @@
     }
     .sort-explain {
         font-size: 16px;
+        margin-left: 10px;
+        margin-bottom: 4px;
     }
     .sort-button {
         width: 95px;
@@ -91,8 +93,12 @@
     }
     .work-title {
         font-size: 18px;
+        padding: 0;
     }
     .student-name {
         font-size: 14px;
+    }
+    .sort-container {
+        padding-top: 40px;
     }
 }

@@ -234,11 +234,9 @@
     #programs {
         padding: 100px 20px;
     }
-
     .box {
         height: auto; /* 모바일에서 높이 자동 조정 */
     }
-
     .instagram-box {
         font-size: 20px;
         padding: 15px;
@@ -254,6 +252,7 @@
     }
     .slider-item img {
         height: 112.5px;
+        width: auto;
     }
     .default-image {
         display: none !important;

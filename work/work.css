@@ -71,10 +71,15 @@
 }
 
 
-/* 모바일에서 2개의 열 */
+/* 반응형: 모바일 화면에서 2개의 열 */
 @media (max-width: 768px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr); /* 모바일에서 2개의 열 */
-        padding: 0 20px; /* 모바일에서는 여백을 좁게 */
+        gap: 15px; /* 모바일에서 간격 조정 */
+        padding: 0 10px; /* 모바일에서는 여백을 좁게 설정 */
+    }
+
+    .gallery-item {
+        padding: 10px; /* 모바일에서 여백 줄이기 */
     }
 }

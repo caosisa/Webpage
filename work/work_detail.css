@@ -124,4 +124,7 @@
     .artwork-section {
         padding-bottom: 0!important;
     }
+    .grid-item p{
+        margin-left: 10px;
+    }
 }

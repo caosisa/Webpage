@@ -234,6 +234,10 @@
     background-color: #2D4356;
     color: #FFFFFF;
 }
+.icon {
+    width: 30px;
+    display: inline-block;
+}
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
@@ -254,6 +258,9 @@
     }
     .exhibition-section-title h5 {
         font-size: 20px;
+    }
+    .icon {
+        display: none;
     }
 }
 

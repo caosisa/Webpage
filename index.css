@@ -11,6 +11,19 @@
     object-fit: cover; /* 이미지가 부모 요소에 맞춰 꽉 차도록 설정 */
     display: block;
 }
+.mobile-image {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .default-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+    }
+}
 
 /* Exhibition Information */
 #exhibition-information {
@@ -214,6 +227,7 @@
     background-color: #2D4356;
     color: #FFFFFF;
 }
+
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {

@@ -19,19 +19,6 @@
 .mobile-image {
     display: none;
 }
-
-/* 모바일 화면에서는 default 이미지를 숨기고 모바일 이미지만 표시 */
-@media (max-width: 768px) {
-    .default-image {
-        display: none !important;
-    }
-
-    .mobile-image {
-        display: block !important;
-    }
-}
-
-
 /* 중앙 정렬 텍스트 */
 .center-text {
     text-align: center;
@@ -98,34 +85,6 @@
     padding-bottom: 100px;
     text-align: center;
     justify-content: center;
-}
-
-/* 반응형 - 모바일 화면 대응 */
-@media (max-width: 768px) {
-    .default-image {
-        display: none;
-    }
-
-    .mobile-image {
-        display: block;
-    }
-
-    .image-poster {
-        max-width: 90% !important; /* 화면 여백을 조금 남기기 */
-        width: 90%;
-
-    }
-
-    .responsive-video {
-        width: 320px; /* 모바일 화면에서 전체 폭 사용 */
-        height: auto;
-    }
-
-    #Video {
-        padding-top: 30px;
-        padding-bottom: 50px; /* 모바일에서 적절히 여백 조정 */
-
-    }
 }
 .video-container p {
     font-size: 15px;
@@ -262,9 +221,38 @@
     }
 
     .profile-section {
-        gap: 10px; /* 모바일에서 간격 줄이기 */
+        gap: 5px; /* 모바일에서 간격 줄이기 */
     }
     .professorImage {
         height: 138px;
+    }
+    .default-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+    }
+
+    .image-poster {
+        width: 90%;
+    }
+
+    .responsive-video {
+        width: 100%;
+        height: auto;
+    }
+
+    #Video {
+        padding-top: 20px;
+        padding-bottom: 20px; /* 모바일에서 적절히 여백 조정 */
+
+    }
+    .default-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
     }
 }

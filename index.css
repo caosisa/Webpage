@@ -16,17 +16,6 @@
 .mobile-image {
     display: none;
 }
-
-@media (max-width: 768px) {
-    .default-image {
-        display: none !important;
-    }
-
-    .mobile-image {
-        display: block !important;
-    }
-}
-
 /* Exhibition Information */
 #exhibition-information {
     background-color: #020D18;
@@ -265,6 +254,13 @@
     }
     .slider-item img {
         height: 112.5px;
+    }
+    .default-image {
+        display: none !important;
+    }
+
+    .mobile-image {
+        display: block !important;
     }
 }
 

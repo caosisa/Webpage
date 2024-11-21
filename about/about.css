@@ -38,6 +38,7 @@
     color: white;
 }
 
+
 /* 제목 스타일 */
 .title {
     font-weight: 1000;
@@ -62,20 +63,22 @@
     max-width: 100%; /* 화면 크기에 맞게 조정 */
     height: auto; /* 비율 유지 */
 }
+.professor-container.center-text {
+    margin-bottom: 40px;
+}
 
 /* 포스터 앞에 문구 */
 .poster-label {
     text-align: center;
     font-weight: bold;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
 /* Video Section */
 .responsive-video {
-    width: 100%; /* 화면 크기에 맞게 조정 */
-    max-width: 1200px; /* 최대 크기 제한 */
+    width: 1200px; /* 최대 크기 제한 */
     height: auto; /* 비율 유지 */
     aspect-ratio: 16 / 9; /* 비율 설정 */
 }
@@ -95,6 +98,7 @@
     padding-top: 60px;
     padding-bottom: 100px;
     text-align: center;
+    justify-content: center;
 }
 
 /* 반응형 - 모바일 화면 대응 */
@@ -114,17 +118,21 @@
     }
 
     .responsive-video {
-        max-width: 100%; /* 모바일 화면에서 전체 폭 사용 */
+        width: 320px; /* 모바일 화면에서 전체 폭 사용 */
+        height: auto;
     }
 
     #Video {
         padding-top: 30px;
         padding-bottom: 50px; /* 모바일에서 적절히 여백 조정 */
-        justify-content: center;
+
     }
 }
+.video-container p {
+    font-size: 15px;
+}
 .student-container h1{
-    font-size: 34px;
+    font-size: 15px;
     color: #FB9EBC;
     font-weight: bold;
     margin-top: 100px;
@@ -160,13 +168,15 @@
 }
 
 .professor-detail-box {
-    background-color: #ffffff;
-    color: #020D18;
     min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     border-radius: 15px;
+    padding-right: 20px;
+    width: 80%;
+    background-color: #FFF;
+    color: #000;
 }
 
 .detail-content {
@@ -185,6 +195,12 @@
     display: flex;
     flex-direction: column;
 }
+.text-content h3 {
+    font-size: 20px;
+}
+.text-content p {
+    font-size: 16px;
+}
 
 .profile-section {
     display: flex;
@@ -195,22 +211,41 @@
 }
 .section-title h1 {
     color: #FB9EBC;
-    font-size: 34px;
+    font-size: 15px;
     font-weight: bold;
+    margin-bottom: 30px;
+}
+.section-title p {
+    margin-bottom: 30px;
 }
 .profile {
     margin-bottom: 20px;
     text-align: center;
     color: white;
     width: 18%;
-
-
 }
 
 /* 학생 이미지 크기 */
 .student-img {
     width: 184px;
     height: 276px;
+}
+.name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.korean-name {
+    text-align: left;
+    font-size: 20px;
+    flex: 1;
+}
+.english-name {
+    text-align: right;
+    font-size: 15px;
+    flex: 1;
 }
 
 /* 반응형 - 모바일 화면 대응 */

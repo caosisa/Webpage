@@ -219,31 +219,27 @@
     .profile {
         width: 45%; /* 모바일에서 한 줄에 두 명 */
     }
-
     .student-img {
         width: 100%; /* 프로필 너비에 맞게 이미지 크기 조정 */
         height: auto; /* 비율 유지 */
+        border-radius: 8px;
     }
     .profile-section {
-        gap: 5px; /* 모바일에서 간격 줄이기 */
+        gap: 15px; /* 모바일에서 간격 줄이기 */
     }
     .default-image {
         display: none;
     }
-
     .mobile-image {
         display: block;
     }
-
     .image-poster {
         width: 90%;
     }
-
     .responsive-video {
         width: 100%;
         height: auto;
     }
-
     #Video {
         padding-top: 20px;
         padding-bottom: 20px; /* 모바일에서 적절히 여백 조정 */
@@ -263,27 +259,22 @@
         align-items: center; /* 중앙 정렬 */
         padding: 20px;
     }
-
     .detail-content {
         flex-direction: column; /* 사진과 텍스트를 상하로 배치 */
         align-items: center;
     }
-
     #professorImage {
         margin: 0 0 20px 0; /* 상단에 위치시키고 여백 추가 */
         width: 80%; /* 모바일에서 이미지 크기를 줄임 */
     }
-
     .text-content {
         margin: 0; /* 텍스트 여백 초기화 */
         text-align: center; /* 텍스트 중앙 정렬 */
     }
-
     .text-content h3 {
         font-size: 18px; /* 글씨 크기 줄임 */
         margin-bottom: 10px; /* 제목 간격 */
     }
-
     .text-content p {
         font-size: 14px; /* 글씨 크기 줄임 */
         margin-bottom: 15px; /* 질문 간 여백 */
@@ -293,11 +284,13 @@
     }
     .name-container {
         flex-direction: column; /* 세로로 정렬 */
-        align-items: flex-start; /* 왼쪽 정렬 (필요에 따라 조정 가능) */
+        align-items: center; /* 왼쪽 정렬 (필요에 따라 조정 가능) */
         gap: 5px; /* 항목 간 간격 */
     }
-
-    .name-container h5 {
-        margin: 0; /* 여백 제거 */
+    .korean-name {
+        font-size: 13px;
+    }
+    .english-name {
+        font-size: 10px;
     }
 }

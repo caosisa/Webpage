@@ -5,6 +5,8 @@
     padding-left: 110px;
     padding-top: 60px;
     padding-bottom: 70px;
+}
+.work-img {
     width: 111px;
 }
 .sort-explain {
@@ -42,35 +44,48 @@
     width: 95px;
 }
 
+
 /* 작품 갤러리 레이아웃 */
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 데스크탑에서 3개의 열 */
-    gap: 28px; /* 이미지 간의 여백 */
     padding: 0 90px; /* 화면 양옆에 여백 추가 */
 }
 
 .gallery-item {
     padding-bottom: 30px;
+    overflow: hidden; /* 내용이 튀어나가지 않도록 설정 */
+    position: relative; /* 위치 설정 */
 }
 
 .gallery-item img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* 부모 요소 너비에 맞춤 */
+    height: auto; /* 이미지 비율 유지 */
     display: block;
     border-radius: 8px;
 }
 
 .info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 양 끝으로 배치 */
+    align-items: center; /* 텍스트 수직 중앙 정렬 */
     margin-top: 10px; /* 이미지와 텍스트 사이 여백 */
-    color:#FFFFFF;
+    color: #FFFFFF;
+    width: 100%; /* 이미지 크기와 동일하게 맞춤 */
+    padding: 0 10px; /* 텍스트가 이미지 끝에 너무 가까워지지 않도록 여백 추가 */
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 
 .student-name {
     font-size: 16px;
+    text-align: right; /* 오른쪽 정렬 */
 }
+
+.work-title {
+    font-size: 24px;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
 
 
 /* 반응형: 모바일 화면에서 2개의 열 */
@@ -94,8 +109,11 @@
         height: 24px;
     }
     .work-title {
-        font-size: 24px;
+        font-size: 18px;
         padding: 0;
+    }
+    .work-img {
+        width: 136px;
     }
     .student-name {
         font-size: 14px;
@@ -107,11 +125,8 @@
         padding-left: 30px;
         padding-top: 30px;
         padding-bottom: 20px;
-        width: 136px;
     }
     .vector {
         width: 100%;
     }
-
-
 }

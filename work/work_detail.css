@@ -132,35 +132,43 @@
     .designer h1 {
         font-size: 18px !important;
         margin-top: 0 !important;
-        margin-left: 10px !important;
+        margin-left: 12px !important;
     }
     .artwork-section {
         padding-bottom: 0!important;
     }
     .grid-item p{
         margin-left: 10px;
+        margin-right: 10px;
     }
     .square-image {
         width: 148px;
         height: 222px;
-        margin-top: 0;
+        margin-top: 10px;
+        margin-left: 10px;
     }
     .designer-email {
         font-size: 14px;
         display: flex;
         align-items: center;
         gap: 5px;
+        color: #162A3F;
     }
     .designer-name {
         font-size: 25px;
+        color: #162A3F;
     }
     .designer-section {
         padding-top: 10px !important;
+        background-color: #E1E8EE;
+        border-radius: 5px;
     }
     .designer-details {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-top: 160px;
+        padding-left: 10px;
     }
 }

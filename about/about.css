@@ -106,6 +106,8 @@
 
     .image-poster {
         max-width: 90%; /* 화면 여백을 조금 남기기 */
+        width: 90%;
+
     }
 
     .responsive-video {

@@ -59,8 +59,8 @@
 }
 
 .gallery-item img {
-    width: 100%; /* 부모 요소 너비에 맞춤 */
-    height: auto; /* 이미지 비율 유지 */
+    width: 380px; /* 부모 요소 너비에 맞춤 */
+    height: 285px; /* 이미지 비율 유지 */
     display: block;
     border-radius: 8px;
 }

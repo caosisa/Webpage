@@ -56,14 +56,13 @@
 }
 
 .designer h1 {
-    font-size: 2.5rem; /* Designer 문구 크기 설정 */
+    font-size: 32px; /* Designer 문구 크기 설정 */
     margin-top: 20px; /* 위쪽에 추가적인 여백 */
-    font-weight: bold;
 }
 
 /* 두 번째 섹션: 작가 정보 및 인터뷰 */
 .designer-section {
-    background-color: #020D18; /* 섹션 배경 색상 */
+
 }
 
 .square-image {

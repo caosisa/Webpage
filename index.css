@@ -81,6 +81,7 @@
     z-index: 2; /* 슬라이더 위에 있게 하기 위해 z-index 설정 */
     font-weight: bold;
     margin-top:13px;
+    font-size: 32px;
 }
 
 /* 전체 요소의 박스 크기 조정 */
@@ -247,6 +248,12 @@
     .instagram-box {
         font-size: 20px;
         padding: 15px;
+    }
+    .work-title h5{
+        font-size: 20px;
+    }
+    .exhibition-section-title h5 {
+        font-size: 20px;
     }
 }
 

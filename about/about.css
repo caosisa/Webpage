@@ -192,6 +192,8 @@
 .text-content {
     display: flex;
     flex-direction: column;
+    margin-left: 64px;
+    margin-top: 40px;
 }
 .text-content h3 {
     font-size: 20px;
@@ -236,16 +238,16 @@
     padding: 0 10px;
 }
 .korean-name {
-    text-align: left;
     font-size: 20px;
     font-weight: normal;
     flex: 1;
+    margin: 0;
 }
 .english-name {
-    text-align: right;
     font-size: 15px;
     font-weight: normal;
     flex: 1;
+    margin: 0;
 }
 
 /* 반응형 - 모바일 화면 대응 */

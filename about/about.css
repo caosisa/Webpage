@@ -253,4 +253,9 @@
     .mobile-only {
         display: inline;
     }
+    .professor-button {
+        padding: 8px 15px; /* 패딩 줄이기 */
+        font-size: 14px; /* 폰트 크기 줄이기 */
+        margin: 3px; /* 버튼 간 간격 줄이기 */
+    }
 }

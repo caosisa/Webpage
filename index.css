@@ -10,17 +10,20 @@
     height: 100%;
     object-fit: cover; /* 이미지가 부모 요소에 맞춰 꽉 차도록 설정 */
 }
+.default-image {
+    display: block;
+}
 .mobile-image {
     display: none;
 }
 
 @media (max-width: 768px) {
     .default-image {
-        display: none;
+        display: none !important;
     }
 
     .mobile-image {
-        display: block;
+        display: block !important;
     }
 }
 

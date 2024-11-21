@@ -118,6 +118,7 @@
     #Video {
         padding-top: 30px;
         padding-bottom: 50px; /* 모바일에서 적절히 여백 조정 */
+        justify-content: center;
     }
 }
 .student-container h1{

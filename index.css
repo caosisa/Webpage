@@ -120,7 +120,8 @@
 /* 이미지 크기 고정 */
 .slider-item img {
     width: 100%; /* 이미지가 부모 요소에 맞게 조정되도록 설정 */
-    height: 100%; /* 고정된 크기 유지 */
+    height: 285px; /* 고정된 크기 유지 */
+    border-radius: 8px;
 }
 
 /* 슬라이더 컨트롤 */
@@ -261,6 +262,9 @@
     }
     .icon {
         display: none;
+    }
+    .slider-item img {
+        height: 112.5px;
     }
 }
 

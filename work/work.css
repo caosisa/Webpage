@@ -101,5 +101,10 @@
     .sort-container {
         padding-top: 40px;
     }
+    .work-page-title {
+        padding-left: 30px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
 
 }

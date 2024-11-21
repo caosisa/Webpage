@@ -288,4 +288,16 @@
         font-size: 14px; /* 글씨 크기 줄임 */
         margin-bottom: 15px; /* 질문 간 여백 */
     }
+    .student-section-title {
+        font-size: 11px;
+    }
+    .name-container {
+        flex-direction: column; /* 세로로 정렬 */
+        align-items: flex-start; /* 왼쪽 정렬 (필요에 따라 조정 가능) */
+        gap: 5px; /* 항목 간 간격 */
+    }
+
+    .name-container h5 {
+        margin: 0; /* 여백 제거 */
+    }
 }

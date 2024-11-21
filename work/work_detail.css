@@ -74,7 +74,7 @@
     object-fit: cover; /* 이미지를 네모 형태로 유지 */
     margin-bottom: 15px; /* 주변과 간격 */
     margin-left: 80px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .designer-name {
@@ -97,20 +97,17 @@
     display: grid; /* 그리드 레이아웃 사용 */
     grid-template-columns: repeat(2, 1fr); /* 2열 설정 */
     gap: 20px; /* 그리드 아이템 간격 */
-    background-color: #020D18;
-    padding: 20px;
-    border-radius: 8px;
+}
+.interview-title {
+    margin-top: 60px;
+    margin-bottom: 16px;
 }
 
 /* 인터뷰 질문과 답변 스타일 */
 .grid-item {
-    background-color: #FFFFFF;
     color: #020D18;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 14px;
-    line-height: 1.6;
+    padding-right: 36px;
 }
 .designer-details {
     margin-left: 80px;
@@ -122,6 +119,9 @@
     color: #03182E;
     margin-bottom: 8px;
     display: block;
+}
+.col-md-8 {
+    padding-right: 80px;
 }
 
 /* 세 번째 섹션: 빈 공간 */

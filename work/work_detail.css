@@ -101,10 +101,27 @@
     background-color: #020D18;
 }
 .interview-question {
-    color: #162A3F;
+    color: #020D18;
 }
 
 /* 세 번째 섹션: 빈 공간 */
 .footer-section .spacer {
     height: 100px;
+}
+
+@media (max-width: 768px) {
+    #article .d-flex {
+        width: 100%;
+    }
+    .left-content {
+        margin-left: 30px;
+    }
+    .designer h1 {
+        font-size: 18px;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+    .artwork-section {
+        padding-bottom: 0!important;
+    }
 }

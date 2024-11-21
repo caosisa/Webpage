@@ -131,23 +131,19 @@
     <script type="text/python">
         from browser import document
 
-        def toggle_menu(event):
-            menu = document["fullscreen-menu"]
-            menu_icon = document["menu-icon"]
-            close_icon = document["close-icon"]
+        def toggle_menu_icon(event):
+            navbar = document.get("navbar")
+            if navbar is None:
+                print("Error: Navbar element not found.")
+                return
 
-            if "active" in menu.class_name:
-                menu.class_name = menu.class_name.replace("active", "").strip()
-                menu_icon.style.display = "block"
-                close_icon.style.display = "none"
+            if "navbar-mobile" in navbar.class_name:
+                navbar.class_name = navbar.class_name.replace("navbar-mobile", "").strip()
             else:
-                menu.class_name += " active"
-                menu_icon.style.display = "none"
-                close_icon.style.display = "block"
+                navbar.class_name += " navbar-mobile"
 
-        # 햄버거와 닫기 아이콘에 이벤트 바인딩
-        document["menu-icon"].bind("click", toggle_menu)
-        document["close-icon"].bind("click", toggle_menu)
+        document["menu-icon"].bind("click", toggle_menu_icon)
+        document["close-icon"].bind("click", toggle_menu_icon)
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
     <script>

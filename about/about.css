@@ -57,6 +57,8 @@
 .student-img {
     margin: 20px auto;
     display: block;
+    max-width: 100%; /* 화면 크기에 맞게 조정 */
+    height: auto; /* 비율 유지 */
 }
 
 /* 포스터 앞에 문구 */
@@ -67,10 +69,54 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
-.video-container p {
 
+/* Video Section */
+.responsive-video {
+    width: 100%; /* 화면 크기에 맞게 조정 */
+    max-width: 1200px; /* 최대 크기 제한 */
+    height: auto; /* 비율 유지 */
+    aspect-ratio: 16 / 9; /* 비율 설정 */
 }
 
+/* Poster Section */
+#Poster {
+    background-color: #020D18;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Video Section */
+#Video {
+    background-color: #020D18;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+/* 반응형 - 모바일 화면 대응 */
+@media (max-width: 768px) {
+    .default-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+    }
+
+    .image-poster {
+        max-width: 90%; /* 화면 여백을 조금 남기기 */
+    }
+
+    .responsive-video {
+        max-width: 100%; /* 모바일 화면에서 전체 폭 사용 */
+    }
+
+    #Video {
+        padding-top: 30px;
+        padding-bottom: 50px; /* 모바일에서 적절히 여백 조정 */
+    }
+}
 .student-container h1{
     font-size: 34px;
     color: #FB9EBC;

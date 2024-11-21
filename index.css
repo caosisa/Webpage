@@ -171,14 +171,14 @@
 
 /* 첫 번째 박스 배경 이미지 */
 .box-1 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://cnudesign2024.com/dist/res/image/home_last_background1.svg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://cnudesign2024.com/dist/res/image/home_last_background1.webp');
     background-blend-mode: multiply;
     background-size: cover;
 }
 
 /* 두 번째 박스 배경 이미지 */
 .box-2 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://cnudesign2024.com/dist/res/image/home_last_background2.svg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://cnudesign2024.com/dist/res/image/home_last_background2.webp');
     background-blend-mode: multiply;
     background-size: cover;
 }

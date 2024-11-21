@@ -208,7 +208,9 @@
     flex: 1;
     margin: 0;
 }
-
+.mobile-only {
+    display: none;
+}
 /* 반응형 - 모바일 화면 대응 */
 @media (max-width: 768px) {
     .profile {
@@ -248,11 +250,7 @@
         padding-bottom: 20px; /* 모바일에서 적절히 여백 조정 */
 
     }
-    .default-image {
-        display: none;
-    }
-
-    .mobile-image {
-        display: block;
+    .mobile-only {
+        display: inline;
     }
 }

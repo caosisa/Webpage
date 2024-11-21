@@ -104,6 +104,23 @@
     color: #020D18;
 }
 
+.designer-info-container {
+    position: relative;
+    text-align: left;
+}
+
+/* 이름과 이메일 정렬 */
+.designer-details {
+    position: absolute;
+    bottom: 10px; /* 사진의 하단에서 10px 위 */
+    left: 10px; /* 사진의 왼쪽에서 10px 우측 */
+    background-color: rgba(255, 255, 255, 0.9); /* 반투명 흰색 배경 */
+    padding: 10px;
+    border-radius: 8px;
+    width: calc(100% - 20px); /* 전체 가로 크기를 유지하면서 padding 반영 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* 약간의 그림자 효과 */
+}
+
 /* 세 번째 섹션: 빈 공간 */
 .footer-section .spacer {
     height: 100px;
@@ -126,5 +143,22 @@
     }
     .grid-item p{
         margin-left: 10px;
+    }
+    .square-image {
+        width: 148px;
+        height: 222px;
+        margin-top: 0;
+    }
+    .designer-email {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .designer-name {
+        font-size: 25px;
+    }
+    .designer-section {
+        padding-top: 10px !important;
     }
 }

@@ -38,12 +38,22 @@
 </head>
 <body onload="brython(); setTimeout(window.bind_buttons, 100)">
     <!-- 첫 번째 섹션 -->
-    <section id="About_first" style="background-color: #020D18; padding-bottom: 30px;">
-        <div class="homemain-container">
-            <img src="https://cnudesign2024.com/dist/res/image/about_main.svg"  class ="about-image default-image" style="width: 100%; height: 100%;">
-            <img src="https://cnudesign2024.com/dist/res/image/mobile/mobile_about_first.webp" loading="lazy" alt="Mobile Front Page Image" class="about-image mobile-image">
-        </div>
-    </section>
+    <section id="about" class="d-flex align-items-center">
+    <div class="aboutmain-container">
+        <!-- 기본 이미지 -->
+        <img src="https://cnudesign2024.com/dist/res/image/about_main.svg"
+             loading="lazy"
+             alt="About Page Image"
+             class="about-image default-image">
+
+        <!-- 모바일 이미지 -->
+        <img src="https://cnudesign2024.com/dist/res/image/mobile/mobile_about_main.webp"
+             loading="lazy"
+             alt="Mobile About Page Image"
+             class="about-image mobile-image">
+    </div>
+</section>
+
 
     <!-- 두 번째 섹션 - Poster -->
     <section id="Poster" class="d-flex align-items-center" style="background-color: #020D18; background-position: center;padding-top: 70px">

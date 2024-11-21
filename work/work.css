@@ -71,8 +71,7 @@
     align-items: center; /* 텍스트 수직 중앙 정렬 */
     margin-top: 10px; /* 이미지와 텍스트 사이 여백 */
     color: #FFFFFF;
-    width: 100%; /* 이미지 크기와 동일하게 맞춤 */
-    padding: 0 10px; /* 텍스트가 이미지 끝에 너무 가까워지지 않도록 여백 추가 */
+    width: 90%; /* 이미지 크기와 동일하게 맞춤 */
     box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 

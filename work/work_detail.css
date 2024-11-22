@@ -27,7 +27,8 @@
 }
 .work-detail {
     margin-top: 10px;
-
+    height: 20px;
+    width: auto;
 }
 
 .title {

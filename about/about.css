@@ -132,7 +132,8 @@
     height: 40px;
     background: #FFCEDE;
     border: 1px solid #FFCEDE;
-    font-size: 20px;
+    font-size: 19px;
+    margin: 10px;
 }
 
 /* 두 번째 줄 버튼 - 작은 버튼 스타일 */
@@ -144,7 +145,8 @@
     background: #162A3F;
     border: 0.75px solid rgba(255, 206, 222, 0.35);
     color: #FFFFFF; /* 텍스트 색상 */
-    font-size: 15px;
+    font-size: 14px;
+    margin: 0 8px;
 }
 
 /* 버튼 hover 효과 */
@@ -184,8 +186,9 @@
 .text-content {
     display: flex;
     flex-direction: column;
-    margin-left: 64px;
+    margin-right: 64px;
     margin-top: 40px;
+    margin-left: 64px;
 }
 .text-content h3 {
     font-size: 20px;

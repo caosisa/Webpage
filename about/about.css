@@ -164,10 +164,9 @@
 
 .profile-section {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
 
 }
 .section-title h1 {
@@ -186,7 +185,7 @@
     margin-bottom: 72px;
     text-align: center;
     color: white;
-    width: calc(18% - 10px);
+    width: 18%;
 }
 
 /* 학생 이미지 크기 */
@@ -200,7 +199,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    padding: 0;
+    padding: 0 10px;
+    width: 184px;
 }
 .korean-name {
     font-size: 20px;

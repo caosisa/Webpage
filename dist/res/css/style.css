@@ -227,6 +227,13 @@
     overflow-y: auto;
     transition: 0.3s;
 }
+li.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
 
 .navbar-mobile a,
 .navbar-mobile a:focus {

@@ -112,14 +112,44 @@
 }
 
 .professor-button {
-    background-color: #162A3F; /* 기본 버튼 색상 */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+}
+
+/* 첫 번째 줄 버튼 - 큰 버튼 스타일 */
+.large-button {
+    padding: 8px 20px;
+    gap: 8px;
+    width: 148px;
+    height: 40px;
+    background: #FFCEDE;
+    border: 1px solid #FFCEDE;
+}
+
+/* 두 번째 줄 버튼 - 작은 버튼 스타일 */
+.small-button {
+    padding: 6px 15px;
+    gap: 6px;
+    width: 111px;
+    height: 30px;
+    background: #162A3F;
+    border: 0.75px solid rgba(255, 206, 222, 0.35);
+    color: #FFFFFF; /* 텍스트 색상 */
+}
+
+/* 버튼 hover 효과 */
+.professor-button:hover {
+    background: rgba(255, 206, 222, 0.8);
+    color: #000;
+    border-color: rgba(255, 206, 222, 1);
 }
 
 .professor-button.selected {

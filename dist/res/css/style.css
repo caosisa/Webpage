@@ -207,8 +207,9 @@
 
 .navbar-mobile .mobile-nav-toggle {
     position: absolute;
-    top: 15px;
+    top: 22px;
     right: 15px;
+    color: #FB9EBC;
 }
 
 .mobile-nav-toggle.hidden {
@@ -241,6 +242,7 @@ li.social {
     font-size: 40px;
     color: #FB9EBC;
     margin-bottom: 40px;
+    font-weight: bold;
 }
 
 .navbar-mobile a:hover,

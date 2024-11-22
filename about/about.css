@@ -254,6 +254,9 @@
 .mobile-only {
     display: none;
 }
+.desktop-only {
+    display: inline;
+}
 @media (min-width: 1920px) {
     .profile-section {
         margin-left: 324px;
@@ -274,6 +277,8 @@
     .profile-section {
         gap: 10px; /* 모바일에서 간격 줄이기 */
         justify-content: space-around;
+        margin-left: 30px;
+        margin-right: 30px;
     }
     .default-image {
         display: none;
@@ -357,5 +362,8 @@
         width: calc(25% - 8px); /* 4개 버튼이 한 줄에 들어갈 수 있도록 너비 조정 */
         height: 40px; /* 조금 더 작은 높이 */
         font-size: 11px; /* 폰트 크기 조정 */
+    }
+    .desktop-only {
+        display: none;
     }
 }

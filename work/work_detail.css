@@ -187,6 +187,7 @@
         height: auto; /* 비율 유지 */
         margin-left: 10px; /* 오른쪽 여백 */
         margin-top: 30px;
+        margin-right: 20px;
     }
     /* 텍스트 컨테이너 - 오른쪽에 위치 */
     .designer-details {

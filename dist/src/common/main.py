@@ -50,11 +50,15 @@ def enable_navigation():
     mobile_toggles = document.getElementsByClassName('mobile-nav-toggle')
 
     def scroll_to(section: str):
+        header = document.getElementById('header')
+        if not header:
+            print("Error: Header element not found.")
+            return
         offset = header.offsetHeight
         if section:
             section_element = document.getElementById(section.split('#')[-1])
             if section_element:
-                pos = document.getElementById(section.split('#')[-1]).offsetTop
+                pos = section_element.offsetTop
                 window.scrollTo({'top': pos - offset, 'behavior': "smooth"})
 
     def navbar_click(event):

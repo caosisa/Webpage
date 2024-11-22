@@ -3,37 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>헤더 네비게이션</title>
+    <title>Custom Navigation</title>
     <style>
-        /* 헤더 스타일 */
+        /* 헤더 기본 스타일 */
         header {
             background-color: #000000;
             color: #FB9EBC;
+            padding: 10px 0;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 999;
-            padding: 10px 20px;
+        }
+
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        header a {
-            color: #FB9EBC;
-            text-decoration: none;
-            padding: 0 15px;
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
         }
 
-        header a:hover {
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: #FB9EBC;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover {
             color: #FFCEDE;
         }
 
-        /* 모바일 네비게이션 토글 */
+        /* 모바일 토글 */
         .mobile-nav-toggle {
             display: none;
+            color: #fff;
             font-size: 28px;
-            color: #FB9EBC;
             cursor: pointer;
         }
 
@@ -41,115 +58,121 @@
             .mobile-nav-toggle {
                 display: block;
             }
-        }
 
-        /* 모바일 메뉴 오버레이 */
-        #mobile-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #101924;
-            color: #FB9EBC;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 998;
-            padding: 40px 20px;
-        }
+            .navbar ul {
+                display: none;
+            }
 
-        #mobile-menu-overlay.active {
-            display: flex;
-        }
+            .navbar ul.active {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #101924;
+                z-index: 1000;
+                padding: 20px 0;
+            }
 
-        /* 메뉴 항목 */
-        #mobile-menu-overlay ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        #mobile-menu-overlay ul li a {
-            color: #FB9EBC;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        #mobile-menu-overlay ul li a:hover {
-            color: #FFCEDE;
-        }
-
-        /* 소셜 아이콘 */
-        #mobile-menu-overlay .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        #mobile-menu-overlay .social-icons a img {
-            width: 30px;
-            height: 30px;
+            .navbar ul li {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <!-- 로고 -->
-    <h1>
-        <a href="/index.html">
-            <img src="/dist/res/image/home_logo.webp" alt="Home Logo" style="width: 150px;">
-        </a>
-    </h1>
 
-    <!-- 햄버거 메뉴 아이콘 -->
-    <i id="menu-icon" class="mobile-nav-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-    </i>
+<!-- Header -->
+<header id="header">
+    <div class="header-container">
+        <h1 class="banner">
+            <a href="/index.html">
+                <img src="/dist/res/image/home_logo.webp" alt="Home Logo" style="width: 200px;">
+            </a>
+        </h1>
+        <!-- Navigation -->
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link" href="#about">ABOUT</a></li>
+                <li><a class="nav-link" href="#work">WORK</a></li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="/dist/res/image/instagram_icon.webp" alt="Instagram" style="width: 24px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="/dist/res/image/youtube.webp" alt="YouTube" style="width: 24px;">
+                    </a>
+                </li>
+            </ul>
+            <!-- Mobile Menu Toggle -->
+            <i id="menu-icon" class="mobile-nav-toggle">☰</i>
+            <i id="close-icon" class="mobile-nav-toggle hidden">×</i>
+        </nav>
+    </div>
 </header>
 
-<!-- 모바일 메뉴 오버레이 -->
-<div id="mobile-menu-overlay">
-    <ul>
-        <li><a href="/index.html">Main</a></li>
-        <li><a href="/about/index.html">About</a></li>
-        <li><a href="/work/index.html">Work</a></li>
-    </ul>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/2024_cnud?igsh=MWI1dmdjdTlmeWJ5Zg==" target="_blank">
-            <img src="/dist/res/image/instagram_icon.webp" alt="Instagram">
-        </a>
-        <a href="https://www.youtube.com/watch?v=_nVyTtWDYQI" target="_blank">
-            <img src="/dist/res/image/youtube.webp" alt="YouTube">
-        </a>
-    </div>
-</div>
+<!-- Sections -->
+<section id="about" style="margin-top: 70px; height: 500px; background: #162A3F;">
+    <h2 style="color: white; text-align: center;">About Section</h2>
+</section>
+<section id="work" style="height: 500px; background: #020D18;">
+    <h2 style="color: white; text-align: center;">Work Section</h2>
+</section>
 
+<!-- Scripts -->
 <script>
-    // JavaScript
     document.addEventListener("DOMContentLoaded", () => {
         const menuIcon = document.getElementById("menu-icon");
-        const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+        const closeIcon = document.getElementById("close-icon");
+        const navbar = document.getElementById("navbar");
 
         menuIcon.addEventListener("click", () => {
-            mobileMenuOverlay.classList.toggle("active");
+            navbar.classList.add("active");
+            menuIcon.style.display = "none";
+            closeIcon.style.display = "block";
         });
 
-        // 닫기 버튼 추가 가능 (여기서 처리)
-        mobileMenuOverlay.addEventListener("click", (e) => {
-            if (e.target === mobileMenuOverlay) {
-                mobileMenuOverlay.classList.remove("active");
-            }
+        closeIcon.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            menuIcon.style.display = "block";
+            closeIcon.style.display = "none";
         });
     });
 </script>
+
+<script type="text/python">
+def enable_navigation():
+    header = document.getElementById("header")
+    navigation = document.getElementsByClassName("nav-link")
+
+    def scroll_to(section: str):
+        if not header:
+            print("Header not found")
+            return
+        offset = header.offsetHeight
+        if section:
+            target = document.getElementById(section.strip("#"))
+            if target:
+                pos = target.offsetTop
+                window.scrollTo({"top": pos - offset, "behavior": "smooth"})
+
+    for nav in navigation:
+        nav.onclick = lambda e: (
+            e.preventDefault(),
+            scroll_to(e.target.attributes["href"].value)
+        )
+enable_navigation()
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython_stdlib.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => brython());
+</script>
+
 </body>
 </html>

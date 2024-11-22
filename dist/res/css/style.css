@@ -229,13 +229,16 @@
     transition: 0.3s;
     padding-top: 220px;
 }
-li.social {
+@media (min-width: 746px) {
+    li.social {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 170px;
 }
+}
+
 
 .navbar-mobile a,
 .navbar-mobile a:focus {

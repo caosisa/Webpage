@@ -56,13 +56,11 @@
 .navbar a:focus {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-size: 15px;
     font-weight: 500;
     color: #FB9EBC;
     white-space: nowrap;
     transition: 0.3s;
+    flex-direction: column;
 }
 
 .navbar a i,
@@ -202,7 +200,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(90, 110, 140, 0.95);
+    background: #000000;
     transition: 0.3s;
     z-index: 999;
 }
@@ -220,22 +218,19 @@
 .navbar-mobile ul {
     display: block;
     position: absolute;
-    top: 55px;
-    right: 15px;
-    bottom: 15px;
-    left: 15px;
+    top: 70px;
+    right: 0;
+    bottom: 0;
     padding: 10px 0;
-    border-radius: 10px;
-    background-color: #fff;
+    background-color: #101924;
     overflow-y: auto;
     transition: 0.3s;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
-    padding: 10px 20px;
-    font-size: 15px;
-    color: #5A6E8C;
+    font-size: 40px;
+    color: #FB9EBC;
 }
 
 .navbar-mobile a:hover,

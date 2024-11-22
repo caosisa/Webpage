@@ -240,9 +240,21 @@
     .box {
         height: auto; /* 모바일에서 높이 자동 조정 */
     }
+    .box h5 {
+        font-size: 20px;
+    }
     .instagram-box {
         font-size: 20px;
         padding: 15px;
+    }
+    .instagram-box h5 {
+        font-size: 20px;
+    }
+    .box br {
+        display: none;
+    }
+    .box-2 br {
+        display: none;
     }
     .work-title h5{
         font-size: 20px;

@@ -86,7 +86,7 @@
 }
 
 .designer-email {
-    font-size: 10px;
+    font-size: 14px;
     color: #333;
     text-decoration: none;
 }
@@ -115,7 +115,7 @@
     padding-right: 36px;
 }
 .designer-details {
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 /* 질문 강조 */

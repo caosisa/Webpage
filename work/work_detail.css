@@ -88,11 +88,10 @@
     font-weight: bold; /* 이름을 굵게 표시 */
 }
 
-.designer-email {
-    font-size: 14px;
-    color: #333;
-    text-decoration: none;
-}
+.email-font {
+        font-size: 14px;
+        color: #162A3F;
+    }
 .email-icon {
     width: 14px;
 }
@@ -205,8 +204,7 @@
         color: #162A3F;
         margin-bottom: 5px; /* 이름과 이메일 간 간격 */
     }
-    /* 이메일 스타일 */
-    .designer-email {
+    .email-font {
         font-size: 14px;
         color: #162A3F;
     }

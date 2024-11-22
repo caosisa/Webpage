@@ -367,4 +367,8 @@
     .desktop-only {
         display: none;
     }
+    .section-title p {
+        font-size: 14px;
+        margin: 0 20px;
+    }
 }

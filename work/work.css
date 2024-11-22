@@ -88,10 +88,26 @@
 
 @media (min-width: 1920px) {
     .vector {
-        width: 1280px;
+        width: 1200px;
+        margin-left: 345px;
     }
     .info {
-        width: 85%;
+        width: 92%;
+    }
+    .gallery {
+        margin: 0 255px;
+    }
+    .sort-container {
+        padding-left: 180px;
+    }
+    .button-image {
+        margin-right: 360px;
+    }
+    .work-img {
+        margin-left: 240px;
+    }
+    .sort-explain {
+        margin-left: 170px;
     }
 }
 

@@ -353,15 +353,16 @@
     }
 
     .large-button {
-        width: calc(50% - 10px); /* 화면 너비의 절반에 맞게 조정 */
-        height: 50px; /* 조금 더 큰 높이 */
+        width: auto; /* 화면 너비의 절반에 맞게 조정 */
+        height: 32px; /* 조금 더 큰 높이 */
         font-size: 14px; /* 폰트 크기 조정 */
     }
 
     .small-button {
-        width: calc(25% - 8px); /* 4개 버튼이 한 줄에 들어갈 수 있도록 너비 조정 */
-        height: 40px; /* 조금 더 작은 높이 */
+        width: auto; /* 4개 버튼이 한 줄에 들어갈 수 있도록 너비 조정 */
+        height: 25px; /* 조금 더 작은 높이 */
         font-size: 11px; /* 폰트 크기 조정 */
+        padding:4px 8px;
     }
     .desktop-only {
         display: none;

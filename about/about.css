@@ -164,10 +164,11 @@
 
 .profile-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
     flex-wrap: wrap;
-
+    margin-left: 120px;
+    margin-right: 120px;
 }
 .section-title h1 {
     color: #FB9EBC;
@@ -185,7 +186,7 @@
     margin-bottom: 72px;
     text-align: center;
     color: white;
-    width: 18%;
+    width: calc(18% - 10px);
 }
 
 /* 학생 이미지 크기 */
@@ -199,7 +200,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    padding: 0 10px;
+    padding: 0;
     width: 184px;
 }
 .korean-name {
@@ -216,6 +217,13 @@
 }
 .mobile-only {
     display: none;
+}
+@media (min-width: 1920px) {
+    .profile-section {
+        margin-left: 324px;
+        margin-right: 324px;
+    }
+
 }
 /* 반응형 - 모바일 화면 대응 */
 @media (max-width: 768px) {

@@ -154,45 +154,52 @@
     .description {
         font-size: 16px;
     }
+    /* Designer 제목 왼쪽 정렬 */
     .designer h1 {
         font-size: 18px !important;
         margin-top: 0 !important;
-        margin-left: 12px !important;
+        margin-left: 10px; /* 왼쪽에 약간의 여백 */
+        text-align: left; /* 왼쪽 정렬 */
     }
-    .designer-container {
-        flex-direction: column; /* 세로 정렬 */
-        align-items: center; /* 중앙 정렬 */
-        text-align: center;
-    }
+
+    /* Designer 섹션 레이아웃 */
     .artwork-section, .designer-section {
         display: flex;
-        flex-direction: column; /* 세로 정렬 */
-        align-items: center; /* 중앙 정렬 */
-        text-align: center; /* 텍스트 중앙 정렬 */
+        flex-direction: row; /* 가로 정렬 */
+        align-items: center; /* 세로 정렬 */
+        text-align: left; /* 텍스트 왼쪽 정렬 */
         padding: 10px;
         width: 100%; /* 부모 요소에 맞춤 */
     }
-    /* 이미지 스타일 */
+
+    /* 이미지 스타일 - 왼쪽에 위치 */
     .square-image {
-        width: 80%; /* 모바일에서 적절한 크기 */
+        width: 150px; /* 적절한 크기로 조정 */
         height: auto; /* 비율 유지 */
-        margin: 0 auto 20px; /* 중앙 정렬 및 간격 추가 */
+        object-fit: cover;
+        margin-right: 20px; /* 이름과 이메일 간 간격 */
     }
-    /* 디자이너 정보 */
+
+    /* 디자이너 정보 - 오른쪽에 위치 */
     .designer-details {
-        text-align: center; /* 텍스트 중앙 정렬 */
-        margin-top: 10px; /* 이미지와의 간격 조정 */
+        display: flex;
+        flex-direction: column; /* 세로 정렬 */
+        align-items: flex-start; /* 왼쪽 정렬 */
+        margin-top: 0; /* 불필요한 상단 간격 제거 */
+        text-align: left; /* 텍스트 왼쪽 정렬 */
     }
+
+    /* 이름과 이메일 스타일 */
     .designer-name {
         font-size: 20px;
         color: #162A3F;
-        margin-bottom: 5px; /* 이메일과의 간격 조정 */
+        margin-bottom: 5px; /* 이름과 이메일 간 간격 */
     }
+
     .designer-email {
         font-size: 14px;
         color: #162A3F;
         display: block; /* 이메일을 한 줄로 표시 */
-        margin-bottom: 20px; /* 인터뷰 섹션과 간격 추가 */
     }
     /* 인터뷰 섹션 */
     .grid-container {
@@ -205,10 +212,19 @@
     }
     .grid-item {
         font-size: 14px; /* 모바일에서 텍스트 크기 줄이기 */
+        padding: 0;
     }
     .interview-title {
         font-size: 18px;
         margin-bottom: 15px; /* 제목과 질문 간 간격 조정 */
         text-align: center; /* 제목 중앙 정렬 */
+        display: flex;
+        margin-left: 10px;
+    }
+    .row {
+        margin: 5px;
+    }
+    .col-md-8 {
+        padding-right: 0;
     }
 }

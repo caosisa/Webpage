@@ -32,3 +32,11 @@ body {
 .cursor .cursor--large {
     --cursor-size: 0px;
 }
+
+@media (max-width: 768px) {
+    .cursor .cursor--small,
+    .cursor .cursor--large,
+    .cursor .cursor--text {
+        display: none; /* 모바일에서 숨김 */
+    }
+}

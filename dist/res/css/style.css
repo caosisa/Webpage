@@ -218,6 +218,7 @@
 .navbar-mobile ul {
     display: block;
     position: absolute;
+    margin: 0 !important;
     top: 70px;
     right: 0;
     bottom: 0;

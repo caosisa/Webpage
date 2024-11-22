@@ -340,4 +340,12 @@
     .english-name {
         font-size: 10px;
     }
+    .large-button {
+        width: auto;
+        height: 32px;
+    }
+    .small-button {
+        width: auto;
+        height: 25px;
+    }
 }

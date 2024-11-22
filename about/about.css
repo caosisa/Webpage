@@ -132,6 +132,7 @@
     height: 40px;
     background: #FFCEDE;
     border: 1px solid #FFCEDE;
+    font-size: 20px;
 }
 
 /* 두 번째 줄 버튼 - 작은 버튼 스타일 */
@@ -143,6 +144,7 @@
     background: #162A3F;
     border: 0.75px solid rgba(255, 206, 222, 0.35);
     color: #FFFFFF; /* 텍스트 색상 */
+    font-size: 15px;
 }
 
 /* 버튼 hover 효과 */

@@ -247,10 +247,24 @@
     .icon {
         display: none;
     }
-    .slider-item {
-        height: 113px;
-        width: auto;
+    /* 슬라이더 설정 */
+    .slider-container {
+        display: flex; /* 가로로 정렬 */
+        overflow-x: scroll; /* 수평 스크롤 허용 */
+        scroll-snap-type: x mandatory; /* 스크롤 스냅 적용 */
+        gap: 10px; /* 아이템 간 간격 */
+        padding: 0 10px;
     }
+
+    .slider-item {
+        flex: 0 0 80%; /* 화면의 80% 크기 */
+        height: 200px; /* 아이템 높이 조정 */
+        scroll-snap-align: start; /* 스크롤 스냅 시작점 */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+        border-radius: 8px; /* 둥근 모서리 */
+        background-color: #ffffff; /* 아이템 배경색 */
+    }
+
     .default-image {
         display: none !important;
     }

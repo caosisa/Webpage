@@ -343,9 +343,11 @@
     .large-button {
         width: auto;
         height: 32px;
+        font-size: 15px;
     }
     .small-button {
         width: auto;
         height: 25px;
+        font-size: 11px;
     }
 }

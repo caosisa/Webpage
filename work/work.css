@@ -86,7 +86,14 @@
     text-align: left; /* 왼쪽 정렬 */
 }
 
-
+@media (min-width: 1920px) {
+    .vector {
+        width: 1280px;
+    }
+    .info {
+        width: 85%;
+    }
+}
 
 /* 반응형: 모바일 화면에서 2개의 열 */
 @media (max-width: 768px) {

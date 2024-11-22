@@ -209,18 +209,28 @@
 </header>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const menuIcon = document.getElementById("menu-icon");
-        const closeIcon = document.getElementById("close-icon");
-        const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
 
-        menuIcon.addEventListener("click", () => {
-            mobileMenuOverlay.classList.remove("hidden");
-        });
+    // 초기 상태 설정
+    mobileMenuOverlay.classList.add("hidden");
+    closeIcon.style.display = "none";
 
-        closeIcon.addEventListener("click", () => {
-            mobileMenuOverlay.classList.add("hidden");
-        });
-        });
+    // 햄버거 버튼 클릭 이벤트
+    menuIcon.addEventListener("click", () => {
+        mobileMenuOverlay.classList.remove("hidden");
+        menuIcon.style.display = "none"; // 햄버거 버튼 숨기기
+        closeIcon.style.display = "block"; // 닫기 버튼 보이기
+    });
+
+    // 닫기 버튼 클릭 이벤트
+    closeIcon.addEventListener("click", () => {
+        mobileMenuOverlay.classList.add("hidden");
+        menuIcon.style.display = "block"; // 햄버거 버튼 보이기
+        closeIcon.style.display = "none"; // 닫기 버튼 숨기기
+    });
+});
 
 </script>
 </body>

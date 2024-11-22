@@ -172,7 +172,7 @@
     }
     .designer-section {
         display: flex;
-        flex-direction: row; /* 가로 정렬 */
+        flex-direction: column;
         align-items: flex-start; /* 사진과 텍스트의 상단을 맞춤 */
         padding: 10px;
     }

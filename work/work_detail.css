@@ -178,11 +178,11 @@
     }
     /* 이미지 스타일 - 왼쪽에 위치 */
     .square-image {
-        width: 120px; /* 모바일에서 적절한 크기 */
+        width: 148px; /* 모바일에서 적절한 크기 */
         height: auto; /* 비율 유지 */
-        margin-right: 15px; /* 오른쪽 여백 */
+        margin-left: 10px; /* 오른쪽 여백 */
+        margin-top: 30px;
     }
-
     /* 텍스트 컨테이너 - 오른쪽에 위치 */
     .designer-details {
         display: flex;
@@ -190,15 +190,14 @@
         justify-content: flex-start;
         align-items: flex-start;
         text-align: left; /* 텍스트 왼쪽 정렬 */
+        margin-left: 10px;
     }
-
     /* 이름 스타일 */
     .designer-name {
         font-size: 18px;
         color: #162A3F;
         margin-bottom: 5px; /* 이름과 이메일 간 간격 */
     }
-
     /* 이메일 스타일 */
     .designer-email {
         font-size: 14px;
@@ -222,9 +221,10 @@
         text-align: center; /* 제목 중앙 정렬 */
         display: flex;
         margin-left: 20px;
+        margin-top: 30px;
     }
     .row {
-        margin: 5px;
+        margin: 10px;
     }
     .col-md-8 {
         padding: 0;

@@ -229,7 +229,7 @@
     transition: 0.3s;
     padding-top: 220px;
 }
-@media (min-width: 746px) {
+@media (max-width: 746px) {
     li.social {
     display: flex;
     flex-direction: row;

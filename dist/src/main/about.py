@@ -60,6 +60,7 @@ def show_message(event):
     if selected_button:
         selected_button.style.backgroundColor = "#FFCEDE"
         selected_button.style.color = "#162A3F"
+        selected_button.style.fontWeight = "bold"
 
     # 메시지 가져오기
     message = professor_messages.get(professor_id, {})

@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Navigation</title>
     <style>
-        /* 헤더 기본 스타일 */
+        /* 헤더 배경 색상과 텍스트 색상 지정 */
         header {
-            background-color: #000000;
-            color: #FB9EBC;
+            background-color: #000000; /* 배경 색상 */
+            color: #FB9EBC; /* 기본 텍스트 색상 */
             padding: 10px 0;
             position: fixed;
             top: 0;
@@ -16,163 +15,222 @@
             z-index: 999;
         }
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar ul li {
-            margin-left: 20px;
-        }
-
-        .navbar ul li a {
+        /* 링크(a) 태그의 색상을 #FB9EBC로 지정 */
+        header a {
             color: #FB9EBC;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            transition: 0.3s;
+            text-decoration: none; /* 링크 밑줄 제거 */
+            padding: 0 15px;
         }
 
-        .navbar ul li a:hover {
+        /* 링크에 마우스를 올렸을 때 색상을 유지 */
+        header a:hover {
             color: #FFCEDE;
         }
 
-        /* 모바일 토글 */
+        .header-container {
+            display: flex;
+            justify-content: space-between; /* 로고와 메뉴 사이 간격 생성 */
+            align-items: center;
+        }
+
+        /* 네비게이션 메뉴 스타일 */
+        nav ul {
+            margin-left: auto; /* 자동 여백을 추가하여 우측으로 정렬 */
+            margin-right: 20px;
+            display: flex;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        /* 모바일 토글 버튼 숨기기 */
         .mobile-nav-toggle {
             display: none;
-            color: #fff;
-            font-size: 28px;
-            cursor: pointer;
+        }
+
+        /* 페이지 컨텐츠가 헤더 밑에 가려지지 않도록 마진 추가 */
+        body {
+            margin-top: 70px; /* 헤더 높이만큼 마진 */
+            background-color: #020D18;
+        }
+
+        /* Mobile-specific styles */
+        .hidden {
+            display: none;
         }
 
         @media (max-width: 768px) {
             .mobile-nav-toggle {
                 display: block;
+                cursor: pointer;
             }
-
-            .navbar ul {
+            img.banner_img {
+                width: 200px!important;
+            }
+            nav ul {
                 display: none;
-            }
-
-            .navbar ul.active {
-                display: flex;
                 flex-direction: column;
-                position: fixed;
+                position: absolute;
                 top: 70px;
                 left: 0;
                 width: 100%;
-                background: #101924;
-                z-index: 1000;
-                padding: 20px 0;
+                background-color: #000000;
             }
 
-            .navbar ul li {
-                margin-left: 0;
-                margin-bottom: 15px;
+            nav ul.active {
+                display: flex;
+            }
+
+            /* 아이콘 스타일 */
+            .bi-list, .bi-x {
+                cursor: pointer;
+            }
+            .fixed-top {
+                padding-left: 10px !important;
+                padding-right: 20px !important;
+            }
+            .header-container {
+                flex-wrap: nowrap;
+            }
+            #header {
+                height: 60px;
+            }
+            /* 모바일 메뉴 오버레이 */
+            #mobile-menu-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #101924; /* 배경색 */
+                display: flex !important;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+                padding: 40px 20px;
+            }
+
+            #mobile-menu-overlay.hidden {
+                display: none; /* 초기 상태 숨김 */
+            }
+
+            /* 메뉴 리스트 */
+            #mobile-menu-overlay .menu-content ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            #mobile-menu-overlay .menu-content ul li a {
+                color: #FB9EBC; /* 텍스트 색상 */
+                font-size: 1.5rem;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            #mobile-menu-overlay .menu-content ul li a:hover {
+                color: #FFCEDE; /* 호버 효과 */
+            }
+
+            /* 하단 소셜 아이콘 */
+            #mobile-menu-overlay .social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            #mobile-menu-overlay .social-icons a img {
+                width: 30px;
+                height: 30px;
             }
         }
     </style>
+    <title>헤더</title>
 </head>
 <body>
-
-<!-- Header -->
-<header id="header">
-    <div class="header-container">
+<!-- Header - 모든 페이지에서 동일하게 사용 -->
+<header id="header" class="fixed-top">
+    <div class="header-container d-flex align-items-center">
+        <!-- 로고 클릭시 홈으로 이동 -->
         <h1 class="banner">
             <a href="/index.html">
-                <img src="/dist/res/image/home_logo.webp" alt="Home Logo" style="width: 200px;">
-            </a>
-        </h1>
-        <!-- Navigation -->
+                <img src="/dist/res/image/home_logo.webp" alt="Home_Logo" class="banner_img" style="width: 280px">
+            </a></h1>
+        <!-- 네비게이션 -->
         <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link" href="#about">ABOUT</a></li>
-                <li><a class="nav-link" href="#work">WORK</a></li>
+            <ul class="m-4 m-lg-0">
+                <li><a class="nav-link" href="/about/index.html">ABOUT</a></li>
+                <li><a class="nav-link" href="/work/index.html">WORK</a></li>
                 <li>
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="/dist/res/image/instagram_icon.webp" alt="Instagram" style="width: 24px;">
+                    <a href="https://www.instagram.com/2024_cnud?igsh=MWI1dmdjdTlmeWJ5Zg==" target="_blank">
+                        <img src="/dist/res/image/instagram_icon.webp" alt="header-Instagram" style="width: 24px; height: auto;">
                     </a>
                 </li>
-                <li>
-                    <a href="https://www.youtube.com/" target="_blank">
-                        <img src="/dist/res/image/youtube.webp" alt="YouTube" style="width: 24px;">
+                <li><a href="https://www.youtube.com/watch?v=_nVyTtWDYQI" target="_blank">
+                        <img src="/dist/res/image/youtube.webp" style="width: 24px;height: auto;">
                     </a>
                 </li>
             </ul>
-            <!-- Mobile Menu Toggle -->
-            <i id="menu-icon" class="mobile-nav-toggle">☰</i>
-            <i id="close-icon" class="mobile-nav-toggle hidden">×</i>
+            <!-- 모바일 메뉴 아이콘 (햄버거 & 닫기) -->
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list mobile-nav-toggle" viewBox="0 0 16 16" id="menu-icon">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x mobile-nav-toggle hidden" viewBox="0 0 16 16" id="close-icon">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </i>
         </nav>
     </div>
+    <div id="mobile-menu-overlay" class="hidden">
+        <div class="menu-content">
+            <ul>
+                <li><a href="/index.html">Main</a></li>
+                <li><a href="/about/index.html">About</a></li>
+                <li><a href="/work/index.html">Work</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/2024_cnud?igsh=MWI1dmdjdTlmeWJ5Zg==" target="_blank">
+                    <img src="/dist/res/image/instagram_icon.webp" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/watch?v=_nVyTtWDYQI" target="_blank">
+                    <img src="/dist/res/image/youtube.webp" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </div>
 </header>
-
-<!-- Sections -->
-<section id="about" style="margin-top: 70px; height: 500px; background: #162A3F;">
-    <h2 style="color: white; text-align: center;">About Section</h2>
-</section>
-<section id="work" style="height: 500px; background: #020D18;">
-    <h2 style="color: white; text-align: center;">Work Section</h2>
-</section>
-
-<!-- Scripts -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const menuIcon = document.getElementById("menu-icon");
         const closeIcon = document.getElementById("close-icon");
-        const navbar = document.getElementById("navbar");
+        const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
 
+        // 초기 상태 설정
+        mobileMenuOverlay.classList.add("hidden");
+        closeIcon.style.display = "none";
+
+        // 햄버거 버튼 클릭 이벤트
         menuIcon.addEventListener("click", () => {
-            navbar.classList.add("active");
-            menuIcon.style.display = "none";
-            closeIcon.style.display = "block";
+            mobileMenuOverlay.classList.remove("hidden");
+            menuIcon.style.display = "none"; // 햄버거 버튼 숨기기
+            closeIcon.style.display = "block"; // 닫기 버튼 보이기
         });
-
+    
+        // 닫기 버튼 클릭 이벤트
         closeIcon.addEventListener("click", () => {
-            navbar.classList.remove("active");
-            menuIcon.style.display = "block";
-            closeIcon.style.display = "none";
-        });
+            mobileMenuOverlay.classList.add("hidden");
+            menuIcon.style.display = "block"; // 햄버거 버튼 보이기
+            closeIcon.style.display = "none"; // 닫기 버튼 숨기기
+            });
     });
+
 </script>
-
-<script type="text/python">
-def enable_navigation():
-    header = document.getElementById("header")
-    navigation = document.getElementsByClassName("nav-link")
-
-    def scroll_to(section: str):
-        if not header:
-            print("Header not found")
-            return
-        offset = header.offsetHeight
-        if section:
-            target = document.getElementById(section.strip("#"))
-            if target:
-                pos = target.offsetTop
-                window.scrollTo({"top": pos - offset, "behavior": "smooth"})
-
-    for nav in navigation:
-        nav.onclick = lambda e: (
-            e.preventDefault(),
-            scroll_to(e.target.attributes["href"].value)
-        )
-enable_navigation()
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython_stdlib.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => brython());
-</script>
-
 </body>
-</html>

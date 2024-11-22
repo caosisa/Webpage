@@ -222,23 +222,25 @@
     top: 70px;
     right: 0;
     bottom: 0;
-    padding: 10px 0;
+    padding-bottom: 80px;
     background-color: #101924;
     overflow-y: auto;
     transition: 0.3s;
+    padding-top: 220px;
 }
 li.social {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 170px;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
     font-size: 40px;
     color: #FB9EBC;
+    margin-bottom: 40px;
 }
 
 .navbar-mobile a:hover,

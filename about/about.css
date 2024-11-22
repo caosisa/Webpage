@@ -343,14 +343,19 @@
     .english-name {
         font-size: 10px;
     }
-    .large-button {
-        width: auto;
-        height: 32px;
-        font-size: 15px;
+    .button-row {
+        flex-wrap: wrap; /* 버튼이 화면에 맞게 줄바꿈 */
     }
+
+    .large-button {
+        width: calc(50% - 10px); /* 화면 너비의 절반에 맞게 조정 */
+        height: 50px; /* 조금 더 큰 높이 */
+        font-size: 14px; /* 폰트 크기 조정 */
+    }
+
     .small-button {
-        width: auto;
-        height: 25px;
-        font-size: 11px;
+        width: calc(25% - 8px); /* 4개 버튼이 한 줄에 들어갈 수 있도록 너비 조정 */
+        height: 40px; /* 조금 더 작은 높이 */
+        font-size: 11px; /* 폰트 크기 조정 */
     }
 }

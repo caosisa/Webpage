@@ -26,7 +26,8 @@
     margin-right: 60px;
 }
 .work-detail {
-        margin-top: 10px;
+    margin-top: 10px;
+
 }
 
 .title {
@@ -67,8 +68,8 @@
 .row {
     margin-left: 200px;
     margin-right: 200px;
+    border-radius: 8px;
 }
-
 
 .square-image {
     width: 240px;

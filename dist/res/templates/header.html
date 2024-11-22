@@ -66,7 +66,9 @@
                 display: block;
                 cursor: pointer;
             }
-
+            img.banner_img {
+                width: 200px;
+            }
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -93,8 +95,7 @@
                 flex-wrap: nowrap;
             }
             #header {
-                height: 70px;
-                padding-top: 20px;
+                height: 60px;
             }
             /* 모바일 메뉴 오버레이 */
             #mobile-menu-overlay {
@@ -160,7 +161,7 @@
         <!-- 로고 클릭시 홈으로 이동 -->
         <h1 class="banner">
             <a href="/index.html">
-                <img src="/dist/res/image/home_logo.webp" alt="Home_Logo" style="width: 280px">
+                <img src="/dist/res/image/home_logo.webp" alt="Home_Logo" class="banner_img" style="width: 280px">
             </a></h1>
         <!-- 네비게이션 -->
         <nav id="navbar" class="navbar">

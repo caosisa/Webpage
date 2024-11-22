@@ -66,6 +66,17 @@
                 display: block;
                 cursor: pointer;
             }
+            #menu-icon {
+                display: block;
+                cursor: pointer;
+            }
+            #close-icon {
+                display: none;
+                cursor: pointer;
+            }
+            .hidden {
+                display: none !important;
+            }
             img.banner_img {
                 width: 200px!important;
             }
@@ -121,11 +132,13 @@
             #mobile-menu-overlay .menu-content ul {
                 list-style: none;
                 padding: 0;
-                margin: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 20px;
+                gap: 40px;
+                margin-top: 200px;
+                margin-bottom: 200px;
+                align-content: space-around;
             }
 
             #mobile-menu-overlay .menu-content ul li a {

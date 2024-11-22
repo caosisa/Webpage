@@ -264,7 +264,7 @@
 /* 반응형 - 모바일 화면 대응 */
 @media (max-width: 768px) {
     .profile {
-        width: 45%; /* 모바일에서 한 줄에 두 명 */
+         flex: 0 0 calc(50% - 20px);
     }
     .student-img {
         width: 100%; /* 프로필 너비에 맞게 이미지 크기 조정 */
@@ -272,7 +272,8 @@
         border-radius: 8px;
     }
     .profile-section {
-        gap: 15px; /* 모바일에서 간격 줄이기 */
+        gap: 10px; /* 모바일에서 간격 줄이기 */
+        justify-content: space-around;
     }
     .default-image {
         display: none;
@@ -333,6 +334,8 @@
         flex-direction: column; /* 세로로 정렬 */
         align-items: center; /* 왼쪽 정렬 (필요에 따라 조정 가능) */
         gap: 5px; /* 항목 간 간격 */
+        margin-left: 0;
+        width: auto;
     }
     .korean-name {
         font-size: 13px;

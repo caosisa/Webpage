@@ -225,9 +225,15 @@
     width: 30px;
     display: inline-block;
 }
+.mobile-only {
+    display: none;
+}
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
+    .mobile-only {
+        display: inline;
+    }
     #programs {
         padding: 100px 20px;
     }

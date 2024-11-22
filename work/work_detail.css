@@ -117,7 +117,7 @@
     padding-right: 36px;
 }
 .designer-details {
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 /* 질문 강조 */
@@ -129,6 +129,9 @@
 }
 .col-md-8 {
     padding-right: 80px;
+    padding-bottom: 80px;
+}
+.col-md-4 {
     padding-bottom: 80px;
 }
 

@@ -88,6 +88,7 @@
 }
 .video-container p {
     font-size: 15px;
+    color: #FB9EBC;
 }
 .student-container h1{
     font-size: 15px;
@@ -163,9 +164,10 @@
 
 .profile-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
     flex-wrap: wrap;
+    gap: 20px;
 
 }
 .section-title h1 {
@@ -181,34 +183,35 @@
     margin-bottom: 20px;
 }
 .profile {
-    margin-bottom: 20px;
+    margin-bottom: 72px;
     text-align: center;
     color: white;
-    width: 18%;
+    width: calc(18% - 10px);
 }
 
 /* 학생 이미지 크기 */
 .student-img {
     width: 184px;
     height: 276px;
+    border-radius: 8px;
 }
 .name-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    padding: 0 10px;
+    padding: 0;
 }
 .korean-name {
     font-size: 20px;
     font-weight: normal;
-    flex: 1;
+    text-align: left;
     margin: 0;
 }
 .english-name {
     font-size: 15px;
     font-weight: normal;
-    flex: 1;
+    text-align: right;
     margin: 0;
 }
 .mobile-only {

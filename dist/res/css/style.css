@@ -54,7 +54,7 @@
 
 .navbar a,
 .navbar a:focus {
-    display: flex;
+    display: inline;
     align-items: center;
     font-weight: 500;
     color: #FB9EBC;
@@ -236,7 +236,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 170px;
-}
+    }
+    .navbar a {
+        display: flex;
+    }
 }
 
 

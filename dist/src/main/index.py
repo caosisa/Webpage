@@ -61,18 +61,12 @@ start_x = 0
 current_offset = 0
 is_swiping = False
 
-# 슬라이드 이동 함수
-def move_slide():
-    global currentIndex
-    offset = currentIndex * item_width  # 이동할 너비 계산
-    slider_wrapper.style.transition = "transform 0.5s ease"  # 부드러운 이동 애니메이션 추가
-    slider_wrapper.style.transform = f"translateX(-{offset}px)"
-
 # 터치 시작 이벤트 핸들러
 def touch_start(event):
     global start_x, current_offset, is_swiping
     start_x = event.touches[0].clientX  # 터치 시작 시의 x 좌표 저장
-    current_offset = currentIndex * item_width
+    current_offset = slider_wrapper.style.transform.replace("translateX(", "").replace("px)", "")
+    current_offset = float(current_offset.replace("-", "")) if current_offset else 0
     slider_wrapper.style.transition = "none"  # 실시간 이동 중에는 애니메이션 비활성화
     is_swiping = True
 
@@ -86,23 +80,9 @@ def touch_move(event):
 
 # 터치 종료 이벤트 핸들러
 def touch_end(event):
-    global currentIndex, start_x, is_swiping
-    end_x = event.changedTouches[0].clientX  # 터치 종료 시의 x 좌표 저장
+    global is_swiping
     is_swiping = False
-
-    # 스와이프 거리 계산
-    swipe_distance = end_x - start_x
-
-    # 스와이프 기준에 따른 슬라이드 이동 (오른쪽으로 스와이프한 경우 이전 슬라이드, 왼쪽으로 스와이프한 경우 다음 슬라이드)
-    if swipe_distance > 50:  # 오른쪽으로 스와이프 (50px 이상 움직였을 때)
-        if currentIndex > 0:
-            currentIndex -= 1
-    elif swipe_distance < -50:  # 왼쪽으로 스와이프 (50px 이상 움직였을 때)
-        if currentIndex < total_items - items_per_slide:
-            currentIndex += 1
-
-    # 슬라이드 이동
-    move_slide()
+    # 터치 종료 시 애니메이션을 추가할 필요가 없다면 이 부분은 비워둡니다.
 
 # 슬라이더에 터치 이벤트 등록 (모바일 환경에서만 적용)
 if window.innerWidth < 768:

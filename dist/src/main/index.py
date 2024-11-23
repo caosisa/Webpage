@@ -56,6 +56,11 @@ total_items = len(slider_wrapper.children)
 items_per_slide = 3  # 한 번에 보이는 슬라이더 아이템 수
 item_width = 410  # 슬라이더 아이템 너비 (400px + margin-right 10px)
 
+# 터치 이벤트 변수 초기화
+start_x = 0
+current_offset = 0
+is_swiping = False
+
 # 슬라이드 이동 함수
 def move_slide():
     global currentIndex
@@ -63,24 +68,27 @@ def move_slide():
     slider_wrapper.style.transition = "transform 0.5s ease"  # 부드러운 이동 애니메이션 추가
     slider_wrapper.style.transform = f"translateX(-{offset}px)"
 
-# 터치 이벤트 변수 초기화
-start_x = 0
-end_x = 0
-
 # 터치 시작 이벤트 핸들러
 def touch_start(event):
-    global start_x
+    global start_x, current_offset, is_swiping
     start_x = event.touches[0].clientX  # 터치 시작 시의 x 좌표 저장
+    current_offset = currentIndex * item_width
+    slider_wrapper.style.transition = "none"  # 실시간 이동 중에는 애니메이션 비활성화
+    is_swiping = True
 
-# 터치 이동 이벤트 핸들러 (이벤트 처리 중 필요에 따라 사용)
+# 터치 이동 이벤트 핸들러
 def touch_move(event):
-    # 여기에 터치 이동 시의 추가 효과를 줄 수 있음 (예: 부드러운 이동 애니메이션)
-    pass
+    global start_x, current_offset, is_swiping
+    if is_swiping:
+        delta_x = event.touches[0].clientX - start_x
+        new_offset = current_offset - delta_x
+        slider_wrapper.style.transform = f"translateX(-{new_offset}px)"
 
 # 터치 종료 이벤트 핸들러
 def touch_end(event):
-    global currentIndex, start_x, end_x
+    global currentIndex, start_x, is_swiping
     end_x = event.changedTouches[0].clientX  # 터치 종료 시의 x 좌표 저장
+    is_swiping = False
 
     # 스와이프 거리 계산
     swipe_distance = end_x - start_x

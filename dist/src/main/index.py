@@ -47,7 +47,7 @@ def setup_programs_filter():
     programs_filter = document.getElementById('programs_filter').children
     for el in programs_filter + list(document.getElementsByClassName('program-type')):
         el.onclick = change_filter
-        
+
 # 초기 설정
 print, pyprint = module_init(__name__, "index.index")
 currentIndex = 0
@@ -100,15 +100,6 @@ if window.innerWidth < 768:
     slider_wrapper.bind("touchstart", touch_start)
     slider_wrapper.bind("touchmove", touch_move)
     slider_wrapper.bind("touchend", touch_end)
-
-# 자동 슬라이드 함수
-def auto_slide(*args):
-    global currentIndex
-    if currentIndex < total_items - items_per_slide:
-        currentIndex += 1
-    else:
-        currentIndex = 0  # 마지막 슬라이드에 도달하면 처음으로 돌아감
-    move_slide()
 
 # 이전 슬라이드 버튼 클릭 이벤트 핸들러
 def prev_slide(event):

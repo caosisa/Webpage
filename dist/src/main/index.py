@@ -60,6 +60,7 @@ item_width = 410  # 슬라이더 아이템 너비 (400px + margin-right 10px)
 def move_slide():
     global currentIndex
     offset = currentIndex * item_width  # 이동할 너비 계산
+    slider_wrapper.style.transition = "transform 0.5s ease"  # 부드러운 이동 애니메이션 추가
     slider_wrapper.style.transform = f"translateX(-{offset}px)"
 
 # 터치 이벤트 변수 초기화

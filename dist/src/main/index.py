@@ -82,8 +82,9 @@ def prev_slide(event):
 document["nextBtn"].bind("click", auto_slide)
 document["prevBtn"].bind("click", prev_slide)
 
-# 슬라이드를 자동으로 넘기기 위한 타이머 설정 (예: 3초마다)
-window.setInterval(auto_slide, 3000)  # 3000ms = 3초
+if window.innerWidth < 768:
+    # 슬라이드를 자동으로 넘기기 위한 타이머 설정 (예: 3초마다)
+    window.setInterval(auto_slide, 3000)  # 3000ms = 3초
 
 
 

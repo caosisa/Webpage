@@ -228,6 +228,9 @@
 .mobile-only {
     display: none;
 }
+.slider-control {
+    display: inline;
+}
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
@@ -283,6 +286,9 @@
 
     .mobile-image {
         display: block !important;
+    }
+    .slider-control {
+        display: none;
     }
 }
 

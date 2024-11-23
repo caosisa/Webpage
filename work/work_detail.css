@@ -248,4 +248,7 @@
     .col-md-8 {
         padding: 0;
     }
+    .col-md-4 {
+        padding-bottom: 0;
+    }
 }

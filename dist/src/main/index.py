@@ -1,5 +1,53 @@
 from browser import document, window, aio, module_init
 
+print, pyprint = module_init(__name__, "index.index")
+
+
+########################################################################################################################
+# AOS Animation
+########################################################################################################################
+window.AOS.init()
+
+
+########################################################################################################################
+# Programs List
+########################################################################################################################
+def enable_isotope():
+    programs_container = document.getElementById('programs_container')
+    if programs_container:
+        window.programs_isotope = window.Isotope.new(programs_container, {
+            'itemSelector': ".programs-item",
+            'layoutMode': "masonry"
+        })
+        window.AOS.refresh()
+
+
+def flag_selected_tag(selected):
+    for li in document.getElementById('programs_filter').getElementsByClassName('filter-active'):
+        li.classList.remove('filter-active')
+    selected.classList.add('filter-active')
+
+
+def change_filter(event):
+    programs_filter = document.getElementById('programs_filter').children
+    filter_value = event.currentTarget.dataset.filter
+    window.programs_isotope.arrange({'filter': filter_value})
+    window.programs_isotope.on('arrangeComplete', lambda _: window.AOS.refresh())
+    if 'program-type' in event.currentTarget.classList:
+        for fil in programs_filter:
+            if filter_value == fil.attributes['data-filter'].nodeValue:
+                flag_selected_tag(fil)
+                break
+    else:
+        flag_selected_tag(event.currentTarget)
+
+
+def setup_programs_filter():
+    enable_isotope()
+    programs_filter = document.getElementById('programs_filter').children
+    for el in programs_filter + list(document.getElementsByClassName('program-type')):
+        el.onclick = change_filter
+        
 # 초기 설정
 print, pyprint = module_init(__name__, "index.index")
 currentIndex = 0
@@ -61,11 +109,6 @@ def auto_slide(*args):
     else:
         currentIndex = 0  # 마지막 슬라이드에 도달하면 처음으로 돌아감
     move_slide()
-
-# 모바일 화면 너비일 때만 자동 슬라이드 실행
-if window.innerWidth < 768:
-    # 슬라이드를 자동으로 넘기기 위한 타이머 설정 (예: 3초마다)
-    window.setInterval(auto_slide, 3000)  # 3000ms = 3초
 
 # 이전 슬라이드 버튼 클릭 이벤트 핸들러
 def prev_slide(event):

@@ -296,7 +296,7 @@
     }
     #Video {
         padding-top: 20px;
-        padding-bottom: 20px; /* 모바일에서 적절히 여백 조정 */
+        padding-bottom: 50px; /* 모바일에서 적절히 여백 조정 */
 
     }
     .mobile-only {

@@ -43,7 +43,7 @@
 
 .navbar ul {
     margin: 0;
-    padding: 0;
+    padding-top: 8px;
     display: flex;
     list-style: none;
     align-items: center;
@@ -225,6 +225,7 @@
     right: 0;
     bottom: 0;
     padding-bottom: 80px;
+    padding-left: 0;
     background-color: #101924;
     overflow-y: auto;
     transition: 0.3s;
